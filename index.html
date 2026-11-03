@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Millennial's Guide to the Aftermath</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #5B534B;
+    color: #F4F1EA;
+    font-family: Futura, "Century Gothic", "Trebuchet MS", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.55;
+  }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+  .cover {
+    margin: -32px -20px 0;
+    padding: 44px 24px 38px;
+    text-align: center;
+    background: #655C52;
+  }
+  .logo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .geo { display: block; width: 300px; max-width: 90%; height: auto; margin: 26px auto 4px; }
+  .dont-panic {
+    margin: 12px 0 6px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #F4F1EA;
+  }
+  .redrule { width: 64px; height: 6px; background: #E3A82F; margin: 14px auto; }
+  .series { margin: 0; font-size: 25px; font-weight: 600; color: #F4F1EA; }
+  .sub {
+    margin: 8px 0 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #CFC8BA;
+  }
+  h2 {
+    margin: 40px 0 12px;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #E3A82F;
+    padding-bottom: 8px;
+  }
+  .letter {
+    margin: 26px 0 8px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #E3A82F;
+  }
+  a.book {
+    display: block;
+    padding: 18px;
+    border: 3px solid #F4F1EA;
+    border-radius: 6px;
+    background: #6B6259;
+    color: #F4F1EA;
+    text-decoration: none;
+  }
+  a.book strong { display: block; font-size: 20px; font-weight: 600; }
+  a.book span { color: #CFC8BA; font-size: 15px; }
+  .pdf { margin-top: 12px; font-size: 15px; }
+  .pdf a { color: #E8B33C; }
+  footer {
+    margin-top: 44px;
+    text-align: center;
+    color: #CFC8BA;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 36px;
+  }
+  .tile {
+    background: #655C52;
+    border-top: 8px solid var(--acc);
+    padding: 20px 16px 14px;
+    text-align: center;
+  }
+  .tile a.tile-main { display: block; text-decoration: none; color: #F4F1EA; }
+  .tile .logo { max-width: 200px; }
+  .tile .geo { width: 170px; margin: 14px auto 2px; }
+  .tile strong { display: block; font-size: 19px; margin-top: 10px; line-height: 1.35; }
+  .tile .blurb { display: block; margin-top: 8px; font-size: 14.5px; color: #CFC8BA; line-height: 1.5; }
+  .tile .tile-pdf { margin: 12px 0 2px; font-size: 13.5px; color: #CFC8BA; }
+  .tile .tile-pdf a { color: var(--acc); }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo: a thumbs-up hand on a ringed planet, with a circle holding a radioactive trefoil">
+      <defs>
+        <clipPath id="logoDiscClip"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="logoFrontClip"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#3E3833"/>
+      <g clip-path="url(#logoDiscClip)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26" clip-path="url(#logoFrontClip)"/>
+      <circle cx="490" cy="470" r="105" fill="#E3A82F" stroke="#3E3833" stroke-width="12"/>
+      <g transform="translate(413 393) scale(0.24)">
+        <path fill="#3E3833" d="M478.2 98.5C464 88.4 444.7 93.9 436 109l-72.4 125.3c31.3 15.8 52.8 48.3 52.8 85.7h144c17.7 0 32.2-14.4 30.1-31.9C581.4 210 539.1 142 478.2 98.5m-273.5 10.4c-8.7-15.1-28-20.6-42.2-10.4c-60.9 43.4-103.2 111.4-112.3 189.6c-2.1 17.5 12.5 31.9 30.1 31.9h144c0-37.5 21.5-69.9 52.8-85.7zm-9.4 416.8c-8.7 15.1-3.8 34.5 12 41.8c34.4 15.7 72.7 24.5 113 24.5s78.6-8.8 113-24.5c15.8-7.2 20.7-26.7 12-41.8L373 400.3a95.7 95.7 0 0 1-52.6 15.7c-19.4 0-37.5-5.8-52.6-15.7zm125-157.7c26.5-.2 47.8-21.8 47.7-48.3c-.2-26.6-21.9-47.9-48.4-47.7s-47.8 21.8-47.6 48.4c.1 26.5 21.8 47.8 48.3 47.6"/>
+      </g>
+    </svg>
+    <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#E3A82F"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#3E3833"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+    <p class="dont-panic">DON'T PANIC</p>
+    <div class="redrule"></div>
+    <p class="series">The Millennial's Guide to the Aftermath</p>
+  </section>
+  <div class="grid">
+    <div class="tile" style="--acc:#E3A82F">
+      <a class="tile-main" href="books/basic-wiring-and-electricity.html">
+        <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo: a thumbs-up hand on a ringed planet, with a circle holding a lightning bolt">
+      <defs>
+        <clipPath id="logoDiscClip"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="logoFrontClip"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#3E3833"/>
+      <g clip-path="url(#logoDiscClip)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26" clip-path="url(#logoFrontClip)"/>
+      <circle cx="490" cy="470" r="105" fill="#E3A82F" stroke="#3E3833" stroke-width="12"/>
+      <g transform="translate(490 468)">
+        <path fill="#3E3833" d="M14 -60 L-30 14 L-6 14 L-18 60 L32 -16 L6 -16 Z"/>
+      </g>
+    </svg>
+        <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#E3A82F"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#3E3833"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+        <strong>Basic Wiring and Electricity, Explained</strong>
+        <span class="blurb">The grid is gone. Build a working power rig from a battery, scrap copper wire, and a solar panel — wired in a safe order, one circle at a time.</span>
+      </a>
+      <p class="tile-pdf">Print file: <a href="books/basic-wiring-and-electricity.pdf">PDF</a></p>
+    </div>
+    <div class="tile" style="--acc:#E4572E">
+      <a class="tile-main" href="books/fire.html">
+        <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo for this book: a thumbs-up hand on a ringed planet, with a circle holding a flame">
+      <defs>
+        <clipPath id="fDisc"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="fFront"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E4572E" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#472015"/>
+      <g clip-path="url(#fDisc)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E4572E" stroke-width="26" clip-path="url(#fFront)"/>
+      <circle cx="490" cy="470" r="105" fill="#E4572E" stroke="#472015" stroke-width="12"/>
+      <g transform="translate(490 468) scale(1.15)">
+        <path fill="#472015" d="M0 -58 C16 -30 36 -16 36 8 C36 36 20 54 0 54 C-20 54 -36 36 -36 8 C-36 -10 -28 -20 -18 -30 C-16 -18 -10 -12 -6 -10 C-8 -28 -6 -44 0 -58 Z"/>
+      </g>
+    </svg>
+        <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#E4572E"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#472015"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+        <strong>Fire, Explained</strong>
+        <span class="blurb">The servant that bites. The triangle, the ladder of wood, five honest ways to start it, fire lays for every job, stoves built from junk — and field recipes for char cloth, a rocket stove, a Swedish torch, and more.</span>
+      </a>
+      <p class="tile-pdf">Print file: <a href="books/fire.pdf">PDF</a></p>
+    </div>
+    <div class="tile" style="--acc:#3E9CC4">
+      <a class="tile-main" href="books/safe-water-management.html">
+        <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo for this book: a thumbs-up hand on a ringed planet, with a circle holding a water drop">
+      <defs>
+        <clipPath id="wDisc"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="wFront"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#3E9CC4" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#173F57"/>
+      <g clip-path="url(#wDisc)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#3E9CC4" stroke-width="26" clip-path="url(#wFront)"/>
+      <circle cx="490" cy="470" r="105" fill="#3E9CC4" stroke="#173F57" stroke-width="12"/>
+      <g transform="translate(490 468)">
+        <path fill="#173F57" d="M0 -60 C20 -28 40 -6 40 20 C40 44 22 60 0 60 C-22 60 -40 44 -40 20 C-40 -6 -20 -28 0 -60 Z"/>
+      </g>
+    </svg>
+        <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#3E9CC4"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#173F57"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+        <strong>Safe Water Management, Explained</strong>
+        <span class="blurb">The taps are dry and the clock is three days. Store water before, find it hiding in your house, strain it, then kill what's in it — boil it, bleach it, sun it, or distill it on the stove.</span>
+      </a>
+      <p class="tile-pdf">Print file: <a href="books/safe-water-management.pdf">PDF</a></p>
+    </div>
+    <div class="tile" style="--acc:#C62F2F">
+      <a class="tile-main" href="books/staying-warm-and-keeping-cool.html">
+        <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo for this book: a thumbs-up hand on a ringed planet, with a circle holding a thermometer">
+      <defs>
+        <clipPath id="tDisc"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="tFront"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#C62F2F" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#4D1414"/>
+      <g clip-path="url(#tDisc)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#C62F2F" stroke-width="26" clip-path="url(#tFront)"/>
+      <circle cx="490" cy="470" r="105" fill="#C62F2F" stroke="#4D1414" stroke-width="12"/>
+      <g transform="translate(490 468)">
+        <rect x="-12" y="-56" width="24" height="80" rx="12" fill="#4D1414"/>
+        <circle cx="0" cy="34" r="21" fill="#4D1414"/>
+        <circle cx="0" cy="34" r="9" fill="#C62F2F"/>
+        <rect x="-3.5" y="-6" width="7" height="36" fill="#C62F2F"/>
+      </g>
+    </svg>
+        <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#C62F2F"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#4D1414"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+        <strong>Staying Warm and Keeping Cool, Explained</strong>
+        <span class="blurb">Warm the person, not the house. The four leaks, sleeping warm, shrinking the space, heating and cooling one room, and scavenging insulation from junk — with field recipes for a sleep cocoon, a window skin, a clay pot heater, a swamp cooler, and more.</span>
+      </a>
+      <p class="tile-pdf">Print file: <a href="books/staying-warm-and-keeping-cool.pdf">PDF</a></p>
+    </div>
+  </div>
+
+  <footer>The Guide is definitive. Reality is frequently inaccurate.</footer>
+</main>
+</body>
+</html>
