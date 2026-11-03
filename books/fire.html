@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fire, Explained — The Millennial's Guide to the Aftermath</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #5B534B;
+    color: #F4F1EA;
+    font-family: Futura, "Century Gothic", "Trebuchet MS", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 20px 56px; }
+  .cover {
+    margin: -32px -20px 0;
+    padding: 44px 24px 38px;
+    text-align: center;
+    background: #655C52;
+  }
+  .logo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .geo { display: block; width: 300px; max-width: 90%; height: auto; margin: 26px auto 4px; }
+  .dont-panic {
+    margin: 12px 0 6px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #F4F1EA;
+  }
+  .redrule { width: 64px; height: 6px; background: #E4572E; margin: 14px auto; }
+  h1 { margin: 0; font-size: 27px; font-weight: 600; color: #F4F1EA; }
+  .entry { margin-top: 44px; }
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    border-bottom: 3px solid #E4572E;
+    padding-bottom: 8px;
+  }
+  p, li { font-size: 17px; }
+  ul, ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  .rule {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+  }
+  .rule strong { color: #F4845F; }
+  .real {
+    border-left: 5px solid #E4572E;
+    padding: 4px 0 4px 14px;
+    margin: 14px 0;
+  }
+  .real strong { color: #F4845F; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td {
+    border: 2px solid #CFC8BA;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  th { background: #472015; color: #F4F1EA; font-weight: 600; }
+  figure.diagram {
+    margin: 18px 0;
+    background: #F4F1EA;
+    border: 3px solid #2B2620;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 10px 10px 0 #E4572E;
+  }
+  figure.diagram svg { display: block; width: 100%; height: auto; }
+  figure.diagram figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #55504a;
+    text-align: center;
+  }
+  .recipe {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .recipe h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #F4845F;
+  }
+  .recipe .makes { margin: 0 0 6px; }
+  a { color: #F4845F; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #CFC8BA;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @media print {
+    .entry { page-break-inside: avoid; }
+    figure.diagram { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo for this book: a thumbs-up hand on a ringed planet, with a circle holding a flame">
+      <defs>
+        <clipPath id="fDisc"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="fFront"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E4572E" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#472015"/>
+      <g clip-path="url(#fDisc)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E4572E" stroke-width="26" clip-path="url(#fFront)"/>
+      <circle cx="490" cy="470" r="105" fill="#E4572E" stroke="#472015" stroke-width="12"/>
+      <g transform="translate(490 468) scale(1.15)">
+        <path fill="#472015" d="M0 -58 C16 -30 36 -16 36 8 C36 36 20 54 0 54 C-20 54 -36 36 -36 8 C-36 -10 -28 -20 -18 -30 C-16 -18 -10 -12 -6 -10 C-8 -28 -6 -44 0 -58 Z"/>
+      </g>
+    </svg>
+    <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#E4572E"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#472015"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+    <p class="dont-panic">DON'T PANIC</p>
+    <div class="redrule"></div>
+    <h1>Fire, Explained</h1>
+  </section>
+
+  <section class="entry">
+    <h2>Start here: the servant that bites</h2>
+    <p>Fire does five jobs no other tool in this series can do alone: it warms you, lights the dark, cooks food, boils water safe, and signals for help. For most of human history it was <em>the</em> technology. It still is, the week the grid goes down.</p>
+    <p>It is also the only tool in these books that can kill you in your sleep without touching you. Fire eats oxygen and breathes out carbon monoxide — an invisible gas with no smell that puts you down quietly and permanently. So this book's fire is an outdoor animal, or a stove-and-chimney animal, never a free-roaming indoor one.</p>
+    <div class="rule">
+      <p><strong>THE ONE RULE: fire is never left alone, and never burns in a sealed room.</strong> Somebody awake watches every flame, every time. Anything that burns — wood, candles, stoves — belongs where its exhaust goes up and away, not into the air you're breathing.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>1. The triangle: fuel, air, heat</h2>
+    <p>Every fire ever lit is the same three things holding hands:</p>
+    <ul>
+      <li><strong>Fuel</strong> — something that burns: wood, paper, cloth, alcohol.</li>
+      <li><strong>Air</strong> — the oxygen in it. Fire is a fast, hungry kind of rust.</li>
+      <li><strong>Heat</strong> — a spark, a flame, a coal: the push that starts the reaction.</li>
+    </ul>
+    <p>That's the whole science. Starting a fire means bringing the three together. Keeping one means feeding all three. And putting one out means kicking a leg out: smother it (no air), soak it (no heat), or let it starve (no fuel). Every technique in this book is one of those six moves.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: the fire triangle — fuel, air, and heat; remove any one and the fire dies">
+        <polygon points="320,60 130,320 510,320" fill="none" stroke="#2B2620" stroke-width="6"/>
+        <g transform="translate(320 215) scale(0.85)">
+          <path fill="#C7431F" d="M0 -58 C16 -30 36 -16 36 8 C36 36 20 54 0 54 C-20 54 -36 36 -36 8 C-36 -10 -28 -20 -18 -30 C-16 -18 -10 -12 -6 -10 C-8 -28 -6 -44 0 -58 Z"/>
+        </g>
+        <circle cx="320" cy="60" r="34" fill="#E4572E"/>
+        <text x="320" y="68" text-anchor="middle" font-size="17" font-weight="700" fill="#F4F1EA">HEAT</text>
+        <circle cx="130" cy="320" r="34" fill="#E4572E"/>
+        <text x="130" y="328" text-anchor="middle" font-size="17" font-weight="700" fill="#F4F1EA">FUEL</text>
+        <circle cx="510" cy="320" r="34" fill="#E4572E"/>
+        <text x="510" y="328" text-anchor="middle" font-size="17" font-weight="700" fill="#F4F1EA">AIR</text>
+        <text x="320" y="382" text-anchor="middle" font-size="16" fill="#2B2620">KICK OUT ANY ONE LEG AND THE FIRE DIES</text>
+      </svg>
+      <figcaption>Three legs — every fire trick is adding or removing one</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>2. Build the pile before you light it</h2>
+    <p>Amateurs light a match and then go looking for wood. Do it backwards: build the whole pile first, light it once. Fire climbs a ladder of sizes, and each rung lights the next:</p>
+    <ul>
+      <li><strong>Tinder</strong> — catches a spark or a tiny flame: dry grass, bark shavings, dryer lint, cotton balls, char cloth. It should be fluffy, bone dry, and about the size of a bird's nest.</li>
+      <li><strong>Kindling</strong> — pencil-thin sticks. These turn a tinder flicker into real flame. Snap, don't bend: dry sticks break with a crack; green ones fold.</li>
+      <li><strong>Fuel wood</strong> — wrist-thick and up. This is the fire itself once the ladder is climbed.</li>
+    </ul>
+    <p>Gather three times more than you think you need, sorted into three piles within arm's reach of the pit. Running into the dark for more wood is how fires — and ankles — die.</p>
+    <div class="real">
+      <p><strong>Finding dry wood in a wet world:</strong> rain only soaks the outside. Split a log and its heart is dry. Standing dead trees are drier than anything on the ground. Pine knots and resin-heavy "fatwood" burn like they owe you money. The underside of a leaning log, and the low dead branches under a pine's skirt, stay dry when nothing else does.</p>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: the fire ladder — tinder catches first, then pencil-thin kindling, then wrist-thick fuel wood">
+        <path d="M60 300 q14 -34 30 0 q12 -44 28 -6 q16 -30 26 6 q14 -26 24 0" stroke="#948A7A" stroke-width="6" fill="none"/>
+        <path d="M52 316 q60 -14 128 0" stroke="#948A7A" stroke-width="5" fill="none"/>
+        <text x="115" y="90" text-anchor="middle" font-size="18" font-weight="700" fill="#2B2620">TINDER</text>
+        <text x="115" y="345" text-anchor="middle" font-size="15" fill="#2B2620">FLUFFY · DRY</text>
+        <text x="115" y="367" text-anchor="middle" font-size="15" fill="#2B2620">CATCHES A SPARK</text>
+        <path d="M262 320 L316 210 M292 322 L340 224 M322 320 L362 238" stroke="#C7431F" stroke-width="9"/>
+        <text x="315" y="90" text-anchor="middle" font-size="18" font-weight="700" fill="#2B2620">KINDLING</text>
+        <text x="315" y="345" text-anchor="middle" font-size="15" fill="#2B2620">PENCIL-THIN</text>
+        <text x="315" y="367" text-anchor="middle" font-size="15" fill="#2B2620">MAKES REAL FLAME</text>
+        <rect x="452" y="272" width="150" height="34" rx="15" fill="#948A7A" stroke="#2B2620" stroke-width="3.5"/>
+        <rect x="452" y="312" width="150" height="34" rx="15" fill="#948A7A" stroke="#2B2620" stroke-width="3.5"/>
+        <circle cx="458" cy="289" r="12" fill="#F2C4B0"/>
+        <circle cx="458" cy="329" r="12" fill="#F2C4B0"/>
+        <text x="527" y="90" text-anchor="middle" font-size="18" font-weight="700" fill="#2B2620">FUEL WOOD</text>
+        <text x="527" y="245" text-anchor="middle" font-size="15" fill="#2B2620">WRIST-THICK +</text>
+        <text x="527" y="367" text-anchor="middle" font-size="15" fill="#2B2620">THE FIRE ITSELF</text>
+        <path d="M190 285 L232 285 M398 285 L432 285" stroke="#2B2620" stroke-width="5"/>
+        <polygon points="232,275 254,285 232,295" fill="#2B2620"/>
+        <polygon points="432,275 454,285 432,295" fill="#2B2620"/>
+      </svg>
+      <figcaption>Each rung lights the next — skip one and the fire stalls</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>3. Starting it: five honest ways</h2>
+    <p>Carry at least two of these, in different pockets. Fire-starting is not the place for a single point of failure.</p>
+    <ul>
+      <li><strong>Matches and lighters.</strong> The easy way, while they last. Keep them dry — a lighter that got soaked works again once it dries out; a wet match is confetti.</li>
+      <li><strong>Ferro rod.</strong> A metal rod that throws a shower of sparks when scraped hard with a steel edge. It works wet, it works cold, and it lasts thousands of strikes. Push the scraper away from you, slow and hard, into your tinder nest. Practice once at home and it's yours forever.</li>
+      <li><strong>Battery and steel wool.</strong> Touch a pad of fine steel wool across both terminals of a battery (a 9V is easiest) and the strands themselves catch fire. Sounds like a trick; is not. This is Book 1 reaching into Book 3.</li>
+      <li><strong>Sun through a lens.</strong> A magnifying glass, or the bottom of a clear bottle of water, focused to the smallest, brightest dot on dark tinder. Slow, silent, fuel-free — and needs real sun.</li>
+      <li><strong>Friction (bow drill and friends).</strong> It works. It is also genuinely hard, slow, and humbling, and worse when you're cold and it's wet — which is exactly when you'd need it. Learn it as a party trick in good weather; never let it be your plan A.</li>
+    </ul>
+    <p>Whatever the spark, the move is the same: get the tinder smoldering, cup it in both hands, and blow long and slow like you're fogging a mirror. Flame is just a smolder that got enough air.</p>
+    <div class="recipe">
+    <h3>Field Recipe · Char Cloth</h3>
+    <p class="makes"><strong>Makes:</strong> black cloth squares that catch a single spark and hold a smolder for minutes — the bridge between a ferro rod and a flame.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>100% cotton cloth (old t-shirt, denim), cut in squares</td><td>×6</td></tr>
+      <tr><td>Small metal tin with a lid, one nail-hole poked in the top</td><td>×1</td></tr>
+    </table>
+    <ol>
+      <li>Cloth squares go in the tin, lid on. The tin goes in a fire or on coals.</li>
+      <li>Smoke jets out of the hole while the cloth cooks without burning — there's no air in the tin, so it chars instead of catching.</li>
+      <li>When the smoke stops (about 10 minutes), pull the tin out and let it cool completely before opening. Open it hot and the cloth flashes to ash in the fresh air.</li>
+      <li>Done right, the squares are black, limp, and still cloth-shaped. Store them dry in the tin.</li>
+    </ol>
+    </div>
+    <div class="recipe">
+    <h3>Field Recipe · Fire Kit</h3>
+    <p class="makes"><strong>Makes:</strong> one pocket-sized tin that starts a fire three different ways.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Small waterproof tin or pouch</td><td>×1</td></tr>
+      <tr><td>Cotton balls rubbed with petroleum jelly</td><td>×5</td></tr>
+      <tr><td>Char cloth squares</td><td>×3</td></tr>
+      <tr><td>Ferro rod with scraper</td><td>×1</td></tr>
+      <tr><td>Disposable lighter</td><td>×1</td></tr>
+      <tr><td>Fine steel wool pad (for the battery trick)</td><td>×1</td></tr>
+    </table>
+    <ol>
+      <li>Everything goes in the tin; the tin goes in your pocket or pack, not the truck, not the house.</li>
+      <li>Restock what you use the same day. A kit with a missing lighter is a story, not a kit.</li>
+    </ol>
+    <p>One kit on you beats five lighters in a drawer across town.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>4. Fire lays: the shape is the job</h2>
+    <p>Same wood, different architecture. Build the shape that matches what the fire is for:</p>
+    <ul>
+      <li><strong>Teepee</strong> — kindling leaned into a cone over the tinder. Lights fast, burns hot and quick. The boil-a-pot-now fire.</li>
+      <li><strong>Log cabin</strong> — fuel wood stacked in a square, kindling inside. Slower, steadier, and it makes the best cooking coals.</li>
+      <li><strong>Long fire</strong> — two big logs parallel, fire built in the trench between them. A line of heat you can cook along — or sleep beside, with the log between you and the flames as a windbreak and reflector.</li>
+      <li><strong>Dakota hole</strong> — the fire burns in a pit, fed air by a tunnel from a second hole. Nearly smokeless, hard to see, sips fuel, and shrugs off wind. The quiet professional's fire.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: a Dakota fire hole — fire burns in a pit, air feeds in through an underground tunnel from a second hole, almost no smoke">
+        <rect x="30" y="150" width="580" height="16" fill="#948A7A"/>
+        <path d="M120 166 L120 300 L300 300 L300 166" fill="#F4F1EA"/>
+        <path d="M390 166 L390 235 Q390 262 350 262 L300 262" fill="none" stroke="#2B2620" stroke-width="5"/>
+        <path d="M390 166 L390 235" stroke="#2B2620" stroke-width="0"/>
+        <path d="M140 300 L140 250 Q210 215 280 250 L280 300 Z" fill="#F2C4B0"/>
+        <g transform="translate(210 258) scale(0.62)">
+          <path fill="#C7431F" d="M0 -58 C16 -30 36 -16 36 8 C36 36 20 54 0 54 C-20 54 -36 36 -36 8 C-36 -10 -28 -20 -18 -30 C-16 -18 -10 -12 -6 -10 C-8 -28 -6 -44 0 -58 Z"/>
+        </g>
+        <path d="M415 130 q10 -16 0 -30 M445 130 q10 -16 0 -30" stroke="#948A7A" stroke-width="4" fill="none"/>
+        <text x="210" y="345" text-anchor="middle" font-size="17" font-weight="700" fill="#2B2620">FIRE PIT</text>
+        <text x="445" y="345" text-anchor="middle" font-size="17" font-weight="700" fill="#2B2620">AIR HOLE</text>
+        <text x="352" y="245" text-anchor="middle" font-size="15" fill="#2B2620">TUNNEL</text>
+        <text x="465" y="95" text-anchor="middle" font-size="15" fill="#2B2620">ALMOST NO SMOKE</text>
+        <text x="120" y="120" font-size="15" fill="#2B2620">GROUND</text>
+      </svg>
+      <figcaption>Fire underground: hidden, wind-proof, and stingy with wood</figcaption>
+    </figure>
+    <p>Whichever lay you build: clear a circle of bare dirt first, wider than you think, and keep water or dirt at hand for the end of the night. The lay is the easy part; the discipline around it is the skill.</p>
+  </section>
+
+  <section class="entry">
+    <h2>5. Cooking over fire</h2>
+    <p>Flames lick and scorch. <strong>Coals cook.</strong> Let the fire burn down to a bed of glowing coals, then work over those: even heat, no soot-blackened pot, no raw-middle-burnt-outside supper.</p>
+    <ul>
+      <li>A flat rock beside the fire is a griddle. A green-wood tripod or a forked stick holds a pot over coals without burning through for a good while — green wood resists flame.</li>
+      <li>Wrap food in foil or pack it in clay or wet leaves and bury it in the coals' edge for slow cooking.</li>
+      <li>Boiling water is the safest cooking there is — when in doubt, make soup. (Water rules live in Book 2; this book just brings the heat.)</li>
+    </ul>
+    <div class="recipe">
+    <h3>Field Recipe · Swedish Torch</h3>
+    <p class="makes"><strong>Makes:</strong> a single log that is stove, burner, and lamp at once — a flat cooking top with the fire inside it.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>One dry log, roughly a foot thick and two feet long</td><td>×1</td></tr>
+      <tr><td>Tinder and kindling for the core</td><td>1 handful</td></tr>
+    </table>
+    <ol>
+      <li>Stand the log on end. Saw or split cuts most of the way down it — four cuts, like slicing a pie, stopping a few inches above the base so it holds together.</li>
+      <li>Drop tinder and kindling into the cuts at the top and light them. The log burns from the inside out, downward, for hours.</li>
+      <li>Set the pot straight on the flat top. The flame comes up the middle like a burner.</li>
+    </ol>
+    <p><strong>Tools:</strong> a saw or an axe. One log, one pot, no stove at all.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>6. Stoves from junk</h2>
+    <p>An open fire wastes most of its heat to the sky. A stove is just a can or a barrel that bosses the air around: air in low, flame up a chimney, pot on top. Scavenging for one, judge junk like this:</p>
+    <ul>
+      <li><strong>Good:</strong> big tin cans, steel barrels and buckets, bricks and cinder blocks (a brick rocket stove is three bricks' worth of genius), old wood stoves — heavy is fine, you're not carrying it.</li>
+      <li><strong>Burn it out first:</strong> any container that held paint, oil, or chemicals gets a hot burn-out fire in it, outdoors, before it ever cooks food — and some mystery drums are never worth it at all.</li>
+      <li><strong>Never:</strong> galvanized metal in the fire box (the zinc coating cooks off into fumes you don't want), pressure tanks, anything sealed. A sealed can in a fire is a small bomb with a slow fuse.</li>
+    </ul>
+    <div class="recipe">
+    <h3>Field Recipe · Rocket Stove</h3>
+    <p class="makes"><strong>Makes:</strong> a stove that boils a pot on a handful of sticks — the most cooking per twig of anything in this book.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Large can (#10 can or a clean paint can) — the body</td><td>×1</td></tr>
+      <tr><td>Smaller cans — one for the vertical chimney, one for the sideways feed tube</td><td>×2</td></tr>
+      <tr><td>Ash, sand, or dirt — insulation to pack between the tubes and the body</td><td>1 fill</td></tr>
+      <tr><td>A few sticks or a grate — a pot stand for the top</td><td>×1</td></tr>
+    </table>
+    <ol>
+      <li>Cut a hole low in the big can's side for the feed tube, and a hole in its top for the chimney.</li>
+      <li>Join the two small cans into an L: the feed tube points sideways, the chimney rises from its inner end, up through the big can's top hole.</li>
+      <li>Pack ash or sand into every gap between the L and the big can. Insulation is what makes it a rocket instead of a can.</li>
+      <li>Light a small fire at the L's elbow. Feed thumb-thick sticks in through the side tube, a little at a time. The chimney pulls air through and the flame roars straight up at the pot.</li>
+    </ol>
+    <p><strong>Tools:</strong> tin snips or a can opener and pliers. Burns sticks, not logs — a pocketful of twigs cooks supper.</p>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: a rocket stove — L-shaped burn tube inside an insulated can, sticks fed in the side, flame up the chimney to the pot">
+        <rect x="220" y="110" width="200" height="210" rx="10" fill="#F2C4B0" stroke="#2B2620" stroke-width="4"/>
+        <rect x="292" y="130" width="56" height="190" fill="#F4F1EA" stroke="#2B2620" stroke-width="3.5"/>
+        <rect x="160" y="252" width="132" height="48" fill="#F4F1EA" stroke="#2B2620" stroke-width="3.5"/>
+        <path d="M170 276 L240 276" stroke="#C7431F" stroke-width="8"/>
+        <g transform="translate(320 210) scale(0.6)">
+          <path fill="#C7431F" d="M0 -58 C16 -30 36 -16 36 8 C36 36 20 54 0 54 C-20 54 -36 36 -36 8 C-36 -10 -28 -20 -18 -30 C-16 -18 -10 -12 -6 -10 C-8 -28 -6 -44 0 -58 Z"/>
+        </g>
+        <rect x="272" y="72" width="96" height="34" rx="8" fill="#2B2620"/>
+        <text x="320" y="55" text-anchor="middle" font-size="17" font-weight="700" fill="#2B2620">POT</text>
+        <text x="150" y="240" text-anchor="end" font-size="16" font-weight="700" fill="#2B2620">FEED STICKS</text>
+        <text x="150" y="262" text-anchor="end" font-size="16" fill="#2B2620">IN THE SIDE</text>
+        <text x="470" y="170" font-size="16" font-weight="700" fill="#2B2620">INSULATION:</text>
+        <text x="470" y="192" font-size="16" fill="#2B2620">ASH OR SAND</text>
+        <text x="470" y="240" font-size="16" font-weight="700" fill="#2B2620">FLAME UP</text>
+        <text x="470" y="262" font-size="16" fill="#2B2620">THE CHIMNEY</text>
+        <text x="320" y="352" text-anchor="middle" font-size="16" fill="#2B2620">AIR IN LOW · FIRE IN THE ELBOW · HEAT OUT THE TOP</text>
+      </svg>
+      <figcaption>The L-tube is the engine; the insulation is the secret</figcaption>
+    </figure>
+    <div class="recipe">
+    <h3>Field Recipe · Alcohol (Penny) Stove</h3>
+    <p class="makes"><strong>Makes:</strong> a silent, soot-free burner the size of a hockey puck — one can of soup's worth of boiling at a time.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Aluminum soda or beer cans</td><td>×2</td></tr>
+      <tr><td>A coin</td><td>×1</td></tr>
+      <tr><td>Alcohol fuel (denatured alcohol, or high-proof spirits)</td><td>1 shot</td></tr>
+    </table>
+    <ol>
+      <li>Cut the bottom third off both cans. One becomes the base; the other, trimmed, slides inside it as the inner wall.</li>
+      <li>Poke a ring of small holes around the upper rim — those are the burner jets. Poke one fill hole in the center top.</li>
+      <li>Pour in a shot of alcohol, set the coin over the center hole, and light the fuel that pools on top. The stove warms, the alcohol vaporizes, and blue jets light around the rim.</li>
+      <li>Set the pot on a small stand above it — never directly on top, which smothers it.</li>
+    </ol>
+    <p>Alcohol flames are nearly invisible in daylight. Assume it is lit. Always.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>7. Light and a little heat</h2>
+    <p>Not every flame needs to be a bonfire. A candle is a fire with a governor on it — hours of light from an ounce of fuel, and enough heat to take the edge off a small space or warm your hands back to working.</p>
+    <div class="recipe">
+    <h3>Field Recipe · Fat Candle</h3>
+    <p class="makes"><strong>Makes:</strong> a jar candle that burns for days, not hours — the aftermath's reading lamp.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Glass jar with a wide mouth</td><td>×1</td></tr>
+      <tr><td>Shortening (like Crisco) or any solid cooking fat</td><td>1 jarful</td></tr>
+      <tr><td>Candle wick, or a strip of cotton cloth</td><td>×1</td></tr>
+    </table>
+    <ol>
+      <li>Pack the fat into the jar, firm, with no air pockets.</li>
+      <li>Push the wick down the center until it stands out of the fat by half an inch. A cloth strip works; twist it tight.</li>
+      <li>Light the wick. The flame melts a small pool around itself and sips from it — a full jar burns for days of evenings.</li>
+    </ol>
+    <p>Same rules as every flame: on a non-burnable surface, away from curtains and bedding, out when you sleep. Days of light, zero forgiveness.</p>
+    </div>
+    <p>A candle under a clay flowerpot is the famous "pot heater." Honest note: it warms the pot, and the pot warms the air right around it — a hand-warmer, not a furnace. The warmth book takes real heating from here.</p>
+  </section>
+
+  <section class="entry">
+    <h2>8. Keeping fire, carrying fire</h2>
+    <p>Starting a fire is a skill. Not having to start one every time is a bigger one:</p>
+    <ul>
+      <li><strong>Bank it at night.</strong> Push the coals together, cover them with ash and a shovelful of dirt. A banked fire holds a living coal for 8–12 hours. Morning: dig down, add tinder, blow. Fire, no matches spent.</li>
+      <li><strong>Carry an ember.</strong> A coal wrapped in punk wood (soft, rotten, dry wood) or tucked in a tin of char cloth will smolder, slowly, for hours of walking. Our ancestors crossed continents this way.</li>
+      <li><strong>Feed it on a schedule.</strong> A fire you check every half hour stays a fire. A fire you forget becomes a story about starting over in the rain.</li>
+      <li><strong>Wet-day fire.</strong> Split wood for the dry heart, build the pile under any cover you have — a lean-to of bark, your own coat held over it — and start smaller and more patient than usual. Fatwood and char cloth earn their keep on wet days.</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>9. What to scavenge for fire</h2>
+    <p>When you're picking through what's left, fire gear is small, light, and worth more than it looks:</p>
+    <ul>
+      <li><strong>Lighters</strong> — every car console, junk drawer, and gas-station corpse of a display rack. Even "dead" ones usually have flint and a few sparks left.</li>
+      <li><strong>Steel wool</strong> — under every sink. With any battery, it's a firestarter (Entry 3). Keep it bagged away from batteries in your kit, or it starts the party early.</li>
+      <li><strong>Hand sanitizer and alcohol</strong> — fuel and accelerant in one bottle.</li>
+      <li><strong>Dryer lint and cotton anything</strong> — free tinder, if it's natural fiber. Synthetics melt more than they burn.</li>
+      <li><strong>Candles</strong> — light, heat, and a wax source for waterproofing matches (dip the heads in melted wax).</li>
+      <li><strong>Road flares</strong> — the nuclear option: a flare starts wet wood, signals for help, and does not care about your ferro rod technique. Save them for when it matters.</li>
+      <li><strong>Charcoal</strong> — leftover grill bags are pre-made, even-burning fuel that asks for very little air.</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>10. Stop signs</h2>
+    <ul>
+      <li><strong>Any flame in a sealed space.</strong> Carbon monoxide has no smell and no warning. Headache and dizziness around indoor burning means get out into air, now — that's the gas talking, not tiredness.</li>
+      <li><strong>Gasoline on a fire. Ever.</strong> Not to start one, not to revive one. Gasoline doesn't burn — its vapor explodes. This is the rule people get hurt breaking, every year, everywhere.</li>
+      <li><strong>Treated wood, plywood, plastics, tires.</strong> Their smoke is poison with extra steps. If you wouldn't breathe over it, don't burn it.</li>
+      <li><strong>Wind and dry grass.</strong> A fire in high wind near dry brush isn't a tool, it's an arson. Some days the answer is a cold camp and an early night.</li>
+      <li><strong>A chimney you don't know.</strong> A fireplace with a blocked or cracked flue fills the room, not the sky. First fire in any chimney: small, watched, and somebody awake the whole time.</li>
+      <li><strong>Sleeping next to open flame.</strong> Bank the fire or drown it before you sleep. The night watch is a rotation, or it's nobody.</li>
+    </ul>
+    <p>Putting a fire out properly is part of lighting it: spread the coals, soak them, stir, soak again. If it's too hot to hold your hand in, it isn't out.</p>
+  </section>
+
+  <section class="entry">
+    <h2>11. The whole book on one card</h2>
+    <ul>
+      <li>Fire needs fuel, air, and heat. Remove any one and it dies — that's also how you kill it on purpose.</li>
+      <li>Build the whole pile first: tinder, kindling, fuel wood. Three times more than you think.</li>
+      <li>Carry two ways to start it, in two pockets. Ferro rod works wet; a battery and steel wool really work.</li>
+      <li>Char cloth turns one spark into a smolder you can blow into flame.</li>
+      <li>The shape is the job: teepee for fast, log cabin for coals, long fire for cooking and sleep, Dakota hole for quiet.</li>
+      <li>Coals cook; flames scorch.</li>
+      <li>A rocket stove boils supper on a handful of sticks.</li>
+      <li>Bank coals under ash at night; dig up a living fire in the morning.</li>
+      <li>Never indoors sealed, never gasoline, never left alone, never slept beside.</li>
+      <li>Out means cold: soak, stir, soak again.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">All books, A–Z</a></p>
+    <p>The Millennial's Guide to the Aftermath — Fire, Explained</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Wiring and Electricity, Explained — The Millennial's Guide to the Aftermath</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #5B534B;
+    color: #F4F1EA;
+    font-family: Futura, "Century Gothic", "Trebuchet MS", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 20px 56px; }
+  .cover {
+    margin: -32px -20px 0;
+    padding: 44px 24px 38px;
+    text-align: center;
+    background: #655C52;
+  }
+  .logo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .geo { display: block; width: 300px; max-width: 90%; height: auto; margin: 26px auto 4px; }
+  .dont-panic {
+    margin: 12px 0 6px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #F4F1EA;
+  }
+  .redrule { width: 64px; height: 6px; background: #E3A82F; margin: 14px auto; }
+  h1 { margin: 0; font-size: 27px; font-weight: 600; color: #F4F1EA; }
+  .series {
+    margin: 10px 0 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #CFC8BA;
+  }
+  .entry { margin-top: 44px; }
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    border-bottom: 3px solid #E3A82F;
+    padding-bottom: 8px;
+  }
+  p, li { font-size: 17px; }
+  ul, ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  .rule {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+  }
+  .rule strong { color: #E8B33C; }
+  .real {
+    border-left: 5px solid #E3A82F;
+    padding: 4px 0 4px 14px;
+    margin: 14px 0;
+  }
+  .real strong { color: #E8B33C; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td {
+    border: 2px solid #CFC8BA;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  th { background: #3E3833; color: #F4F1EA; font-weight: 600; }
+  figure.diagram {
+    margin: 18px 0;
+    background: #F4F1EA;
+    border: 3px solid #3E3833;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 10px 10px 0 #E3A82F;
+  }
+  figure.diagram svg { display: block; width: 100%; height: auto; }
+  figure.diagram figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #55504a;
+    text-align: center;
+  }
+
+  .recipe {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .recipe h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #E8B33C;
+  }
+  .recipe .makes { margin: 0 0 6px; }
+  a { color: #E8B33C; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #CFC8BA;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @media print {
+    .entry { page-break-inside: avoid; }
+    figure.diagram { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo: a thumbs-up hand on a ringed planet, with a circle holding a lightning bolt">
+      <defs>
+        <clipPath id="logoDiscClip"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="logoFrontClip"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#3E3833"/>
+      <g clip-path="url(#logoDiscClip)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#E3A82F" stroke-width="26" clip-path="url(#logoFrontClip)"/>
+      <circle cx="490" cy="470" r="105" fill="#E3A82F" stroke="#3E3833" stroke-width="12"/>
+      <g transform="translate(490 468)">
+        <path fill="#3E3833" d="M14 -60 L-30 14 L-6 14 L-18 60 L32 -16 L6 -16 Z"/>
+      </g>
+    </svg>
+    <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#E3A82F"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#3E3833"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+    <p class="dont-panic">DON'T PANIC</p>
+    <div class="redrule"></div>
+    <h1>Basic Wiring and Electricity, Explained</h1>
+  </section>
+
+  <section class="entry">
+    <h2>Start here: the grid is gone</h2>
+    <p>The wall outlet is a decoration now. The power company is not coming. But power itself is not gone — it is sitting in every car battery, every solar panel, every coil of copper wire in every abandoned garage. This book teaches you to build a small, safe power rig out of that stuff, assuming you have never wired anything in your life. Because maybe you haven't. That's fine. Nobody is born knowing this. They just usually learn it before the world ends.</p>
+    <p>This book is about <strong>battery power only</strong> — the 12-volt kind that runs cars, camp lights, and radios. House wiring is a different book and a bigger danger. Everything here is the gentle end of electricity. Gentle, not harmless: a battery can still start a fire if you treat it stupidly. So we go slow, in order, one wire at a time.</p>
+  </section>
+
+  <section class="entry">
+    <h2>1. Electricity, in one picture</h2>
+    <p>Pretend electricity is water in a pipe. That's it. That's the whole trick.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: electricity as water in a pipe — volts push, amps flow, ohms squeeze, watts work">
+        <path d="M44 78 A55 42 0 0 1 154 78 Z" fill="#D9A62E"/>
+        <rect x="44" y="78" width="110" height="232" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <rect x="56" y="174" width="86" height="130" fill="#948A7A"/>
+        <rect x="196" y="30" width="64" height="64" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M228 82 L246 44" stroke="#D9A62E" stroke-width="5" stroke-linecap="round"/>
+        <path d="M206 42 L213 50 M250 42 L243 50" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="222" y="94" width="12" height="50" fill="#1a1a1a"/>
+        <rect x="154" y="150" width="366" height="34" fill="#948A7A" stroke="#1a1a1a" stroke-width="4"/>
+        <polygon points="238,157 262,167 238,177" fill="#ffffff"/>
+        <polygon points="428,157 452,167 428,177" fill="#ffffff"/>
+        <polygon points="330,112 354,112 342,142" fill="#1a1a1a"/>
+        <polygon points="330,222 354,222 342,192" fill="#1a1a1a"/>
+        <rect x="520" y="118" width="88" height="88" fill="#E3A82F" stroke="#1a1a1a" stroke-width="4"/>
+        <g fill="#1a1a1a">
+          <polygon points="552,158 576,158 564,128"/>
+          <polygon points="552,158 576,158 564,128" transform="rotate(120 564 162)"/>
+          <polygon points="552,158 576,158 564,128" transform="rotate(240 564 162)"/>
+        </g>
+        <rect x="556" y="154" width="16" height="16" fill="#ffffff" stroke="#1a1a1a" stroke-width="3"/>
+        <path d="M20 330 L620 330" stroke="#1a1a1a" stroke-width="3"/>
+        <g>
+          <rect x="20" y="352" width="24" height="24" fill="#1a1a1a"/>
+          <text x="32" y="371" text-anchor="middle" font-size="15" font-weight="bold" fill="#f4f1ea">1</text>
+          <text x="54" y="371" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">VOLTS = PUSH</text>
+          <rect x="196" y="352" width="24" height="24" fill="#1a1a1a"/>
+          <text x="208" y="371" text-anchor="middle" font-size="15" font-weight="bold" fill="#f4f1ea">2</text>
+          <text x="230" y="371" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">AMPS = FLOW</text>
+          <rect x="364" y="352" width="24" height="24" fill="#1a1a1a"/>
+          <text x="376" y="371" text-anchor="middle" font-size="15" font-weight="bold" fill="#f4f1ea">3</text>
+          <text x="398" y="371" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">OHMS = SQUEEZE</text>
+          <rect x="540" y="352" width="24" height="24" fill="#1a1a1a"/>
+          <text x="552" y="371" text-anchor="middle" font-size="15" font-weight="bold" fill="#f4f1ea">4</text>
+          <text x="574" y="371" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">WATTS</text>
+        </g>
+        <g font-size="13" font-weight="bold" fill="#f4f1ea">
+          <rect x="182" y="6" width="20" height="20" fill="#1a1a1a"/>
+          <text x="192" y="21" text-anchor="middle">1</text>
+          <rect x="452" y="118" width="20" height="20" fill="#1a1a1a"/>
+          <text x="462" y="133" text-anchor="middle">2</text>
+          <rect x="366" y="152" width="20" height="20" fill="#1a1a1a"/>
+          <text x="376" y="167" text-anchor="middle">3</text>
+          <rect x="596" y="88" width="20" height="20" fill="#1a1a1a"/>
+          <text x="606" y="103" text-anchor="middle">4</text>
+        </g>
+      </svg>
+      <figcaption>Pressure pushes · Water flows · The skinny part fights back · Work happens at the end</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Volts</strong> = water pressure. How hard it pushes. A car battery pushes at 12 volts.</li>
+      <li><strong>Amps</strong> = how much water is flowing right now.</li>
+      <li><strong>Watts</strong> = pressure × flow. The total work getting done. This is the number printed on every light and charger.</li>
+      <li><strong>Ohms</strong> = how skinny the pipe is. Skinny wire, long wire, bad connections — all squeeze the flow.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> a battery is a water tower. It stores push. Your job in this book is to run a pipe from the tower to something useful — a light, a radio, a phone charger — and back again, without springing a leak.</p>
+  </section>
+
+  <section class="entry">
+    <h2>2. The one rule that keeps you safe</h2>
+    <p class="rule"><strong>BUILD IT DEAD. CONNECT THE BATTERY LAST.</strong> A battery has no off switch. It is awake right now, in the dark, waiting. So you assemble the whole circuit first — every wire, every connection — and the battery joins the party at the very end, one terminal at a time. Taking it apart? Battery comes off first.</p>
+    <p>Two more habits that do most of the safety work in this book:</p>
+    <ul>
+      <li><strong>One terminal at a time.</strong> Never let a tool, a loose wire end, or your own metal watch strap touch both battery terminals at once. That is a short circuit: all the flow, all at once, through your wrench. It can weld, spark, and burn. Take rings and bracelets off. Tape any wire end that isn't connected yet.</li>
+      <li><strong>Every rig gets a fuse.</strong> Entry 4. No fuse, no power. The fuse is the one part designed to die so the rest of your rig doesn't.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> 12 volts won't shock you through dry skin — you can touch both terminals of a car battery and feel nothing. What hurts people at 12 volts is <em>heat</em>: short circuits, glowing wires, fires in the dark. Respect the heat and this voltage is a friendly one.</p>
+  </section>
+
+  <section class="entry">
+    <h2>3. A circuit is a circle</h2>
+    <p>Here is the secret nobody leads with: power has to go home. Electricity leaves the battery's <strong>plus terminal (+)</strong>, does its work, and must return to the <strong>minus terminal (−)</strong> to complete the loop. No loop, no flow, no light. Every circuit you will ever build is this one circle wearing different clothes.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 340" role="img" aria-label="Diagram: a battery circuit is a loop — power leaves the plus terminal, lights the lamp, and returns to the minus terminal">
+        <path d="M150 84 L428 84" stroke="#D9A62E" stroke-width="7"/>
+        <polygon points="270,74 296,84 270,94" fill="#D9A62E"/>
+        <path d="M150 256 L428 256" stroke="#1a1a1a" stroke-width="7"/>
+        <polygon points="300,246 274,256 300,266" fill="#1a1a1a"/>
+        <path d="M150 84 L150 256" stroke="#1a1a1a" stroke-width="4"/>
+        <rect x="66" y="120" width="168" height="100" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <rect x="86" y="106" width="34" height="22" fill="#D9A62E" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="103" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">+</text>
+        <rect x="180" y="106" width="34" height="22" fill="#1a1a1a"/>
+        <text x="197" y="124" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff">−</text>
+        <text x="150" y="162" text-anchor="middle" font-size="19" font-weight="bold" letter-spacing="2" fill="#1a1a1a">BATTERY</text>
+        <text x="150" y="190" text-anchor="middle" font-size="16" fill="#1a1a1a">12 VOLTS</text>
+        <path d="M428 84 L428 150" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M428 200 L428 256" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M384 186 A44 40 0 0 1 472 186 Z" fill="#E3A82F" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="384" y="186" width="88" height="10" fill="#1a1a1a"/>
+        <text x="428" y="228" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">LAMP</text>
+        <text x="290" y="62" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#A8741A">PLUS — POWER GOES OUT</text>
+        <text x="290" y="292" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">MINUS — POWER COMES HOME</text>
+      </svg>
+      <figcaption>Out of the plus · Through the work · Home to the minus</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Plus (+)</strong> — usually marked red. The door power leaves by.</li>
+      <li><strong>Minus (−)</strong> — usually marked black. The door power comes home by.</li>
+      <li><strong>The loop</strong> — if anything in the circle is broken, disconnected, or switched off, nothing flows. When a rig "just doesn't work," you are hunting for the break in the circle. It is always the break in the circle.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> wire colors are a promise the last person made. On a battery, trust the <strong>+ and − stamped in the plastic</strong>, not the color of whatever wire someone left attached. On scrap wire, you pick the colors — pick a rule (red tape on the plus wire) and never break it.</p>
+  </section>
+
+  <section class="entry">
+    <h2>4. The fuse: the guard on your wire</h2>
+    <p>A fuse is a deliberate weak link — a tiny strip of metal inside a little housing that melts on purpose if too much power flows. It dies in a millisecond so your wire doesn't die over ten seconds, glowing, inside your wall tent. Think of it as the guard from the water picture, except this guard's whole job is to throw himself on the grenade.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 300" role="img" aria-label="Diagram: a fuse sits on the plus wire, close to the battery, between the battery and everything else">
+        <rect x="36" y="102" width="130" height="84" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="101" y="138" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">BATTERY</text>
+        <text x="101" y="164" text-anchor="middle" font-size="15" fill="#1a1a1a">PLUS +</text>
+        <path d="M166 144 L236 144" stroke="#D9A62E" stroke-width="7"/>
+        <rect x="236" y="116" width="64" height="56" fill="#E3A82F" stroke="#1a1a1a" stroke-width="3"/>
+        <path d="M248 158 L264 130 L276 152 L288 130" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="268" y="200" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">FUSE</text>
+        <path d="M300 144 L428 144" stroke="#D9A62E" stroke-width="7"/>
+        <polygon points="352,134 378,144 352,154" fill="#D9A62E"/>
+        <rect x="428" y="102" width="176" height="84" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="516" y="138" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">EVERYTHING</text>
+        <text x="516" y="164" text-anchor="middle" font-size="13" fill="#1a1a1a">LIGHTS · RADIO · PHONES</text>
+        <text x="320" y="52" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">THE FUSE SITS ON THE PLUS WIRE</text>
+        <text x="320" y="256" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#A8741A">CLOSE TO THE BATTERY — BEFORE EVERYTHING ELSE</text>
+      </svg>
+      <figcaption>Plus wire · Fuse first · Then the world</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Where:</strong> on the plus wire, as close to the battery as you can put it. Everything you run goes through it.</li>
+      <li><strong>What size:</strong> bigger than your load needs, smaller than your wire can carry. Running one 10-watt light (about 1 amp at 12 volts)? A 5-amp fuse is a calm, sensible guard. The fuse's number is printed on it.</li>
+      <li><strong>If a fuse blows:</strong> something is wrong — a short, a pinched wire, too big a load. Find it. A bigger fuse is not a fix; it's removing the guard because he kept doing his job.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> amps = watts ÷ volts. A 60-watt load on 12 volts pulls 5 amps. Do this division for everything you plug in, write the number on a piece of tape on the wire, and future-you will never have to guess.</p>
+  </section>
+
+  <section class="entry">
+    <h2>5. What you need, and what to scavenge</h2>
+    <ul>
+      <li><strong>A battery.</strong> Car, truck, lawn tractor, golf cart, boat — if it's a big 12-volt brick, it's a water tower. Bigger and heavier generally means more stored power.</li>
+      <li><strong>Copper wire.</strong> The veins of everything below. How to judge scrap below.</li>
+      <li><strong>A fuse holder and spare fuses.</strong> Sold in every auto parts store on Earth, and sitting in every dead car's fuse box right now. Take spares. Fuses are consumables; blowing them while learning is normal.</li>
+      <li><strong>A switch.</strong> Any switch. It goes on the plus wire and becomes the gate.</li>
+      <li><strong>Something useful to power.</strong> Start with a 12-volt LED light or strip. LEDs sip power and forgive beginners.</li>
+      <li><strong>Electrical tape.</strong> For insulating joints and marking your plus wire with red tape.</li>
+      <li><strong>A knife or wire strippers.</strong> For baring the copper ends.</li>
+      <li><strong>A tester.</strong> A multimeter if you find one. If not, a spare 12-volt bulb on two wires is a test light: it glows, there's power; it doesn't, there isn't.</li>
+      <li><strong>For charging later:</strong> a solar panel and a charge controller (Entry 7).</li>
+    </ul>
+    <p><strong>Judging scrap copper wire:</strong></p>
+    <table>
+      <tr><th>Grab it</th><th>Leave it</th></tr>
+      <tr><td>Bright orange metal under the plastic coat</td><td>Pale silvery metal — that's aluminum. Worse carrier, fussier joints</td></tr>
+      <tr><td>Thick as a pencil lead or thicker, for anything serious</td><td>Green or white crusty corrosion eating the copper</td></tr>
+      <tr><td>Coat intact, flexible</td><td>Coat cracked, melted, or crumbling off</td></tr>
+      <tr><td>Speaker wire, car wire, extension cords, jumper cables, appliance cords</td><td>Wire that got hot before — stiff, darkened, smells burnt</td></tr>
+    </table>
+    <p>To use a wire: cut off damaged ends, strip about a finger-width of coat off each end, and twist the bare copper strands tight into one neat rope. A good joint is copper squeezed hard against copper — twist them together like you're wringing out a tiny towel, then tape the joint so no bare metal shows.</p>
+  </section>
+
+  <section class="entry">
+    <h2>6. Job one: make one light work</h2>
+    <p>Every power rig on Earth is this job plus more stuff. One battery, one fuse, one switch, one light, one circle.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 320" role="img" aria-label="Diagram: one light circuit — battery, fuse, switch, lamp, and the return wire back to the battery minus">
+        <text x="320" y="44" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="2" fill="#1a1a1a">ONE LIGHT · ONE CIRCLE</text>
+        <path d="M178 148 L206 148 M282 148 L310 148 M420 148 L448 148" stroke="#D9A62E" stroke-width="7"/>
+        <rect x="48" y="110" width="130" height="76" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="113" y="142" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">BATTERY</text>
+        <text x="113" y="166" text-anchor="middle" font-size="15" fill="#1a1a1a">12 V</text>
+        <rect x="206" y="110" width="76" height="76" fill="#E3A82F" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="244" y="142" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a1a1a">FUSE</text>
+        <text x="244" y="166" text-anchor="middle" font-size="14" fill="#1a1a1a">5 A</text>
+        <rect x="310" y="110" width="110" height="76" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <rect x="330" y="140" width="13" height="13" fill="#1a1a1a"/>
+        <path d="M337 146 L386 118" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+        <rect x="394" y="140" width="13" height="13" fill="#ffffff" stroke="#1a1a1a" stroke-width="3"/>
+        <text x="365" y="176" text-anchor="middle" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">SWITCH</text>
+        <rect x="448" y="110" width="130" height="76" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M483 148 A30 26 0 0 1 543 148 Z" fill="#E3A82F" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="483" y="148" width="60" height="8" fill="#1a1a1a"/>
+        <text x="513" y="176" text-anchor="middle" font-size="15" font-weight="bold" letter-spacing="1" fill="#1a1a1a">LAMP</text>
+        <path d="M513 186 L513 262 L113 262 L113 186" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+        <text x="313" y="294" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">BACK TO MINUS — THE CIRCLE CLOSES</text>
+      </svg>
+      <figcaption>Battery · Fuse · Switch · Lamp · Home again</figcaption>
+    </figure>
+    <p><strong>The wiring sequence. In this order, every time:</strong></p>
+    <ol>
+      <li><strong>Build the whole circle with the battery left out.</strong> Battery → fuse → switch → lamp → a wire long enough to reach back to the battery's minus. Switch in the OFF position. Mark the plus wire with red tape at both ends.</li>
+      <li><strong>Check your joints.</strong> Every connection twisted tight, every bare spot taped, no stray copper hairs reaching toward anything they shouldn't.</li>
+      <li><strong>Connect the minus wire to the battery's minus terminal.</strong> Tight. A loose terminal is a heater you didn't ask for.</li>
+      <li><strong>Connect the plus wire to the plus terminal — last.</strong> This is the moment the rig wakes up. Keep the loose end taped until the second it goes on.</li>
+      <li><strong>Flip the switch.</strong> Light. You have built civilization's favorite trick from junk.</li>
+    </ol>
+    <p><strong>No light?</strong> Don't panic and don't rewire randomly. Walk the circle: battery charged? (Test light across the terminals.) Fuse intact? (The strip inside should be one unbroken piece.) Switch on? Every joint tight? The problem is a break in the circle — find the break, not a new design.</p>
+    <p class="real"><strong>In real life:</strong> taking it apart runs the film backwards — battery off first (plus terminal first, and tape that end immediately), then everything else. The plus wire is the troublemaker; it only ever touches the plus terminal, the fuse, and nothing else in the world.</p>
+      <div class="recipe">
+    <h3>Field Recipe · One-Light Rig</h3>
+    <p class="makes"><strong>Makes:</strong> one 12V light running straight off a battery — Job One, on a card.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>12V battery</td><td>×1</td></tr>
+      <tr><td>Inline fuse holder, with a fuse sized to your lamp</td><td>×1</td></tr>
+      <tr><td>Switch — any kind that breaks the plus wire</td><td>×1</td></tr>
+      <tr><td>12V lamp or LED light</td><td>×1</td></tr>
+      <tr><td>Copper wire, enough to make the whole circle</td><td>2 runs</td></tr>
+    </table>
+    <ol>
+      <li>Build it dead — battery disconnected. Run the plus wire: battery plus → fuse → switch → lamp.</li>
+      <li>Run the lamp&#8217;s other wire straight back to battery minus. The circle must be complete.</li>
+      <li>The fuse sits on the plus wire, close to the battery.</li>
+      <li>Walk the circle with your finger and check every joint.</li>
+      <li>Connect the battery last. Flip the switch.</li>
+    </ol>
+    <p><strong>Tools:</strong> wire stripper or a knife · electrical tape.</p>
+    </div>
+</section>
+
+  <section class="entry">
+    <h2>7. Job two: add the sun</h2>
+    <p>A battery alone is a water tower that only empties. A solar panel is rain. The <strong>charge controller</strong> is the small box that stands between them — it feeds the battery when it's hungry and stops when it's full, because a battery force-fed past full gets cooked. Panel, controller, battery. That order of boxes, always.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 330" role="img" aria-label="Diagram: solar panel, charge controller, battery, and loads — and the order to connect them">
+        <path d="M65 92 A26 22 0 0 1 117 92 Z" fill="#E3A82F"/>
+        <path d="M150 150 L180 150 M300 150 L330 150 M450 150 L480 150" stroke="#1a1a1a" stroke-width="6"/>
+        <rect x="30" y="112" width="120" height="80" fill="#948A7A" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M70 112 L70 192 M110 112 L110 192 M30 152 L150 152" stroke="#f4f1ea" stroke-width="3"/>
+        <text x="90" y="222" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">PANEL</text>
+        <rect x="180" y="112" width="120" height="80" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="240" y="146" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">CHARGE</text>
+        <text x="240" y="170" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">CONTROLLER</text>
+        <rect x="330" y="112" width="120" height="80" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="390" y="146" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">BATTERY</text>
+        <text x="390" y="170" text-anchor="middle" font-size="15" fill="#1a1a1a">12 V</text>
+        <rect x="480" y="112" width="130" height="80" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="545" y="146" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">YOUR STUFF</text>
+        <text x="545" y="170" text-anchor="middle" font-size="14" fill="#1a1a1a">VIA ITS FUSE</text>
+        <g font-size="15" font-weight="bold" fill="#f4f1ea">
+          <rect x="349" y="82" width="24" height="24" fill="#1a1a1a"/>
+          <text x="361" y="100" text-anchor="middle">1</text>
+          <rect x="499" y="82" width="24" height="24" fill="#1a1a1a"/>
+          <text x="511" y="100" text-anchor="middle">2</text>
+          <rect x="199" y="82" width="24" height="24" fill="#1a1a1a"/>
+          <text x="211" y="100" text-anchor="middle">3</text>
+        </g>
+        <text x="390" y="262" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">CONNECT IN NUMBER ORDER — THE PANEL GOES LAST</text>
+        <text x="320" y="296" text-anchor="middle" font-size="15" fill="#A8741A" font-weight="bold" letter-spacing="1">UNHOOK IN REVERSE — THE PANEL COMES OFF FIRST</text>
+      </svg>
+      <figcaption>Panel makes it · Controller manages it · Battery stores it</figcaption>
+    </figure>
+    <p><strong>The connection sequence:</strong></p>
+    <ol>
+      <li><strong>Controller to battery — FIRST.</strong> The controller wakes up, reads the battery, and learns "ah, a 12-volt system." Skip this order and a confused controller can feed your battery like it's a 24-volt one.</li>
+      <li><strong>Your stuff to the battery — second</strong>, through its fuse, exactly like Job One.</li>
+      <li><strong>Panel to controller — LAST.</strong> A panel makes power the moment light touches it; there is no off switch on the sun. Throw a blanket or a towel over the panel while you wire it, and it sleeps until you're done.</li>
+    </ol>
+    <ul>
+      <li>Never leave a panel wired straight to a battery with no controller between them. A day of that can overcharge and kill the battery you're depending on.</li>
+      <li>Panel facing the sun, tilted roughly toward it, nothing shading even one corner — shade on part of a panel drags the whole panel down.</li>
+      <li>Everything still goes in a circle: panel has a plus and a minus, and they land on the controller's panel plus and minus. Match the stamps, not your mood.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> the panel's label tells you its watts. A 100-watt panel in good sun gives you roughly 400–500 watt-hours on a clear day — enough for lights, phones, and a radio, with some left over. Less sun, less rain in the tower. Entry 9 teaches you to budget it.</p>
+      <div class="recipe">
+    <h3>Field Recipe · Solar Charging Rig</h3>
+    <p class="makes"><strong>Makes:</strong> a solar setup that keeps your battery charged — Job Two, on a card.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Solar panel</td><td>×1</td></tr>
+      <tr><td>Charge controller</td><td>×1</td></tr>
+      <tr><td>12V battery</td><td>×1</td></tr>
+      <tr><td>Fuse, on the battery&#8217;s plus wire</td><td>×1</td></tr>
+      <tr><td>Wire — panel-to-controller and controller-to-battery</td><td>2 runs</td></tr>
+    </table>
+    <ol>
+      <li>Controller to battery FIRST — plus wire through the fuse. Never wire a panel straight to a battery.</li>
+      <li>Loads second: your light rig, your USB tap.</li>
+      <li>Panel LAST, and keep it covered with a blanket until it is wired.</li>
+      <li>To take it apart, unhook in reverse: panel first, battery last.</li>
+    </ol>
+    </div>
+</section>
+
+  <section class="entry">
+    <h2>8. More power: series and parallel</h2>
+    <p>One battery not enough? You can chain batteries (and panels — the same rules) in exactly two ways. They are not interchangeable, and mixing them up is the fastest way in this book to destroy equipment.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: batteries in series add voltage; batteries in parallel add runtime">
+        <text x="24" y="46" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">SERIES — PUSH ADDS UP</text>
+        <rect x="120" y="66" width="110" height="64" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="175" y="94" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">12 V</text>
+        <text x="175" y="116" text-anchor="middle" font-size="13" fill="#1a1a1a">− · +</text>
+        <rect x="300" y="66" width="110" height="64" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="355" y="94" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">12 V</text>
+        <text x="355" y="116" text-anchor="middle" font-size="13" fill="#1a1a1a">− · +</text>
+        <path d="M230 98 L300 98" stroke="#1a1a1a" stroke-width="6"/>
+        <path d="M84 98 L120 98 M410 98 L446 98" stroke="#1a1a1a" stroke-width="6"/>
+        <text x="524" y="92" text-anchor="middle" font-size="17" font-weight="bold" fill="#A8741A">= 24 VOLTS</text>
+        <text x="524" y="116" text-anchor="middle" font-size="14" fill="#1a1a1a">SAME FLOW</text>
+        <text x="24" y="162" font-size="15" fill="#1a1a1a">Chain them nose-to-tail: plus of one to minus of the next.</text>
+        <path d="M20 186 L620 186" stroke="#1a1a1a" stroke-width="2"/>
+        <text x="24" y="224" font-size="17" font-weight="bold" letter-spacing="1" fill="#1a1a1a">PARALLEL — RUNTIME ADDS UP</text>
+        <rect x="120" y="262" width="110" height="64" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="175" y="290" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">12 V</text>
+        <rect x="300" y="262" width="110" height="64" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+        <text x="355" y="290" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">12 V</text>
+        <path d="M140 262 L140 236 L310 236 L310 262" fill="none" stroke="#1a1a1a" stroke-width="6"/>
+        <path d="M210 262 L210 254 L380 254 L380 262" fill="none" stroke="#D9A62E" stroke-width="6"/>
+        <rect x="132" y="252" width="16" height="12" fill="#1a1a1a"/>
+        <rect x="202" y="252" width="16" height="12" fill="#D9A62E"/>
+        <rect x="302" y="252" width="16" height="12" fill="#1a1a1a"/>
+        <rect x="372" y="252" width="16" height="12" fill="#D9A62E"/>
+        <text x="524" y="288" text-anchor="middle" font-size="17" font-weight="bold" fill="#A8741A">STILL 12 VOLTS</text>
+        <text x="524" y="312" text-anchor="middle" font-size="14" fill="#1a1a1a">TWICE THE RUNTIME</text>
+        <text x="24" y="368" font-size="15" fill="#1a1a1a">Side by side: all the pluses together, all the minuses together.</text>
+      </svg>
+      <figcaption>Series = more push · Parallel = more stored water</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Series</strong> (nose-to-tail): voltages add. 12 + 12 = 24 volts. Only do this if your equipment is built for the bigger push — 24 volts into a 12-volt light is a brief, bright funeral.</li>
+      <li><strong>Parallel</strong> (side by side): voltage stays, stored power adds. Two batteries in parallel run the same lights twice as long. This is the one most rigs want.</li>
+      <li><strong>Only chain twins:</strong> same voltage, same size, same type, same age, both charged to the same level first. A weak battery in a chain drags the strong ones down to its level.</li>
+      <li><strong>Tape a label on every battery</strong> — its voltage and the date you chained it. In the dark, in a hurry, labels are memory that works.</li>
+    </ul>
+      <div class="recipe">
+    <h3>Field Recipe · Battery Bank</h3>
+    <p class="makes"><strong>Makes:</strong> two batteries working as one. Twins only — same type, same age, same size.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>Matched 12V batteries</td><td>×2</td></tr>
+      <tr><td>Short, thick cables</td><td>×2</td></tr>
+    </table>
+    <ol>
+      <li><strong>Parallel — more runtime, still 12V:</strong> cable plus-to-plus and minus-to-minus. Take power from one battery&#8217;s plus and the OTHER battery&#8217;s minus, so both work evenly.</li>
+      <li><strong>Series — 24V:</strong> cable one battery&#8217;s plus to the other&#8217;s minus. Power comes off the two free ends. Only for gear made for 24V.</li>
+    </ol>
+    <p>Never mix old and new, or big and small. A weak twin drags the strong one down with it.</p>
+    </div>
+</section>
+
+  <section class="entry">
+    <h2>9. Budget your bucket</h2>
+    <p>A battery is a bucket of stored work, and now you can measure the bucket. Battery labels brag in <strong>amp-hours (Ah)</strong>. Multiply by volts and you get <strong>watt-hours (Wh)</strong> — the actual size of the bucket. A 12-volt, 100-amp-hour battery holds 12 × 100 = <strong>1,200 watt-hours</strong>.</p>
+    <p>One catch: an old-style lead battery (car, golf cart) is only willing to give up about <strong>half</strong> its bucket before running it lower starts killing it. Lithium batteries will give you nearly the whole bucket. So that 1,200 Wh lead battery is really a <strong>600 Wh daily budget</strong> if you want it alive next month.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Diagram: a battery is a bucket of watt-hours; every load pours out of the same bucket">
+        <g transform="rotate(-12 96 132)">
+          <rect x="26" y="96" width="140" height="72" fill="#E3A82F" stroke="#1a1a1a" stroke-width="3"/>
+          <text x="96" y="124" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">LIGHT · 10 W</text>
+          <text x="96" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a1a1a">50 Wh A NIGHT</text>
+        </g>
+        <path d="M160 178 C 188 196, 210 206, 236 214" fill="none" stroke="#948A7A" stroke-width="9"/>
+        <g transform="rotate(12 548 124)">
+          <rect x="478" y="88" width="140" height="72" fill="#A8741A" stroke="#1a1a1a" stroke-width="3"/>
+          <text x="548" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">FRIDGE · 60 W</text>
+          <text x="548" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">600 Wh A DAY</text>
+        </g>
+        <path d="M492 168 C 472 186, 458 196, 446 206" fill="none" stroke="#948A7A" stroke-width="9"/>
+        <rect x="248" y="196" width="164" height="136" fill="#948A7A"/>
+        <rect x="240" y="90" width="180" height="250" fill="none" stroke="#1a1a1a" stroke-width="4"/>
+        <path d="M206 214 L454 214" stroke="#D9A62E" stroke-width="4" stroke-dasharray="10 7"/>
+        <text x="330" y="128" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">THE BUCKET</text>
+        <text x="330" y="152" text-anchor="middle" font-size="14" fill="#1a1a1a">1,200 Wh TOTAL</text>
+        <text x="330" y="196" text-anchor="middle" font-size="14" font-weight="bold" fill="#A8741A">LEAD SAFE LINE</text>
+        <text x="330" y="282" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="1" fill="#ffffff">600 Wh TO SPEND</text>
+        <text x="320" y="378" text-anchor="middle" font-size="16" font-weight="bold" letter-spacing="1" fill="#1a1a1a">EVERY LOAD POURS OUT OF THE SAME BUCKET</text>
+      </svg>
+      <figcaption>Watts × hours = watt-hours · Spend less than the sun puts back</figcaption>
+    </figure>
+    <p>The spending math is one multiplication: <strong>watts × hours = watt-hours</strong>.</p>
+    <table>
+      <tr><th>Load</th><th>Math</th><th>Cost</th></tr>
+      <tr><td>LED light, 10 W, all evening (5 hrs)</td><td>10 × 5</td><td>50 Wh</td></tr>
+      <tr><td>Phone charge</td><td>about</td><td>15 Wh</td></tr>
+      <tr><td>Radio, 5 W, 4 hrs</td><td>5 × 4</td><td>20 Wh</td></tr>
+      <tr><td>Fridge, ~60 W average, all day</td><td>60 × 24... it cycles, call it</td><td>~600 Wh</td></tr>
+    </table>
+    <p>Lights, phones, and a radio together cost about 85 Wh a day — pocket change. The fridge eats the entire budget by itself. That is the whole game of off-grid power: the panel is your income (Entry 7: a 100 W panel earns roughly 400–500 Wh on a clear day), the bucket is your savings, and every load is a purchase. Spend less than you earn and the lights never go out.</p>
+  </section>
+
+  <section class="entry">
+    <h2>10. Wire thickness and distance: the two thieves</h2>
+    <p>Back to the water picture: a long, skinny pipe wastes pressure before the water arrives. Wire does the same. Two thieves steal your power on every run, and both are beaten the same way:</p>
+    <ul>
+      <li><strong>Thief one: thin wire.</strong> Big flow through a skinny wire turns into heat inside the wire. The load gets weak power and you get a warm cable.</li>
+      <li><strong>Thief two: distance.</strong> Every extra foot of wire is more squeeze. A light at the end of 50 feet of skinny wire glows like it's tired, because it is.</li>
+      <li><strong>The defense: short and thick.</strong> Keep the battery close to the things it powers. For runs that must be long, go thicker than you think you need.</li>
+      <li><strong>The ten-minute test:</strong> run the rig for ten minutes, then feel every wire and every joint with the back of your hand. Cool is correct. Warm means too thin, or a loose joint pretending to be a connection. Hot means stop now and fix it.</li>
+    </ul>
+    <p class="real"><strong>In real life:</strong> skip the inverter for as long as you can. An inverter turns battery power into house-style power, and it's a glutton: a 1,000-watt inverter pulls around 90 amps from a 12-volt battery — jumper-cable territory, thick and short or not at all. Lights, radios, fans, and chargers all exist in 12-volt versions. Live in the battery's world; don't make the battery pretend to be the grid.</p>
+      <div class="recipe">
+    <h3>Field Recipe · USB Charging Tap</h3>
+    <p class="makes"><strong>Makes:</strong> a charging point for phones and USB gear, straight off the battery — no inverter, no waste.</p>
+    <table>
+      <tr><th>Component</th><th>Count</th></tr>
+      <tr><td>12V battery</td><td>×1</td></tr>
+      <tr><td>Fuse</td><td>×1</td></tr>
+      <tr><td>Car-style 12V USB socket</td><td>×1</td></tr>
+      <tr><td>Wire</td><td>2 runs</td></tr>
+    </table>
+    <ol>
+      <li>Plus wire: battery plus → fuse → socket plus.</li>
+      <li>Socket minus → battery minus.</li>
+      <li>Connect the battery last, like always. Plug in and charge.</li>
+    </ol>
+    </div>
+</section>
+
+  <section class="entry">
+    <h2>11. Stop signs</h2>
+    <ul>
+      <li>A battery that is swollen, cracked, leaking, or hissing. Walk away from it. It is done being a battery and is becoming an incident.</li>
+      <li>A rotten-egg smell near a charging battery. That's gas from overcharging. Stop charging, air the space out, no sparks nearby.</li>
+      <li>A big flash or spark when you connect a terminal. Small loads can tick; a flash means a short. Battery off, walk the circle, find it.</li>
+      <li>Any wire too hot to hold, or a fuse that blows a second time. The rig is telling you something. Listen the first time.</li>
+      <li>Two batteries of different voltages someone wants to chain together "just to try it." No. Entry 8: twins only.</li>
+      <li>Anyone who wants to wire your rig into a house's breaker panel to "power the house." That is the other kind of electricity, the killing kind, and it is not in this book. Your rig powers its own loads through its own wires, full stop.</li>
+      <li>White crusty stuff on battery terminals is battery acid residue. Don't touch your eyes, wash your hands after, clean terminals with an old brush, not your good one.</li>
+      <li>The moment you think "I'm not sure." That thought is the skill working. Listen to it.</li>
+    </ul>
+    <p>Knowing where your skill ends is most of having the skill.</p>
+  </section>
+
+  <section class="entry">
+    <h2>12. The whole book on one card</h2>
+    <ul>
+      <li>Every circuit is a circle: out of the plus, through the work, home to the minus.</li>
+      <li>Build it dead. Battery on last, off first. One terminal at a time.</li>
+      <li>Fuse on the plus wire, close to the battery. No fuse, no power.</li>
+      <li>Switch on the plus wire. It's just a gate.</li>
+      <li>Solar: controller to battery first, panel last. Off in reverse.</li>
+      <li>Series adds push. Parallel adds runtime. Twins only.</li>
+      <li>Amps = watts ÷ volts. Watt-hours = watts × hours.</li>
+      <li>Short and thick beats long and thin. Warm wire = warning.</li>
+      <li>Not sure = stop.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">All books, A–Z</a></p>
+    <p>The Millennial's Guide to the Aftermath — Basic Wiring and Electricity, Explained</p>
+  </footer>
+</main>
+</body>
+</html>
