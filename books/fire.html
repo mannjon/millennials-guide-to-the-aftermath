@@ -111,7 +111,11 @@
   }
 
   .tile-ic { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #DAD6CC; border-radius: 3px; vertical-align: middle; margin-right: 10px; }
-  .tile-ic .ing { width: 26px; height: 26px; }
+  .tile-ic .ing { width: 26px; height: 26px; filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.35)); }
+
+  .recipe table { background: #DAD6CC; }
+  .recipe td { color: #38332C; }
+  .recipe td:last-child { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -236,8 +240,8 @@
     <p class="makes"><strong>Makes:</strong> black cloth squares that catch a single spark and hold a smolder for minutes — the bridge between a ferro rod and a flame.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 7h26v27q-6.5 6-13 0q-6.5-6-13 0z" fill="#3D4A5C"/></svg></span>100% cotton cloth (old t-shirt, denim), cut in squares</td><td>×6</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="9" width="28" height="5" rx="2" fill="#3D4A5C"/><rect x="12" y="16" width="24" height="25" rx="2" fill="#3D4A5C"/><circle cx="24" cy="11.5" r="1.7" fill="#DAD6CC"/></svg></span>Small metal tin with a lid, one nail-hole poked in the top</td><td>×1</td></tr>
+      <tr><td>100% cotton cloth (old t-shirt, denim), cut in squares</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 7h26v27q-6.5 6-13 0q-6.5-6-13 0z" fill="#3D4A5C"/></svg></span>×6</td></tr>
+      <tr><td>Small metal tin with a lid, one nail-hole poked in the top</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="9" width="28" height="5" rx="2" fill="#3D4A5C"/><rect x="12" y="16" width="24" height="25" rx="2" fill="#3D4A5C"/><circle cx="24" cy="11.5" r="1.7" fill="#DAD6CC"/></svg></span>×1</td></tr>
     </table>
     <ol>
       <li>Cloth squares go in the tin, lid on. The tin goes in a fire or on coals.</li>
@@ -251,12 +255,12 @@
     <p class="makes"><strong>Makes:</strong> one pocket-sized tin that starts a fire three different ways.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="9" width="28" height="5" rx="2" fill="#3D4A5C"/><rect x="12" y="16" width="24" height="25" rx="2" fill="#3D4A5C"/><circle cx="24" cy="11.5" r="1.7" fill="#DAD6CC"/></svg></span>Small waterproof tin or pouch</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="30" r="9" fill="#3D4A5C"/><circle cx="32" cy="30" r="9" fill="#3D4A5C"/><circle cx="24" cy="18" r="9" fill="#3D4A5C"/></svg></span>Cotton balls rubbed with petroleum jelly</td><td>×5</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 7h26v27q-6.5 6-13 0q-6.5-6-13 0z" fill="#3D4A5C"/></svg></span>Char cloth squares</td><td>×3</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-32 24 24)"><rect x="4" y="21" width="25" height="6" rx="2" fill="#3D4A5C"/><rect x="31" y="17" width="12" height="14" rx="3" fill="#3D4A5C"/></g></svg></span>Ferro rod with scraper</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 1c2.5 3.5 3.5 5.5 3.5 7.5a3.5 3.5 0 1 1-7 0C20.5 6.5 21.5 4.5 24 1z" fill="#3D4A5C"/><rect x="17" y="11" width="14" height="6" fill="#3D4A5C"/><rect x="17" y="18" width="14" height="25" rx="3" fill="#3D4A5C"/></svg></span>Disposable lighter</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="14" fill="#3D4A5C"/><path d="M13 20q11-7 22 0M12 28q12-7 24 0M16 35q8-5 16 0" fill="none" stroke="#DAD6CC" stroke-width="2.2"/></svg></span>Fine steel wool pad (for the battery trick)</td><td>×1</td></tr>
+      <tr><td>Small waterproof tin or pouch</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="9" width="28" height="5" rx="2" fill="#3D4A5C"/><rect x="12" y="16" width="24" height="25" rx="2" fill="#3D4A5C"/><circle cx="24" cy="11.5" r="1.7" fill="#DAD6CC"/></svg></span>×1</td></tr>
+      <tr><td>Cotton balls rubbed with petroleum jelly</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="16" cy="30" r="9" fill="#3D4A5C"/><circle cx="32" cy="30" r="9" fill="#3D4A5C"/><circle cx="24" cy="18" r="9" fill="#3D4A5C"/></svg></span>×5</td></tr>
+      <tr><td>Char cloth squares</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M11 7h26v27q-6.5 6-13 0q-6.5-6-13 0z" fill="#3D4A5C"/></svg></span>×3</td></tr>
+      <tr><td>Ferro rod with scraper</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-32 24 24)"><rect x="4" y="21" width="25" height="6" rx="2" fill="#3D4A5C"/><rect x="31" y="17" width="12" height="14" rx="3" fill="#3D4A5C"/></g></svg></span>×1</td></tr>
+      <tr><td>Disposable lighter</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 1c2.5 3.5 3.5 5.5 3.5 7.5a3.5 3.5 0 1 1-7 0C20.5 6.5 21.5 4.5 24 1z" fill="#3D4A5C"/><rect x="17" y="11" width="14" height="6" fill="#3D4A5C"/><rect x="17" y="18" width="14" height="25" rx="3" fill="#3D4A5C"/></svg></span>×1</td></tr>
+      <tr><td>Fine steel wool pad (for the battery trick)</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="14" fill="#3D4A5C"/><path d="M13 20q11-7 22 0M12 28q12-7 24 0M16 35q8-5 16 0" fill="none" stroke="#DAD6CC" stroke-width="2.2"/></svg></span>×1</td></tr>
     </table>
     <ol>
       <li>Everything goes in the tin; the tin goes in your pocket or pack, not the truck, not the house.</li>
@@ -310,8 +314,8 @@
     <p class="makes"><strong>Makes:</strong> a single log that is stove, burner, and lamp at once — a flat cooking top with the fire inside it.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="#3D4A5C"/><rect x="22.5" y="9" width="3" height="30" fill="#DAD6CC"/><rect x="9" y="22.5" width="30" height="3" fill="#DAD6CC"/></svg></span>One dry log, roughly a foot thick and two feet long</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M13 42L27 8l4 1.5L19 42z" fill="#3D4A5C"/><path d="M24 42L36 12l4 2-10 28z" fill="#3D4A5C"/><path d="M8 40L16 14l4 1-6 26z" fill="#3D4A5C"/></svg></span>Tinder and kindling for the core</td><td>1 handful</td></tr>
+      <tr><td>One dry log, roughly a foot thick and two feet long</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="#3D4A5C"/><rect x="22.5" y="9" width="3" height="30" fill="#DAD6CC"/><rect x="9" y="22.5" width="30" height="3" fill="#DAD6CC"/></svg></span>×1</td></tr>
+      <tr><td>Tinder and kindling for the core</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M13 42L27 8l4 1.5L19 42z" fill="#3D4A5C"/><path d="M24 42L36 12l4 2-10 28z" fill="#3D4A5C"/><path d="M8 40L16 14l4 1-6 26z" fill="#3D4A5C"/></svg></span>1 handful</td></tr>
     </table>
     <ol>
       <li>Stand the log on end. Saw or split cuts most of the way down it — four cuts, like slicing a pie, stopping a few inches above the base so it holds together.</li>
@@ -335,10 +339,10 @@
     <p class="makes"><strong>Makes:</strong> a stove that boils a pot on a handful of sticks — the most cooking per twig of anything in this book.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="7" width="22" height="34" rx="2" fill="#3D4A5C"/><rect x="13" y="13" width="22" height="2.5" fill="#DAD6CC"/><rect x="19" y="27" width="10" height="11" fill="#DAD6CC"/></svg></span>Large can (#10 can or a clean paint can) — the body</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="26" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="10" y="16" width="12" height="2.2" fill="#DAD6CC"/><rect x="26" y="16" width="12" height="2.2" fill="#DAD6CC"/></svg></span>Smaller cans — one for the vertical chimney, one for the sideways feed tube</td><td>×2</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 41q19-24 38 0z" fill="#3D4A5C"/><circle cx="19" cy="33" r="1.8" fill="#DAD6CC"/><circle cx="27" cy="29" r="1.8" fill="#DAD6CC"/><circle cx="30" cy="36" r="1.8" fill="#DAD6CC"/></svg></span>Ash, sand, or dirt — insulation to pack between the tubes and the body</td><td>1 fill</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="11" width="30" height="26" fill="#3D4A5C"/><rect x="16" y="11" width="3.5" height="26" fill="#DAD6CC"/><rect x="22.5" y="11" width="3.5" height="26" fill="#DAD6CC"/><rect x="29" y="11" width="3.5" height="26" fill="#DAD6CC"/></svg></span>A few sticks or a grate — a pot stand for the top</td><td>×1</td></tr>
+      <tr><td>Large can (#10 can or a clean paint can) — the body</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="7" width="22" height="34" rx="2" fill="#3D4A5C"/><rect x="13" y="13" width="22" height="2.5" fill="#DAD6CC"/><rect x="19" y="27" width="10" height="11" fill="#DAD6CC"/></svg></span>×1</td></tr>
+      <tr><td>Smaller cans — one for the vertical chimney, one for the sideways feed tube</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="26" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="10" y="16" width="12" height="2.2" fill="#DAD6CC"/><rect x="26" y="16" width="12" height="2.2" fill="#DAD6CC"/></svg></span>×2</td></tr>
+      <tr><td>Ash, sand, or dirt — insulation to pack between the tubes and the body</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 41q19-24 38 0z" fill="#3D4A5C"/><circle cx="19" cy="33" r="1.8" fill="#DAD6CC"/><circle cx="27" cy="29" r="1.8" fill="#DAD6CC"/><circle cx="30" cy="36" r="1.8" fill="#DAD6CC"/></svg></span>1 fill</td></tr>
+      <tr><td>A few sticks or a grate — a pot stand for the top</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="11" width="30" height="26" fill="#3D4A5C"/><rect x="16" y="11" width="3.5" height="26" fill="#DAD6CC"/><rect x="22.5" y="11" width="3.5" height="26" fill="#DAD6CC"/><rect x="29" y="11" width="3.5" height="26" fill="#DAD6CC"/></svg></span>×1</td></tr>
     </table>
     <ol>
       <li>Cut a hole low in the big can's side for the feed tube, and a hole in its top for the chimney.</li>
@@ -374,9 +378,9 @@
     <p class="makes"><strong>Makes:</strong> a silent, soot-free burner the size of a hockey puck — one can of soup's worth of boiling at a time.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="26" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="10" y="16" width="12" height="2.2" fill="#DAD6CC"/><rect x="26" y="16" width="12" height="2.2" fill="#DAD6CC"/></svg></span>Aluminum soda or beer cans</td><td>×2</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="#3D4A5C"/><circle cx="24" cy="24" r="9.5" fill="none" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>A coin</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8v7l5 5v23a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V17l5-5z" fill="#3D4A5C"/><path d="M24 24c3 4 4.5 6.2 4.5 8.5a4.5 4.5 0 1 1-9 0C19.5 30.2 21 28 24 24z" fill="#DAD6CC"/></svg></span>Alcohol fuel (denatured alcohol, or high-proof spirits)</td><td>1 shot</td></tr>
+      <tr><td>Aluminum soda or beer cans</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="26" y="11" width="12" height="27" rx="2" fill="#3D4A5C"/><rect x="10" y="16" width="12" height="2.2" fill="#DAD6CC"/><rect x="26" y="16" width="12" height="2.2" fill="#DAD6CC"/></svg></span>×2</td></tr>
+      <tr><td>A coin</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="#3D4A5C"/><circle cx="24" cy="24" r="9.5" fill="none" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>×1</td></tr>
+      <tr><td>Alcohol fuel (denatured alcohol, or high-proof spirits)</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8v7l5 5v23a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V17l5-5z" fill="#3D4A5C"/><path d="M24 24c3 4 4.5 6.2 4.5 8.5a4.5 4.5 0 1 1-9 0C19.5 30.2 21 28 24 24z" fill="#DAD6CC"/></svg></span>1 shot</td></tr>
     </table>
     <ol>
       <li>Cut the bottom third off both cans. One becomes the base; the other, trimmed, slides inside it as the inner wall.</li>
@@ -396,9 +400,9 @@
     <p class="makes"><strong>Makes:</strong> a jar candle that burns for days, not hours — the aftermath's reading lamp.</p>
     <table>
       <tr><th>Component</th><th>Count</th></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="5" rx="1.5" fill="#3D4A5C"/><path d="M14 13h20v24a5 5 0 0 1-5 5H19a5 5 0 0 1-5-5z" fill="#3D4A5C"/><rect x="14" y="30" width="20" height="2.5" fill="#DAD6CC"/></svg></span>Glass jar with a wide mouth</td><td>×1</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="11" width="32" height="6" rx="2" fill="#3D4A5C"/><path d="M11 19h26l-2.5 20a3 3 0 0 1-3 2.5h-15A3 3 0 0 1 13.5 39z" fill="#3D4A5C"/></svg></span>Shortening (like Crisco) or any solid cooking fat</td><td>1 jarful</td></tr>
-      <tr><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2c2.5 3.5 3.5 5.5 3.5 7.5a3.5 3.5 0 1 1-7 0C20.5 6.5 21.5 4.5 24 2z" fill="#3D4A5C"/><rect x="23" y="12" width="2" height="4" fill="#3D4A5C"/><rect x="15" y="16" width="18" height="27" rx="2" fill="#3D4A5C"/></svg></span>Candle wick, or a strip of cotton cloth</td><td>×1</td></tr>
+      <tr><td>Glass jar with a wide mouth</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="5" rx="1.5" fill="#3D4A5C"/><path d="M14 13h20v24a5 5 0 0 1-5 5H19a5 5 0 0 1-5-5z" fill="#3D4A5C"/><rect x="14" y="30" width="20" height="2.5" fill="#DAD6CC"/></svg></span>×1</td></tr>
+      <tr><td>Shortening (like Crisco) or any solid cooking fat</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="11" width="32" height="6" rx="2" fill="#3D4A5C"/><path d="M11 19h26l-2.5 20a3 3 0 0 1-3 2.5h-15A3 3 0 0 1 13.5 39z" fill="#3D4A5C"/></svg></span>1 jarful</td></tr>
+      <tr><td>Candle wick, or a strip of cotton cloth</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2c2.5 3.5 3.5 5.5 3.5 7.5a3.5 3.5 0 1 1-7 0C20.5 6.5 21.5 4.5 24 2z" fill="#3D4A5C"/><rect x="23" y="12" width="2" height="4" fill="#3D4A5C"/><rect x="15" y="16" width="18" height="27" rx="2" fill="#3D4A5C"/></svg></span>×1</td></tr>
     </table>
     <ol>
       <li>Pack the fat into the jar, firm, with no air pockets.</li>
