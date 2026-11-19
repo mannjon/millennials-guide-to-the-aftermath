@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic Medical, Explained — The Millennial's Guide to the Aftermath</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #5B534B;
+    color: #F4F1EA;
+    font-family: Futura, "Century Gothic", "Trebuchet MS", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 20px 56px; }
+  .cover {
+    margin: -32px -20px 0;
+    padding: 44px 24px 38px;
+    text-align: center;
+    background: #655C52;
+  }
+  .logo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .geo { display: block; width: 300px; max-width: 90%; height: auto; margin: 26px auto 4px; }
+  .dont-panic {
+    margin: 12px 0 6px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #F4F1EA;
+  }
+  .redrule { width: 64px; height: 6px; background: #C62F2F; margin: 14px auto; }
+  h1 { margin: 0; font-size: 27px; font-weight: 600; color: #F4F1EA; }
+  .series {
+    margin: 10px 0 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #CFC8BA;
+  }
+  .entry { margin-top: 44px; }
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    border-bottom: 3px solid #C62F2F;
+    padding-bottom: 8px;
+  }
+  p, li { font-size: 17px; }
+  ul, ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  .rule {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+  }
+  .rule strong { color: #F0766B; }
+  .real {
+    border-left: 5px solid #C62F2F;
+    padding: 4px 0 4px 14px;
+    margin: 14px 0;
+  }
+  .real strong { color: #F0766B; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td {
+    border: 2px solid #CFC8BA;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  th { background: #3E3833; color: #F4F1EA; font-weight: 600; }
+  figure.diagram {
+    margin: 18px 0;
+    background: #F4F1EA;
+    border: 3px solid #3E3833;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 10px 10px 0 #C62F2F;
+  }
+  figure.diagram svg { display: block; width: 100%; height: auto; }
+  figure.diagram figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #55504a;
+    text-align: center;
+  }
+  .recipe {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .recipe h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #F0766B;
+  }
+  .recipe .makes { margin: 0 0 6px; }
+  a { color: #F0766B; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #CFC8BA;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @media print {
+    .entry { page-break-inside: avoid; }
+    figure.diagram { page-break-inside: avoid; }
+  }
+  .tile-ic { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #DAD6CC; border-radius: 3px; vertical-align: middle; margin-right: 10px; }
+  .tile-ic .ing { width: 26px; height: 26px; }
+  .recipe table { background: #DAD6CC; box-shadow: 4px 4px 8px rgba(0,0,0,0.35); }
+  .recipe td { color: #38332C; }
+  .recipe td:last-child { white-space: nowrap; }
+  .scav-ic { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #DAD6CC; border-radius: 3px; vertical-align: middle; margin-right: 10px; }
+  .scav-ic svg { width: 26px; height: 26px; }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo: a thumbs-up hand on a ringed planet, with a circle holding a medical cross">
+      <defs>
+        <clipPath id="logoDiscClip"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="logoFrontClip"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#C62F2F" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#3E3833"/>
+      <g clip-path="url(#logoDiscClip)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#C62F2F" stroke-width="26" clip-path="url(#logoFrontClip)"/>
+      <circle cx="490" cy="470" r="105" fill="#C62F2F" stroke="#3E3833" stroke-width="12"/>
+      <g transform="translate(490 470)">
+        <path fill="#3E3833" d="M-16 -52 H16 V-16 H52 V16 H16 V52 H-16 V16 H-52 V-16 H-16 Z"/>
+      </g>
+    </svg>
+    <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#C62F2F"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#3E3833"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+    <p class="dont-panic">DON'T PANIC</p>
+    <div class="redrule"></div>
+    <h1>Basic Medical, Explained</h1>
+    <p class="series">The Millennial's Guide to the Aftermath</p>
+  </section>
+
+  <section class="entry">
+    <h2>Start here: you are the help now</h2>
+    <p>The ambulance is not coming. Neither is the urgent-care clinic, the pharmacy refill, or the surgeon. Whatever happens to the people around you — a cut hand, a broken ankle, a fever that won't quit — the first hour of care is yours, and very often the only care there is.</p>
+    <p>That sounds terrifying until you learn the secret this whole book is built on: <strong>most of basic medical is simple, and simple done early beats perfect done never.</strong> Pressure stops bleeding. Clean water prevents more deaths than any drug. A splint is two sticks and something to tie them with. Ordinary people did all of this for thousands of years before hospitals existed, and the basics have not changed — because bodies have not changed.</p>
+    <p>This book assumes you have never treated anything worse than a scraped knee. It teaches the order to do things in, the handful of skills that cover most of what actually happens, what to scavenge, and — just as honestly — where your skill ends. Knowing that last part is not giving up. It is part of the medicine.</p>
+    <div class="rule">
+      <p><strong>The whole book in one sentence:</strong> Stop the dying first, keep it clean, keep them warm, and do the simple thing early.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>1. The first minute: the order that saves lives</h2>
+    <p>When someone is hurt, your brain will want to do everything at once. Don't. There is an order, it is short, and it exists because some problems kill in minutes while others can wait an hour. Work the order, top to bottom, every time:</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 168" role="img" aria-label="The first minute, in order: one, is the scene safe. Two, shout and shake, are they awake. Three, airway, is it open. Four, breathing, are they breathing. Five, bleeding, stop any big bleeding. Then everything else.">
+        <defs><marker id="marr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#3E3833"/></marker></defs>
+        <g font-family="inherit" font-size="13.5" font-weight="700" fill="#3E3833" text-anchor="middle">
+          <rect x="4" y="26" width="104" height="62" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <text x="56" y="52">1 · SCENE</text><text x="56" y="71" font-size="11" font-weight="400">is it safe?</text>
+          <rect x="128" y="26" width="104" height="62" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <text x="180" y="52">2 · SHOUT</text><text x="180" y="71" font-size="11" font-weight="400">are they awake?</text>
+          <rect x="252" y="26" width="104" height="62" fill="#C62F2F" stroke="#3E3833" stroke-width="2.5"/>
+          <text x="304" y="52" fill="#F4F1EA">3 · AIRWAY</text><text x="304" y="71" font-size="11" font-weight="400" fill="#F4F1EA">is it open?</text>
+          <rect x="376" y="26" width="104" height="62" fill="#C62F2F" stroke="#3E3833" stroke-width="2.5"/>
+          <text x="428" y="52" fill="#F4F1EA">4 · BREATHING</text><text x="428" y="71" font-size="11" font-weight="400" fill="#F4F1EA">are they?</text>
+          <rect x="500" y="26" width="96" height="62" fill="#C62F2F" stroke="#3E3833" stroke-width="2.5"/>
+          <text x="548" y="52" fill="#F4F1EA">5 · BLEEDING</text><text x="548" y="71" font-size="11" font-weight="400" fill="#F4F1EA">stop the big ones</text>
+        </g>
+        <g stroke="#3E3833" stroke-width="2.5" marker-end="url(#marr)">
+          <path d="M108 57 H124" fill="none"/><path d="M232 57 H248" fill="none"/>
+          <path d="M356 57 H372" fill="none"/><path d="M480 57 H496" fill="none"/>
+        </g>
+        <text x="300" y="118" font-size="12.5" fill="#55504a" text-anchor="middle">Minutes matter in the red boxes. Everything else — splints, bandages, comfort — comes after.</text>
+        <text x="300" y="140" font-size="12.5" fill="#55504a" text-anchor="middle">A hurt rescuer helps nobody: if the scene isn't safe, make it safe or wait.</text>
+      </svg>
+      <figcaption>The first minute — scene, shout, airway, breathing, bleeding</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Scene safe.</strong> Fire, traffic, a leaning wall, a live wire, an angry animal — check before you kneel down. You cannot help anyone as a second patient.</li>
+      <li><strong>Shout and shake.</strong> "Hey — can you hear me?" Shake the shoulders firmly. Awake and talking is wonderful news: a talking person has an open airway and is breathing.</li>
+      <li><strong>Airway.</strong> Not awake? Tip the head back gently, lift the chin, look in the mouth. Vomit, blood, a broken tooth — sweep it out with a finger wrapped in cloth. The tongue is the most common blockage; head-tilt fixes it.</li>
+      <li><strong>Breathing.</strong> Watch the chest for ten seconds. No breathing, or weird occasional gasps that aren't real breaths? That is a heart problem — Entry 7, compressions, now.</li>
+      <li><strong>Bleeding.</strong> Breathing but bleeding hard — spurting, pooling, soaking through cloth? Entry 3, now. Big bleeding kills in minutes; it outranks everything below it on this list.</li>
+    </ul>
+    <div class="real">
+      <p><strong>Then, and only then,</strong> work the rest: broken bones, wounds, burns, shock watch (Entry 8). Send someone for supplies and help while you work — a shouted, specific order ("You — red shirt — bring the first aid kit from the kitchen") beats a general cry for help every time.</p>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>2. The words: every term on one page</h2>
+    <p>Medical talk sounds like a foreign language because it is one — Latin, mostly. Here is the working vocabulary of this book, in plain words:</p>
+    <table>
+      <tr><th>Word</th><th>What it actually means</th></tr>
+      <tr><td><strong>Airway</strong></td><td>The tube from mouth and nose to lungs. If it's blocked, nothing else matters — they can't breathe around it.</td></tr>
+      <tr><td><strong>Artery / vein</strong></td><td>Arteries carry blood away from the heart under pressure — arterial bleeding spurts and is bright red. Veins carry it back — venous bleeding flows steady and darker. Spurting = minutes matter.</td></tr>
+      <tr><td><strong>Tourniquet</strong></td><td>A band cranked tight above a wound to stop all blood flow to a limb. A limb-saver that risks the limb to save the life. Entry 3.</td></tr>
+      <tr><td><strong>Shock</strong></td><td>Not fright — a failing circulation. The body isn't moving enough blood to keep the organs fed. Pale, cold, sweaty, fast pulse, confused. Entry 8. Shock kills quietly.</td></tr>
+      <tr><td><strong>Infection</strong></td><td>Germs moving in. Signs: spreading redness, warmth, swelling, pain that grows instead of shrinking, pus, red streaks, fever. Entry 4 teaches the watch.</td></tr>
+      <tr><td><strong>Sepsis</strong></td><td>Infection that has gone body-wide: fever or shivering, confusion, fast breathing, feeling like death. This is a Stop Sign (Entry 17) — it outruns home care fast.</td></tr>
+      <tr><td><strong>Fracture</strong></td><td>A broken bone. Closed = skin intact. Open = bone or wound connects to the break — much higher infection risk, treat the wound first.</td></tr>
+      <tr><td><strong>Sprain / strain</strong></td><td>Sprain = stretched or torn ligament at a joint. Strain = the same injury in a muscle or tendon. Both swell and bruise; neither is a break, but a bad sprain can look exactly like one. When in doubt, splint it like a break.</td></tr>
+      <tr><td><strong>Dislocation</strong></td><td>A bone popped out of its joint — the joint looks wrong and won't move. Splint it as it lies. Don't pop it back unless you've been taught how; fingers are the one exception many field guides allow, and this book says splint and wait.</td></tr>
+      <tr><td><strong>Splint</strong></td><td>Anything rigid tied on to keep a limb still. Still = less pain, less bleeding, less damage. Entry 5.</td></tr>
+      <tr><td><strong>Irrigation</strong></td><td>Washing a wound with lots of clean water under a little pressure. The single most infection-preventing act in this book.</td></tr>
+      <tr><td><strong>Dressing / bandage</strong></td><td>Dressing = the clean layer that touches the wound. Bandage = the wrap that holds it on. Different jobs, often confused.</td></tr>
+      <tr><td><strong>Dehydration</strong></td><td>The body's bucket running dry — from vomiting, diarrhea, fever, heat, or just not drinking. Dry mouth, dark pee or no pee, dizziness, sunken eyes in kids. Entry 9.</td></tr>
+      <tr><td><strong>ORS</strong></td><td>Oral rehydration salts — water with the right pinch of salt and sugar to pull fluid back into the body. A recipe, not a product: Entry 16.</td></tr>
+      <tr><td><strong>Dosage / mg</strong></td><td>How much of a medicine, in milligrams. More is not stronger-better; more is how helpful drugs become poisons. Entry 12.</td></tr>
+      <tr><td><strong>Triage</strong></td><td>Sorting the hurt by who needs help first when there are more patients than hands. Hardest word in the book. Entry 15.</td></tr>
+    </table>
+    <div class="rule">
+      <p><strong>The pattern underneath all of it:</strong> bodies fail in a short list of ways — no air, no blood flow, no fluid, germs moving in, parts broken or burned. Every skill in this book answers one of those five.</p>
+    </div>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 170" role="img" aria-label="The five ways bodies fail: air, blood, fluid, germs, and broken parts — one box for each.">
+        <g>
+          <rect x="10" y="25" width="108" height="100" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M28 60 h44 M28 78 h58 M28 96 h44" stroke="#C62F2F" stroke-width="6" stroke-linecap="round"/>
+          <text x="64" y="150" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">AIR</text>
+          <rect x="130" y="25" width="108" height="100" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M184 45 c-12 18 -18 27 -18 36 a18 18 0 0 0 36 0 c0 -9 -6 -18 -18 -36z" fill="#C62F2F"/>
+          <text x="184" y="150" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">BLOOD</text>
+          <rect x="250" y="25" width="108" height="100" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M282 45 h44 l-6 55 a8 8 0 0 1 -8 7 h-16 a8 8 0 0 1 -8 -7z" fill="none" stroke="#3E3833" stroke-width="4"/>
+          <path d="M285 68 h38 l-2 20 h-34z" fill="#C62F2F"/>
+          <text x="304" y="150" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">FLUID</text>
+          <rect x="370" y="25" width="108" height="100" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <g fill="#C62F2F"><circle cx="400" cy="55" r="6"/><circle cx="430" cy="50" r="5"/><circle cx="450" cy="70" r="6"/><circle cx="415" cy="80" r="5"/><circle cx="440" cy="95" r="5"/><circle cx="400" cy="98" r="4"/></g>
+          <text x="424" y="150" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">GERMS</text>
+          <rect x="490" y="25" width="100" height="100" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M508 62 h28 l6 12 -6 12 h-28 l-6 -12z" fill="none" stroke="#3E3833" stroke-width="4"/>
+          <path d="M540 58 l-8 16 8 16" fill="none" stroke="#C62F2F" stroke-width="4"/>
+          <text x="540" y="150" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">BROKEN</text>
+        </g>
+      </svg>
+      <figcaption>The five failures. Everything in this book is an answer to one of these boxes.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>3. Bleeding: pressure is the medicine</h2>
+    <p>Almost all bleeding — even bad bleeding — stops the same unglamorous way: <strong>press on it, hard, and don't let up.</strong> Every fancy tool in this entry is a backup for when pressure alone isn't winning.</p>
+    <ol>
+      <li><strong>Press.</strong> A pad of the cleanest cloth you have, your hand flat over the wound, lean your weight in. If blood soaks through, add more cloth on top — never peel the first layer off; you'd tear away the clot that's forming.</li>
+      <li><strong>Pack deep wounds.</strong> A deep, gaping wound — especially where a limb meets the body — gets packed: push clean cloth (gauze if you have it) down into the wound with your fingers, filling it, then press on top for a full three minutes by the clock. It feels wrong. It works.</li>
+      <li><strong>Raise it if you can.</strong> A bleeding limb held above the heart bleeds slower. Pressure first, elevation as a helper — never instead.</li>
+      <li><strong>Hold for ten minutes.</strong> Peeking every thirty seconds restarts the clock. Press, wait, then look.</li>
+    </ol>
+    <div class="rule">
+      <p><strong>The tourniquet rule:</strong> blood spurting in pulses, a limb partly torn, or pressure failing on an arm or leg — that's tourniquet time, and minutes count. On an arm or leg only, never the neck or torso. Put it on, crank it until the bleeding stops, write the time on it, and <strong>never loosen it</strong> to check. Loosening kills. Once it's on, it's a doctor's problem now — or time's.</p>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 258" role="img" aria-label="A tourniquet on a limb. The band sits two to three inches above the wound, never on a joint. A windlass stick twists the band tight until bleeding stops, then gets tied off. Write the time on the band.">
+        <rect x="60" y="86" width="480" height="72" rx="34" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <path d="M470 100 L496 122 L470 144 L452 122 Z" fill="#C62F2F"/>
+        <text x="474" y="170" font-size="12" fill="#3E3833" text-anchor="middle">WOUND</text>
+        <rect x="238" y="74" width="30" height="96" fill="#3E3833"/>
+        <rect x="206" y="106" width="94" height="13" rx="6" fill="#3E3833" transform="rotate(-14 253 112)"/>
+        <path d="M300 66 L330 40" stroke="#3E3833" stroke-width="2.5"/>
+        <text x="336" y="38" font-size="12.5" font-weight="700" fill="#3E3833">WINDLASS — twist till it stops</text>
+        <path d="M253 176 L253 196" stroke="#3E3833" stroke-width="2.5"/>
+        <text x="300" y="214" font-size="12.5" font-weight="700" fill="#3E3833" text-anchor="middle">BAND — 2–3 inches above the wound, never on a joint</text>
+        <text x="90" y="60" font-size="12.5" fill="#3E3833">Write the TIME on the band or the forehead.</text>
+        <text x="300" y="238" font-size="12.5" fill="#3E3833" text-anchor="middle">A belt alone is too stretchy — a wide band + a stick to twist is the tool.</text>
+      </svg>
+      <figcaption>The tourniquet — above the wound, cranked tight, timed, never loosened</figcaption>
+    </figure>
+    <ul>
+      <li><strong>How tight?</strong> Tighter than you think. A tourniquet that merely slows the flow can make bleeding worse by letting blood in but not out. Crank until bleeding stops, then a quarter-turn more. It will hurt. Hurting is not a reason to loosen it.</li>
+      <li><strong>Two tourniquets?</strong> If blood still flows past the first, put a second one just above it. This is a known thing, not a failure.</li>
+      <li><strong>Nosebleeds:</strong> sit up, lean <em>forward</em>, pinch the soft part of the nose, ten minutes by the clock. Lean back and they swallow blood and vomit it later — forward, always.</li>
+      <li><strong>Impaled objects stay in.</strong> A knife, a shard, a branch — pulling it out opens the hole it was plugging. Pad around it, hold it still, bandage over everything.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 230" role="img" aria-label="Packing a deep wound: cloth pushed into the gap in the skin, filling it completely, then hard pressure on top.">
+        <rect x="60" y="95" width="480" height="55" rx="8" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <path d="M262 95 l14 40 a10 10 0 0 0 10 6 h28 a10 10 0 0 0 10 -6 l14 -40z" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <path d="M276 128 q12 -14 24 0 q12 14 24 0" fill="none" stroke="#C62F2F" stroke-width="6"/>
+        <path d="M300 30 v44" stroke="#3E3833" stroke-width="5"/>
+        <path d="M288 62 l12 16 12 -16" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <rect x="252" y="8" width="96" height="22" rx="6" fill="#C62F2F"/>
+        <text x="300" y="24" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">PUSH CLOTH IN</text>
+        <text x="120" y="185" font-size="13" fill="#3E3833">Fill the whole hole — no empty corners.</text>
+        <text x="120" y="207" font-size="13" fill="#3E3833">Then hard pressure on top, 3 full minutes by the clock.</text>
+      </svg>
+      <figcaption>Packing a deep wound: cloth into the hole until it is full, then press and do not peek.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>4. Wounds: clean beats clever</h2>
+    <p>Once bleeding is stopped, a wound's whole future is decided by one thing: <strong>how clean you get it now.</strong> Infection is the wound complication that actually kills people in a world without antibiotics on tap — and it is mostly preventable with water.</p>
+    <ol>
+      <li><strong>Wash your hands first.</strong> Soap, water, thirty seconds. You are about to put your hands in someone's insides; don't bring your own germs to the meeting. Gloves if you have them (Entry 14).</li>
+      <li><strong>Irrigate — a lot.</strong> Clean water (drinking-clean; see <em>Safe Water Management, Explained</em>), poured or squeezed over and through the wound with a little pressure. A squeeze bottle with a pinhole in the cap is perfect (Entry 16). Use a full litre on a dirty wound, more if it needs it. Dirt, grit, and gravel left in a wound are infection with a head start.</li>
+      <li><strong>Pick out what's left.</strong> Tweezers, boiled or flamed clean. If it won't come out with gentle irrigation and tweezers and it isn't glass or metal near something vital, leaving a small deep speck and watching the wound beats digging a bigger hole. Judgment call — make it consciously.</li>
+      <li><strong>Close it — or don't.</strong> Clean, straight, recent cuts whose edges meet easily: close with closure strips, medical tape butterflies, or skin glue across the top (never glue <em>inside</em> a wound). Dirty wounds, bites, punctures, anything more than a few hours old, anything already angry: <strong>leave open.</strong> A closed dirty wound is an infection in a sealed jar. Open wounds drain; draining is healing.</li>
+      <li><strong>Dress it.</strong> A clean dressing on the wound (a sanitary pad is an excellent field dressing), a bandage to hold it, snug not tight. Change it daily, or sooner if it soaks through or smells.</li>
+    </ol>
+    <div class="rule">
+      <p><strong>The infection watch — check every dressing change:</strong> pain growing instead of shrinking · redness spreading (mark the edge with a pen and watch it move) · swelling up, not down · pus · red streaks crawling from the wound · fever. Any two = this wound is losing. Re-wash it, leave it open, rest it, and read Entry 17.</p>
+    </div>
+    <ul>
+      <li><strong>Bites are the dirtiest wounds there are</strong> — human bites worst of all, then cats, then dogs. Irrigate like you mean it (two litres), never close them, and watch them like a fire in dry grass.</li>
+      <li><strong>Punctures</strong> (nails, thorns, splinters through shoes) carry dirt deep where water can't reach. Soak, watch, and treat any foot puncture as guilty until proven innocent.</li>
+      <li><strong>Tetanus is real and preventable only beforehand.</strong> If anyone knows their last tetanus shot was within ten years, good. If not — you can't fix that now; just clean wounds extra well and know the risk exists.</li>
+      <li><strong>Honey is a legitimate wound dressing</strong> — it's antibacterial, keeps a wound moist, and predates every pharmacy. A thin smear under a clean dressing is old medicine that still works. Not for infants, and not instead of cleaning.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Left: flushing a wound with a squirting bottle. Right: a clean straight cut closed with strips, versus a dirty jagged wound left open.">
+        <path d="M60 130 h200" stroke="#3E3833" stroke-width="4"/>
+        <path d="M138 130 l8 26 a8 8 0 0 0 8 5 h12 a8 8 0 0 0 8 -5 l8 -26" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <g transform="translate(96 38) rotate(24)">
+          <rect x="-16" y="0" width="32" height="58" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <rect x="-6" y="-14" width="12" height="14" fill="#3E3833"/>
+        </g>
+        <path d="M118 92 l26 30 M132 84 l24 34 M146 80 l20 36" stroke="#C62F2F" stroke-width="4" stroke-linecap="round"/>
+        <text x="60" y="196" font-size="13" font-weight="700" fill="#3E3833">FLUSH IT — a full bottle, into every corner</text>
+        <text x="60" y="218" font-size="13" fill="#3E3833">Dirt left in is a guaranteed infection.</text>
+        <path d="M330 20 v210" stroke="#3E3833" stroke-width="2" stroke-dasharray="5 6"/>
+        <path d="M368 84 h130" stroke="#3E3833" stroke-width="5"/>
+        <path d="M386 66 v36 M420 66 v36 M454 66 v36" stroke="#C62F2F" stroke-width="6"/>
+        <text x="498" y="88" font-size="13" font-weight="700" fill="#3E3833" text-anchor="end">CLOSE IT</text>
+        <text x="498" y="108" font-size="12.5" fill="#3E3833" text-anchor="end">clean, straight, edges kiss</text>
+        <path d="M368 176 l22 -10 18 16 22 -14 18 14 22 -12 28 6" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <text x="498" y="212" font-size="13" font-weight="700" fill="#3E3833" text-anchor="end">LEAVE IT OPEN</text>
+        <text x="498" y="232" font-size="12.5" fill="#3E3833" text-anchor="end">bites, dirt, crushed edges</text>
+      </svg>
+      <figcaption>Wash first, then decide: clean cuts close, dirty wounds stay open and get packed.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>5. Bones and joints: still is the treatment</h2>
+    <p>You cannot set a bone like a surgeon, and you don't need to. Your whole job with a break, sprain, or dislocation is: <strong>keep it still, keep the swelling down, and check that blood is still getting past it.</strong> Still bones hurt less, bleed less, and heal straighter.</p>
+    <div class="rule">
+      <p><strong>The splint rules:</strong> (1) Splint it in the position you found it — don't straighten, don't push bones back. (2) The splint must hold the joint above and the joint below the break still. (3) Pad between splint and skin. (4) Tie it snug, not strangling — and check fingers or toes beyond the splint: pink, warm, and they can feel a touch and wiggle. Check again every hour; swelling can make a good splint too tight.</p>
+    </div>
+    <ul>
+      <li><strong>What makes a splint:</strong> sticks, boards, a rolled magazine, a trekking pole, cardboard folded double — rigid is the only requirement. Padding: clothing, moss in a cloth, a folded towel. Ties: belts, strips of sheet, tape, cord (the rope books earn their keep here).</li>
+      <li><strong>Fingers and toes</strong> can be buddy-taped: the hurt one taped to its healthy neighbour with padding between. The neighbour is the splint.</li>
+      <li><strong>A sling</strong> (Entry 16) plus a swathe — a wide band tying the arm to the body — is the full treatment for most arm and shoulder injuries.</li>
+      <li><strong>Sprains get the quiet treatment:</strong> rest it, cold on it (a wet cloth, cold water, snow in a bag — twenty minutes at a time), a firm wrap, and raise it above the heart when resting. Two days of that fixes most sprains; using it anyway un-fixes them.</li>
+      <li><strong>Ribs:</strong> you can't splint a rib usefully. Pain control, rest, and deep breaths every hour even though it hurts — shallow breathing for days is how pneumonia moves in.</li>
+      <li><strong>The pelvis and the thigh bone</strong> are the dangerous breaks — they can bleed heavily inside where you can't see it. Leg looks shortened or turned wrong, pain in the hip or groin: treat for shock (Entry 8), move them as one piece on a stretcher (Entry 16), and take it very seriously.</li>
+      <li><strong>Open fractures</strong> (bone or deep wound at the break): cover with a clean wet dressing, never push the bone in, splint around it, infection watch at maximum.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 215" role="img" aria-label="A splint: a limb held between two padded boards that run past the joints above and below the break, tied in three places, with fingers checked at the end.">
+        <rect x="70" y="86" width="400" height="34" rx="17" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <rect x="50" y="52" width="440" height="16" rx="6" fill="#C62F2F"/>
+        <rect x="50" y="138" width="440" height="16" rx="6" fill="#C62F2F"/>
+        <rect x="130" y="46" width="18" height="114" fill="#3E3833"/>
+        <rect x="262" y="46" width="18" height="114" fill="#3E3833"/>
+        <rect x="392" y="46" width="18" height="114" fill="#3E3833"/>
+        <text x="60" y="196" font-size="13" fill="#3E3833">Boards run past the joint above AND below the break. Pad everything.</text>
+        <g fill="#F4F1EA" stroke="#3E3833" stroke-width="3"><circle cx="492" cy="92" r="9"/><circle cx="508" cy="103" r="9"/><circle cx="492" cy="114" r="9"/></g>
+        <text x="520" y="70" font-size="12.5" font-weight="700" fill="#3E3833">CHECK:</text>
+        <text x="520" y="90" font-size="12.5" fill="#3E3833">pink?</text>
+        <text x="520" y="110" font-size="12.5" fill="#3E3833">warm?</text>
+        <text x="520" y="130" font-size="12.5" fill="#3E3833">wiggles?</text>
+      </svg>
+      <figcaption>A splint is a cast you build: two boards, three ties, joints locked, fingers checked.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>6. Burns: cool water, then cover</h2>
+    <p>Burn care has one great act and a supporting cast. The great act is immediate and non-negotiable:</p>
+    <div class="rule">
+      <p><strong>Cool running water, twenty minutes.</strong> Not cold, not ice — cool, running, and a full twenty minutes by the clock, even if the burn happened a while ago (it helps up to a few hours after). This single step decides how deep the burn goes. Everything else is after.</p>
+    </div>
+    <ul>
+      <li><strong>Degrees, in plain words:</strong> <em>First</em> — red, painful, no blisters (sunburn). <em>Second</em> — blistered, wet-looking, very painful. <em>Third</em> — white, brown, or charred, and strangely <em>less</em> painful in the middle because the nerves are gone. Less pain in a bad burn is worse news, not better.</li>
+      <li><strong>Size it with a palm.</strong> The patient's own palm (fingers together) is about 1% of their body. More than a few palms of second-degree burn, or any third-degree beyond a coin's size, is serious: fluid loss and infection become the fight (Entry 9 for fluids, Entry 17 for the stop signs).</li>
+      <li><strong>Cover loosely</strong> with the cleanest non-stick thing you have — cling film laid on (not wrapped tight) is genuinely excellent, or a clean wet cloth. Never butter, oil, toothpaste, or any folk grease: they trap heat and feed infection.</li>
+      <li><strong>Blisters stay closed.</strong> Intact skin, even blistered, is the best dressing ever made. A blister that breaks on its own gets treated like an open wound (Entry 4).</li>
+      <li><strong>Rings and watches off, early</strong> — burned limbs swell, and jewellery becomes a tourniquet you didn't choose.</li>
+      <li><strong>Burned airways are a stop sign:</strong> burns on the face, soot in the mouth or nose, singed nose hairs, a hoarse or croaky voice after a fire in an enclosed space — swelling inside the airway can close it within hours. Entry 17.</li>
+      <li><strong>Chemical burns:</strong> brush off dry powder, then flood with water far longer than feels necessary. <strong>Electrical burns:</strong> the skin wound lies — the damage runs deep along the inside. Both go on the serious list.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="The three burn depths shown as skin cross-sections: first degree reddens the top layer, second degree goes deeper and blisters, third degree burns through every layer.">
+        <g>
+          <rect x="30" y="50" width="160" height="22" fill="#E8C9A0" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="30" y="72" width="160" height="48" fill="#E8DFD2" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="30" y="120" width="160" height="30" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="30" y="50" width="160" height="22" fill="#C62F2F" opacity="0.55"/>
+          <text x="110" y="182" font-size="13.5" font-weight="700" fill="#3E3833" text-anchor="middle">FIRST</text>
+          <text x="110" y="204" font-size="12.5" fill="#3E3833" text-anchor="middle">red, hurts, no blister</text>
+          <text x="110" y="224" font-size="12.5" fill="#3E3833" text-anchor="middle">sunburn rules</text>
+        </g>
+        <g>
+          <rect x="220" y="50" width="160" height="22" fill="#E8C9A0" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="220" y="72" width="160" height="48" fill="#E8DFD2" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="220" y="120" width="160" height="30" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <path d="M258 50 a22 16 0 0 1 44 0z" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="220" y="50" width="160" height="46" fill="#C62F2F" opacity="0.55"/>
+          <text x="300" y="182" font-size="13.5" font-weight="700" fill="#3E3833" text-anchor="middle">SECOND</text>
+          <text x="300" y="204" font-size="12.5" fill="#3E3833" text-anchor="middle">blisters, weeps, hurts</text>
+          <text x="300" y="224" font-size="12.5" fill="#3E3833" text-anchor="middle">a wound — dress it</text>
+        </g>
+        <g>
+          <rect x="410" y="50" width="160" height="22" fill="#E8C9A0" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="410" y="72" width="160" height="48" fill="#E8DFD2" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="410" y="120" width="160" height="30" fill="#F4F1EA" stroke="#3E3833" stroke-width="2.5"/>
+          <rect x="410" y="50" width="160" height="100" fill="#3E3833" opacity="0.8"/>
+          <text x="490" y="182" font-size="13.5" font-weight="700" fill="#3E3833" text-anchor="middle">THIRD</text>
+          <text x="490" y="204" font-size="12.5" fill="#3E3833" text-anchor="middle">white or charred, numb</text>
+          <text x="490" y="224" font-size="12.5" fill="#3E3833" text-anchor="middle">worst — numb lies</text>
+        </g>
+      </svg>
+      <figcaption>Burn depth at a glance. Blister means wound rules; numb and white means the worst kind.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>7. Choking, breathing, and the heart</h2>
+    <p><strong>Choking.</strong> Someone who can cough or talk has air moving — encourage the cough, don't intervene yet. Silent, hands at the throat, can't cough effectively: act.</p>
+    <ol>
+      <li>Lean them forward. Five hard slaps between the shoulder blades with the heel of your hand.</li>
+      <li>Still stuck? Stand behind, fist above the belly button, other hand over it, and pull sharply in and up. Five times.</li>
+      <li>Alternate fives until it clears or they go limp. Limp = lower them down and start compressions (below) — compressions can also pop the blockage loose.</li>
+      <li>Kids under one: face-down along your forearm, five back slaps, then face-up, five chest pushes with two fingers. Nothing blindly swept into a small mouth — if you can't see it, don't reach for it.</li>
+    </ol>
+    <p><strong>The recovery position.</strong> Breathing but unconscious (drunk, head injury, post-seizure): roll them onto their side, top knee bent to prop them, head tipped so vomit and spit drain out, not in. An unconscious person flat on their back is slowly choking on their own tongue and stomach. On their side, the airway mostly guards itself. Then watch their breathing like it's your only job — because it is.</p>
+    <p><strong>Compressions (CPR).</strong> Not breathing, or only gasping: the heart has stopped or is stopping, and your hands become the heart.</p>
+    <div class="rule">
+      <p><strong>Push hard, push fast, don't stop.</strong> Centre of the chest, heel of one hand, other hand on top, arms straight. Push down about two inches (5cm) on an adult, at roughly two pushes a second — the beat of "Stayin' Alive" is not a joke, it's the metronome. Let the chest come fully back up between pushes. Swap pushers every two minutes if you have them; tired pushes get shallow. Keep going until they breathe, help takes over, or you physically cannot. Stopping early to check is how recoverable people are lost — push.</p>
+    </div>
+    <ul>
+      <li><strong>Kids:</strong> same place, one hand (two fingers for a baby), about a third of the chest's depth, same speed.</li>
+      <li><strong>Breaths?</strong> If you're trained and willing, 30 pushes to 2 breaths. If not, pushes alone — continuously — are nearly as good and infinitely better than hesitating. The blood already has oxygen in it; your job is to move it.</li>
+      <li><strong>AEDs</strong> (the shock boxes on walls in offices, gyms, airports): if one exists, use it. It talks you through every step out loud, it will not shock someone who doesn't need it, and it is the single best chance a stopped heart has. Send someone for it while compressions run.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 235" role="img" aria-label="Chest compressions: hands stacked at the center of the chest, pressing two inches deep, 100 to 120 times a minute, letting the chest spring back fully.">
+        <rect x="90" y="55" width="240" height="140" rx="60" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <rect x="196" y="100" width="30" height="52" rx="8" fill="#C62F2F" stroke="#3E3833" stroke-width="3"/>
+        <rect x="186" y="112" width="50" height="26" rx="8" fill="#3E3833"/>
+        <path d="M211 30 v34" stroke="#3E3833" stroke-width="6"/>
+        <path d="M199 52 l12 16 12 -16" fill="none" stroke="#3E3833" stroke-width="6"/>
+        <text x="90" y="222" font-size="13" fill="#3E3833">Center of the chest. Straight arms, shoulders over hands.</text>
+        <rect x="380" y="55" width="180" height="64" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <text x="470" y="84" font-size="15" font-weight="700" fill="#3E3833" text-anchor="middle">2 INCHES DEEP</text>
+        <text x="470" y="106" font-size="12.5" fill="#3E3833" text-anchor="middle">hard surface, real weight</text>
+        <rect x="380" y="131" width="180" height="64" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <text x="470" y="160" font-size="15" font-weight="700" fill="#3E3833" text-anchor="middle">100–120 / MIN</text>
+        <text x="470" y="182" font-size="12.5" fill="#3E3833" text-anchor="middle">and let it spring back</text>
+      </svg>
+      <figcaption>Compressions: center chest, two inches deep, disco tempo, full recoil, no long pauses.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>8. Shock: the quiet killer</h2>
+    <p>Shock is not being scared. Shock is the circulation failing — from blood loss (including bleeding you can't see, inside), dehydration, bad infection, a failing heart, or a severe allergic reaction. It creeps in after injuries that looked survivable and finishes the job while everyone relaxes. Learn its face:</p>
+    <ul>
+      <li>Skin pale, grey, or mottled — and cold and sweaty to the touch</li>
+      <li>Pulse fast and weak; breathing fast and shallow</li>
+      <li>Restless, anxious, confused — or strangely quiet and dull</li>
+      <li>Thirsty, nauseous, dizzy; lips and nail beds pale or blue</li>
+    </ul>
+    <div class="rule">
+      <p><strong>Treating shock:</strong> (1) Treat the cause you can reach — stop the bleeding, splint the break. (2) Lay them flat, legs raised a bit if no leg or spine injury says no. (3) <strong>Keep them warm</strong> — blankets under as well as over; the ground steals heat. Warmth is a shock treatment, not a comfort. (4) Nothing to eat or drink — a shocked gut doesn't work, and surgery-that-isn't-coming isn't the only reason: they may vomit and choke. Moisten lips only. (5) Calm, quiet, still. Fear speeds the heart; your calm is contagious and medicinal.</p>
+    </div>
+    <p><strong>Allergic shock (anaphylaxis)</strong> deserves its own paragraph because it has a specific cure: after a sting, a food, or a medicine — swelling lips or tongue, hives, wheezing, throat closing. If the person has an epinephrine auto-injector (EpiPen), use it: thigh, through clothing, hold ten seconds. It is nearly impossible to use one wrong in a real reaction, and minutes decide. No injector? Antihistamines are a distant second-best; the airway watch from Entry 1 becomes your whole job.</p>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 220" role="img" aria-label="Shock treatment position: the person lies flat with legs raised on a block, blankets under and over them, and nothing to eat or drink.">
+        <path d="M30 168 h540" stroke="#3E3833" stroke-width="4"/>
+        <rect x="380" y="138" width="90" height="30" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <circle cx="96" cy="128" r="21" fill="#E8C9A0" stroke="#3E3833" stroke-width="3"/>
+        <path d="M116 140 h250 l96 -14" fill="none" stroke="#3E3833" stroke-width="16" stroke-linecap="round"/>
+        <path d="M110 118 q130 -22 260 2" fill="none" stroke="#C62F2F" stroke-width="10"/>
+        <path d="M110 152 q130 16 260 0" fill="none" stroke="#C62F2F" stroke-width="10"/>
+        <text x="60" y="60" font-size="13" font-weight="700" fill="#3E3833">FLAT</text>
+        <text x="230" y="60" font-size="13" font-weight="700" fill="#3E3833">BLANKETS UNDER + OVER</text>
+        <text x="420" y="100" font-size="13" font-weight="700" fill="#3E3833">LEGS UP</text>
+        <g transform="translate(520 52)"><rect x="-16" y="-6" width="32" height="24" rx="4" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/><path d="M-16 -16 l32 34 M16 -16 l-32 34" stroke="#C62F2F" stroke-width="4"/></g>
+        <text x="520" y="96" font-size="12.5" fill="#3E3833" text-anchor="middle">nothing</text>
+        <text x="520" y="112" font-size="12.5" fill="#3E3833" text-anchor="middle">by mouth</text>
+      </svg>
+      <figcaption>Shock position: flat, legs raised, warm from both sides, nothing by mouth.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>9. Sick, not hurt: fever, guts, and the bucket running dry</h2>
+    <p>More people will come to you sick than injured. The great killer in this category is not exotic: it's <strong>fluid leaving the body faster than it goes back in.</strong></p>
+    <ul>
+      <li><strong>Diarrhea and vomiting</strong> drain the bucket from both ends. The treatment is unglamorous and it works: small sips, constantly, of ORS (Entry 16) — a few spoonfuls every couple of minutes beats a big glass that comes back up. Keep going for as long as it lasts. A person who is still peeing pale pee is holding their own.</li>
+      <li><strong>Dehydration's warning signs:</strong> very dark pee or none for 8+ hours, dry mouth and no tears, dizziness standing up, sunken eyes, skin that stays tented when pinched (on the back of the hand). In babies: no wet diapers, sunken soft spot, too sleepy to feed. These mean the sips become urgent and constant, with a watcher assigned.</li>
+      <li><strong>Fever</strong> is a symptom, not the disease — it's the body fighting. Treat the misery, not the number: fluids, rest, and a pain/fever medicine from Entry 12 if you have it. Lukewarm sponging if they're miserable. A fever with confusion, a stiff neck, a rash that doesn't fade under a pressed glass, or trouble breathing is not a home fever — Entry 17.</li>
+      <li><strong>Food poisoning vs. something worse:</strong> the whole group ate the same thing and the whole group is sick = food, usually a miserable day or two, treat with fluids. One person, worsening pain moving to the lower right belly, pain when the belly is pressed and released: that's an appendix pattern — no food, no laxatives, rest, and know it's on the serious list.</li>
+      <li><strong>The water rule underlies all of it:</strong> most gut sickness in the aftermath is water-borne. The sick person's fluids, the washing water, the drinking water — <em>Safe Water Management, Explained</em> is a medical book too. Wash hands after every contact; boil what they drink if there's any doubt.</li>
+    </ul>
+    <div class="real">
+      <p><strong>The pee test, your lab of one:</strong> pale yellow and regular = hydrated. Dark and rare = behind. None = emergency pace. It's crude, it's free, and it never lies to you.</p>
+    </div>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 215" role="img" aria-label="The pee chart: four shades from pale straw to dark amber, showing hydrated, keep sipping, behind, and emergency.">
+        <rect x="50" y="30" width="110" height="110" rx="8" fill="#F2E3AC" stroke="#3E3833" stroke-width="3"/>
+        <rect x="183" y="30" width="110" height="110" rx="8" fill="#E3C04A" stroke="#3E3833" stroke-width="3"/>
+        <rect x="316" y="30" width="110" height="110" rx="8" fill="#C07F24" stroke="#3E3833" stroke-width="3"/>
+        <rect x="449" y="30" width="110" height="110" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <text x="504" y="92" font-size="15" font-weight="700" fill="#C62F2F" text-anchor="middle">NONE</text>
+        <text x="105" y="168" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">WINNING</text>
+        <text x="238" y="168" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">KEEP SIPPING</text>
+        <text x="371" y="168" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">BEHIND</text>
+        <text x="504" y="168" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">EMERGENCY</text>
+        <text x="50" y="198" font-size="13" fill="#3E3833">No instruments needed. Dark or absent pee means fluids, now, in small sips.</text>
+      </svg>
+      <figcaption>The pee chart. The cheapest diagnostic in the book — check it at every stop.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>10. Heads, spines, eyes, and teeth</h2>
+    <ul>
+      <li><strong>Head injuries:</strong> knocked out at all, even briefly — that person gets watched for 24 hours. Worsening headache, vomiting more than once, growing sleepiness you can't easily rouse them from, one pupil bigger than the other, clear fluid from nose or ears, a seizure: the injury is still happening inside. Entry 17. Wake them every couple of hours the first night — yes, really; sleep that can't be interrupted is the sign you're watching for.</li>
+      <li><strong>Spines:</strong> a fall, a dive, a crash, with neck or back pain, numbness, weakness, or tingling in arms or legs — that person does not get up, does not get sat up, does not get their neck "tested." Hands on both sides of the head to hold it still, and if they must move (fire, water, vomiting), move them as one rigid piece — log-roll with helpers keeping head, shoulders, and hips in line. A stretcher (Entry 16) with padding and straps is their only vehicle.</li>
+      <li><strong>Eyes:</strong> dust and grit — flush with clean water, lots, from the nose side outward. Chemicals — flush for a full twenty minutes and don't stop early. Something embedded in the eye itself: do not pull it out; pad a cup or ring over the eye so nothing presses on it, cover the other eye too (eyes move together), and that person stays still and calm.</li>
+      <li><strong>Teeth:</strong> a knocked-out adult tooth is a race you can win: hold it by the crown (the white part, never the root), rinse it for two seconds if dirty, and put it back in its socket if the person allows; otherwise keep it in milk, or inside the person's cheek. Hours matter. A chipped tooth with no pain is a someday problem; a toothache with face swelling is a today problem — swelling near the eye or jaw is infection with ambitions (Entry 17).</li>
+      <li><strong>Nosebleeds that won't stop</strong> after two full rounds of pinching (Entry 3), or blood running down the throat despite leaning forward: pack the nose gently with gauze or a tampon — yes, actually good for this one — and keep them sitting forward and quiet.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 200" role="img" aria-label="Checking pupils after a head injury: two eyes with equal pupils is reassuring; one pupil much larger than the other is a danger sign.">
+        <g>
+          <ellipse cx="130" cy="80" rx="52" ry="34" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <circle cx="130" cy="80" r="15" fill="#3E3833"/>
+          <ellipse cx="252" cy="80" rx="52" ry="34" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <circle cx="252" cy="80" r="15" fill="#3E3833"/>
+          <text x="191" y="146" font-size="13.5" font-weight="700" fill="#3E3833" text-anchor="middle">EQUAL — REASSURING</text>
+          <text x="191" y="168" font-size="12.5" fill="#3E3833" text-anchor="middle">both shrink in bright light</text>
+        </g>
+        <g>
+          <ellipse cx="392" cy="80" rx="52" ry="34" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <circle cx="392" cy="80" r="15" fill="#3E3833"/>
+          <ellipse cx="514" cy="80" rx="52" ry="34" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <circle cx="514" cy="80" r="27" fill="#C62F2F"/>
+          <text x="453" y="146" font-size="13.5" font-weight="700" fill="#C62F2F" text-anchor="middle">ONE BLOWN — DANGER</text>
+          <text x="453" y="168" font-size="12.5" fill="#3E3833" text-anchor="middle">pressure inside the skull</text>
+        </g>
+      </svg>
+      <figcaption>The pupil check after any head injury. Equal is good news; one big one is not.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>11. Bites, stings, and the green world's opinions</h2>
+    <ul>
+      <li><strong>Snake bites:</strong> the movies lied to you. Do NOT cut it, suck it, ice it, tourniquet it, or give alcohol. All of those make it worse — some much worse. Do: keep the person still and calm (venom travels with a racing heart and working muscles), keep the bitten limb still and about level with the heart, splint it, mark the edge of the swelling with a pen and the time, and watch breathing. Most snakes are not venomous; most venomous bites are survivable with stillness and time. The panic kills more reliably than the snake.</li>
+      <li><strong>Ticks:</strong> fine tweezers, grab at the skin line, steady pull up — no twisting, no burning, no oil. Clean the spot. A bullseye rash in the following weeks, or fever and aching, means tick-borne illness: note the date, and if you ever find a clinic again, that date is gold.</li>
+      <li><strong>Bees and wasps:</strong> scrape the stinger out sideways (a card edge) rather than pinching it — pinching squeezes the venom sac. Cold pack, watch for the allergic pattern in Entry 8 for a full hour. A sting in the mouth or throat is an airway problem: Entry 1 order applies.</li>
+      <li><strong>Animal bites:</strong> Entry 4's rule — irrigate enormously, never close, watch hard. Add one fear: rabies. Any bite from a wild animal, or a pet acting strangely, where the animal can't be watched for ten days — that is one of the few true race-against-time problems in this book. Clean like your life depends on it (it may), and if any functioning medicine exists anywhere reachable, this is what it's for.</li>
+      <li><strong>Poison ivy, oak, sumac:</strong> the oil is the enemy and it spreads by contact, not by the rash. Wash skin and clothes and tools with soap and water; the rash itself isn't contagious once washed. Cool compresses and time; eyes, mouth, or a swollen-shut face earns it a serious rating.</li>
+      <li><strong>Spider and scorpion stings:</strong> mostly a clean, cold pack, and watch. Two hard exceptions by region: the widow-type (muscle cramping, belly rigidity spreading from the bite) and the recluse-type (a wound that darkens and ulcerates over days). Know what lives where you live — local knowledge is a medical supply.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 235" role="img" aria-label="Snake bite: the do column — keep still, splint it, keep it level, mark the swelling edge and time. The never column — never cut, suck, ice, tie it off, or give alcohol.">
+        <rect x="30" y="25" width="262" height="185" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <text x="54" y="60" font-size="16" font-weight="700" fill="#3E3833">DO</text>
+        <g font-size="13.5" fill="#3E3833">
+          <text x="54" y="92">✓ Keep them still</text>
+          <text x="54" y="120">✓ Splint the limb</text>
+          <text x="54" y="148">✓ Keep it level</text>
+          <text x="54" y="176">✓ Mark swelling + time</text>
+        </g>
+        <rect x="308" y="25" width="262" height="185" rx="8" fill="#F4F1EA" stroke="#C62F2F" stroke-width="3"/>
+        <text x="332" y="60" font-size="16" font-weight="700" fill="#C62F2F">NEVER</text>
+        <g font-size="13.5" fill="#3E3833">
+          <text x="332" y="92">✗ Cut it</text>
+          <text x="332" y="120">✗ Suck it</text>
+          <text x="332" y="148">✗ Ice it or tie it off</text>
+          <text x="332" y="176">✗ Alcohol "for the pain"</text>
+        </g>
+      </svg>
+      <figcaption>Snake bite in two columns. Everything in the movies is in the right-hand one.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>12. The medicine shelf: small boxes, real power, real limits</h2>
+    <p>Scavenged medicine is powerful and finite. The rules that keep it helpful instead of harmful:</p>
+    <ul>
+      <li><strong>Read the label like it's a contract.</strong> Name, strength (mg), dose, timing. Write down what you gave, how much, and when — on paper, taped to the patient if they're out of it. Memory is not a medical record.</li>
+      <li><strong>The two pain workhorses:</strong> <em>Acetaminophen</em> (Tylenol) — fever and pain, gentle on stomachs, but hard on livers past the max dose; the daily ceiling on the label is a cliff, not a guideline. <em>Ibuprofen</em> (Advil/Motrin) — pain, swelling, fever; harder on stomachs and kidneys, take with food and water. They can alternate for bad pain, which is stronger than doubling either. <strong>Aspirin: never for children or teens with fevers</strong> — a rare, real, and deadly reaction. Adults only.</li>
+      <li><strong>Antihistamines</strong> (Benadryl and kin) — allergic reactions, itching, sleep as a side effect you'll sometimes be grateful for. A second-best for anaphylaxis (Entry 8): epinephrine is the cure; these are the backup singers.</li>
+      <li><strong>Expiry dates are guarantees, not cliffs.</strong> A dry tablet kept cool and dark is usually potent well past its date — the date is when the maker stops promising, not when it turns to poison. The exceptions that DO go dangerous or useless: insulin, epinephrine (weakens — still use an expired EpiPen in a real reaction; weak beats none), liquid antibiotics, anything that smells wrong, crumbles, or got wet. When in doubt with a critical drug, doubt wins.</li>
+      <li><strong>Antibiotics — the honest paragraph.</strong> They only work on bacteria, only some bacteria, only in the right drug at the right dose for the full course. A half-course or the wrong pill breeds resistant germs and spends a treasure you can't replace. Reserve them for clear bacterial patterns — a wound infection that's losing despite perfect cleaning (Entry 4), a urinary infection with fever, pneumonia-pattern illness — match the drug to the problem if the label or a reference tells you how, give the full course, and never hand them out for colds, flu, or "just in case." If that paragraph makes you hesitate: good. Hesitation is the correct dose of confidence for antibiotics.</li>
+      <li><strong>Never</strong> give someone else's prescription-only heart, seizure, diabetes, or psychiatric medicine as an experiment, and never take a found pill you cannot identify. An unknown white tablet is not a resource; it's a lottery ticket with the prizes reversed.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 225" role="img" aria-label="Reading a scavenged medicine bottle: the name, the strength in milligrams per pill, the expiry date, and writing down every dose given.">
+        <rect x="70" y="45" width="150" height="160" rx="14" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <rect x="95" y="20" width="100" height="26" rx="6" fill="#3E3833"/>
+        <rect x="88" y="78" width="114" height="96" fill="#FFFFFF" stroke="#3E3833" stroke-width="2.5"/>
+        <text x="145" y="106" font-size="14" font-weight="700" fill="#3E3833" text-anchor="middle">NAME</text>
+        <text x="145" y="132" font-size="13" fill="#3E3833" text-anchor="middle">500 mg</text>
+        <text x="145" y="156" font-size="12" fill="#C62F2F" text-anchor="middle">EXP 2027</text>
+        <g font-size="13" fill="#3E3833">
+          <text x="260" y="100">NAME — what it actually is</text>
+          <text x="260" y="130">500 mg — strength in EACH pill</text>
+          <text x="260" y="160">EXP — expiry; faded label, no dose</text>
+          <text x="260" y="190">WRITE DOWN every dose you give</text>
+        </g>
+        <path d="M202 100 h48 M202 128 h48 M202 156 h48" stroke="#3E3833" stroke-width="2.5"/>
+      </svg>
+      <figcaption>Every scavenged bottle, decoded the same way. No label you can read means no dose you give.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>13. Clean is a treatment</h2>
+    <p>Before antibiotics, before surgery, medicine's biggest leap was soap. In a world where the pharmacy is a memory, cleanliness isn't housekeeping — it's half your formulary.</p>
+    <ul>
+      <li><strong>Hands, constantly.</strong> Soap and water, thirty seconds, before and after every patient contact, after every toilet, before every meal prep. When water is short, the patient's caregiver's hands still get washed — budget water for it like medicine, because it is.</li>
+      <li><strong>Instruments get boiled.</strong> Tweezers, scissors, hemostats: ten minutes in a rolling boil, or held in a flame until they glow and allowed to cool. Between patients, every time, no exceptions for "it looks clean."</li>
+      <li><strong>The sick corner.</strong> Gut-sick patients (Entry 9) get their own cup, their own cloth, their own latrine arrangements if you can manage it, and a caregiver who washes like religion. Most outbreaks in a shelter are plumbing failures, not bad luck.</li>
+      <li><strong>Waste is a medical problem.</strong> Used dressings get burned or buried deep, away from water. Human waste stays far from wells and kitchens — the Water book's distances are medical distances.</li>
+      <li><strong>Your own body is equipment.</strong> A caregiver who collapses from exhaustion or catches the camp's diarrhea treats nobody. Sleep in shifts, eat, drink. Martyrdom is a staffing failure.</li>
+    </ul>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 190" role="img" aria-label="The three cleans: wash hands for thirty seconds, boil instruments for ten minutes, burn or bury dirty dressings.">
+        <g>
+          <rect x="25" y="25" width="170" height="110" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M60 48 h60 M110 40 v14" stroke="#3E3833" stroke-width="5" stroke-linecap="round"/>
+          <g fill="#C62F2F"><circle cx="78" cy="82" r="8"/><circle cx="102" cy="94" r="6"/><circle cx="126" cy="80" r="7"/><circle cx="96" cy="70" r="5"/></g>
+          <text x="110" y="162" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">WASH — 30 SECONDS</text>
+        </g>
+        <g>
+          <rect x="215" y="25" width="170" height="110" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M248 78 h104 l-10 40 a8 8 0 0 1 -8 6 h-68 a8 8 0 0 1 -8 -6z" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+          <path d="M272 62 q6 -10 0 -18 M300 62 q6 -10 0 -18 M328 62 q6 -10 0 -18" stroke="#C62F2F" stroke-width="4" fill="none"/>
+          <text x="300" y="162" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">BOIL — 10 MINUTES</text>
+        </g>
+        <g>
+          <rect x="405" y="25" width="170" height="110" rx="8" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+          <path d="M490 46 c14 20 22 30 22 44 a22 22 0 0 1 -44 0 c0 -14 8 -24 22 -44z" fill="#C62F2F"/>
+          <path d="M490 74 c7 10 10 14 10 21 a10 10 0 0 1 -20 0 c0 -7 3 -11 10 -21z" fill="#F4F1EA"/>
+          <text x="490" y="162" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">BURN OR BURY</text>
+        </g>
+      </svg>
+      <figcaption>The three cleans. Hands, tools, waste — in that order, every single time.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>14. What to scavenge for medical</h2>
+    <p>Medical supplies hide in plain sight — in every workplace first aid kit nobody ever opened, every bathroom cabinet, every school nurse's office:</p>
+    <ul>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="13" width="34" height="24" rx="3" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M17 13v-3a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v3" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M24 19v12M18 25h12" stroke="#C62F2F" stroke-width="4"/></svg></span><strong>First aid kits</strong> — workplaces, schools, buses, boats, gyms. Take the whole box, not the bits you recognize; the thing you skip is the thing you'll need.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="none" stroke="#3E3833" stroke-width="3.5"/><circle cx="24" cy="24" r="5" fill="none" stroke="#3E3833" stroke-width="3"/><path d="M24 11v-4M24 41v-4" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Gauze, dressings, and tape</strong> — pharmacies, clinic store rooms. Take rolls over pads (a roll becomes anything), and every roll of tape you find. Tape is the duct tape of medicine.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="14" width="18" height="28" rx="3" fill="none" stroke="#3E3833" stroke-width="3.5"/><rect x="19" y="7" width="10" height="7" fill="#3E3833"/><path d="M20 26h8M24 22v8" stroke="#C62F2F" stroke-width="3"/></svg></span><strong>Medicines</strong> — bathroom cabinets and pharmacy shelves: pain relievers, antihistamines, anti-diarrhea tablets, hydrocortisone cream, antibiotic ointment. Check dates (Entry 12), keep them dry and together, and take the leaflets too — they're dosing charts.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 35 L33 15M35 37 L15 17" stroke="#3E3833" stroke-width="3.5"/><circle cx="11" cy="39" r="4.5" fill="none" stroke="#3E3833" stroke-width="3"/><circle cx="37" cy="41" r="4.5" fill="none" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Trauma shears and tweezers</strong> — shears cut clothing, boots, and bandages off a patient faster than anything; tweezers pull the world's splinters. Every kit you build (Entry 16) wants both.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 8h9v14l-9 9zM34 8h-9v14l9 9z" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M14 22h20" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Gloves</strong> — nitrile or latex, boxes of them in clinics, tattoo shops, cleaning closets, food service. Blood and gut fluids are how diseases change patients. Gloves are your armour; take hundreds.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 18h24l-2 20a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4z" fill="none" stroke="#3E3833" stroke-width="3.5"/><rect x="10" y="10" width="28" height="7" rx="2" fill="#3E3833"/><path d="M18 27c2-3 4-3 6 0s4 3 6 0" fill="none" stroke="#3E3833" stroke-width="2.5"/></svg></span><strong>Honey</strong> — kitchens and pantries. A real wound dressing (Entry 4) that never expires in any timeframe that matters to you. Take every jar.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="12" width="28" height="24" rx="10" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M17 24h14" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Sanitary pads</strong> — the best mass-produced wound dressing in any store: sterile, absorbent, individually wrapped. Tampons are for noses (Entry 10), not bullet holes — pads are the dressing. Take them all, no embarrassment; embarrassment is not a medical category.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6h12v8l4 6v20a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3V20l4-6z" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M14 30h20" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Superglue</strong> — hardware stores and junk drawers. In a pinch it closes clean, straight cuts across the surface (never inside a wound, never in eyes). Medical skin glue is its politer cousin; the hardware kind stings more and works.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="21" y="6" width="6" height="26" rx="3" fill="none" stroke="#3E3833" stroke-width="3.5"/><circle cx="24" cy="38" r="6" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M24 12v14" stroke="#C62F2F" stroke-width="3"/></svg></span><strong>A thermometer</strong> — one good one, guarded like a weapon. Fever decisions (Entry 9) are guesses without it. Also safety pins, elastic bandages, and any EpiPens you find (check dates; expired still beats none, Entry 8).</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>15. When it's beyond you: the honest entry</h2>
+    <p>Every other book in this series ends its hard parts with skills. This one has to end with honesty: <strong>some injuries and illnesses cannot be fixed in a kitchen, by anyone, and pretending otherwise wastes the one thing the patient still has — time to be comfortable and accompanied.</strong></p>
+    <ul>
+      <li><strong>Recognize the list:</strong> a belly that's rigid as a board with worsening pain · bleeding inside you can't reach · a head injury that keeps darkening (Entry 10's signs) · sepsis marching despite everything (Entry 2) · a chest that's been crushed or pierced with breathing failing. These are beyond field medicine. Saying so out loud is a skill.</li>
+      <li><strong>Triage is the math of too many.</strong> If three people are hurt and you are one pair of hands, you go first to the one who is dying of something you can fix — the big bleed, the blocked airway — not the loudest, not the worst-looking, not your favourite person. The quiet one with the grey face outranks the screaming one with the broken arm. This feels monstrous and is the opposite: it's how the most people live.</li>
+      <li><strong>Comfort is treatment.</strong> Warmth, water on lips, pain medicine if you have it, a hand held, a name used, someone present. When cure leaves the table, care doesn't. Nobody in your group dies alone and untended while you have breath to prevent it — that's a rule of the aftermath, not a technique.</li>
+      <li><strong>Write it down.</strong> Who, what happened, what you did, when. For the next caregiver, for a clinic if one ever reappears, and for the family. The record is part of the care.</li>
+    </ul>
+    <div class="real">
+      <p><strong>And take care of the caregiver.</strong> Losing a patient you fought for will sit in your chest for a long time. That's not weakness and it's not failure — it's the receipt proving you did the job like a person. Eat. Sleep. Talk about it. Then wash your hands and go back to work.</p>
+    </div>
+      <figure class="diagram">
+      <svg viewBox="0 0 600 200" role="img" aria-label="Triage tags: red means first — quiet, grey, big bleeding, trouble breathing. Yellow means can wait — loud, hurting, stable. Green means can help — walking and talking.">
+        <g>
+          <path d="M40 40 h150 v70 l-30 40 h-90 l-30 -40z" fill="#C62F2F"/>
+          <text x="115" y="82" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">FIRST</text>
+          <text x="115" y="106" font-size="12" fill="#FFFFFF" text-anchor="middle">quiet · grey · bleeding</text>
+          <text x="115" y="172" font-size="12.5" fill="#3E3833" text-anchor="middle">silence is the alarm</text>
+        </g>
+        <g>
+          <path d="M225 40 h150 v70 l-30 40 h-90 l-30 -40z" fill="#E3A82F"/>
+          <text x="300" y="82" font-size="16" font-weight="700" fill="#2B2620" text-anchor="middle">WAITS</text>
+          <text x="300" y="106" font-size="12" fill="#2B2620" text-anchor="middle">loud · hurting · stable</text>
+          <text x="300" y="172" font-size="12.5" fill="#3E3833" text-anchor="middle">screaming = breathing</text>
+        </g>
+        <g>
+          <path d="M410 40 h150 v70 l-30 40 h-90 l-30 -40z" fill="#4E7A3A"/>
+          <text x="485" y="82" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">CAN HELP</text>
+          <text x="485" y="106" font-size="12" fill="#FFFFFF" text-anchor="middle">walking · talking</text>
+          <text x="485" y="172" font-size="12.5" fill="#3E3833" text-anchor="middle">your new assistants</text>
+        </g>
+      </svg>
+      <figcaption>Triage tags. Treat in tag order, not in volume order — the quiet ones are dying politely.</figcaption>
+    </figure>
+</section>
+
+  <section class="entry">
+    <h2>16. Field recipes: medical builds</h2>
+    <p>Five builds and mixes that cover most of what walks, limps, or gets carried to your door. Each also lives in <em>The Recipe Compendium, Explained</em>, with all the others.</p>
+
+    <div class="recipe">
+      <h3>Field Recipe · Oral Rehydration Salts (ORS)</h3>
+      <p class="makes"><strong>Makes:</strong> one litre of the fluid that pulls people back from dehydration — the highest-value recipe in this book.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Clean water — boiled, then cooled (Entry 9)</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8v6l3 4v25a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3V15l3-4z" fill="#3D4A5C"/><path d="M17 26h14" stroke="#DAD6CC" stroke-width="3"/></svg></span>1 litre</td></tr>
+        <tr><td>Sugar — level teaspoons, not heaped</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="14" width="12" height="12" fill="#3D4A5C"/><rect x="24" y="14" width="12" height="12" fill="#3D4A5C"/><rect x="17" y="27" width="12" height="12" fill="#3D4A5C"/></svg></span>6 tsp</td></tr>
+        <tr><td>Salt — level half-teaspoon. Measure like it matters; it does</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="16" width="18" height="26" rx="2" fill="#3D4A5C"/><rect x="17" y="8" width="14" height="8" fill="#3D4A5C"/><circle cx="21" cy="11.5" r="1.4" fill="#DAD6CC"/><circle cx="27" cy="11.5" r="1.4" fill="#DAD6CC"/></svg></span>½ tsp</td></tr>
+        <tr><td>A spoon for measuring and stirring</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="16" cy="13" rx="7" ry="9" fill="#3D4A5C"/><path d="M20 20 L34 41" stroke="#3D4A5C" stroke-width="5" stroke-linecap="round"/></svg></span>×1</td></tr>
+      </table>
+      <ol>
+        <li>Dissolve the sugar and salt completely in the water. Cloudy is fine; gritty is not — keep stirring.</li>
+        <li><strong>Taste it.</strong> It should taste like tears — mildly salty, not like the sea. Saltier than tears means too much salt: pour it out and remake it. Too much salt in a dehydrated body is genuinely dangerous; the measuring is the medicine.</li>
+        <li>Serve in small sips, constantly — a few spoonfuls every few minutes for the very sick or small. A big glass at once comes back up; sips stay down.</li>
+        <li>Keep it coming for as long as fluid is being lost, and after, until the pee runs pale (Entry 9).</li>
+        <li>Make it fresh daily. Yesterday's batch, kept covered and cool, is acceptable; three days old is a germ farm wearing a halo.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Splint from Scrap</h3>
+      <p class="makes"><strong>Makes:</strong> a rigid, padded splint for an arm or leg, from whatever the ruins provide (Entry 5's rules, in build form).</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Rigid pieces — sticks, boards, rolled magazine, folded cardboard — long enough to pass the joints above and below</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="16" width="38" height="16" fill="#3D4A5C"/><path d="M9 24h30M12 20c6 2 10-2 16 0" stroke="#DAD6CC" stroke-width="2" fill="none"/></svg></span>×2</td></tr>
+        <tr><td>Padding — clothing, towels, moss in a cloth</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 14c6-4 12 4 18 0s10-3 16 0v20c-6 4-12-4-18 0s-10 3-16 0z" fill="#3D4A5C"/></svg></span>1 layer</td></tr>
+        <tr><td>Ties — belts, strips of sheet, tape, or cord</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="20" width="36" height="8" fill="#3D4A5C"/><rect x="20" y="6" width="8" height="36" fill="#3D4A5C"/></svg></span>3–4</td></tr>
+      </table>
+      <ol>
+        <li>Leave the limb in the position you found it. If a wound is part of the picture, dress it first (Entry 4).</li>
+        <li>Pad the rigid pieces wherever they'll touch skin — extra padding over bony spots and over the break itself.</li>
+        <li>Lay one piece each side of the limb (or one beneath a leg), spanning the joint above and the joint below the injury.</li>
+        <li>Tie above and below the break, snug enough that the splint and limb move as one piece — never tie directly on the break if you can avoid it.</li>
+        <li>Check beyond the splint: fingers or toes pink, warm, can feel and wiggle. Recheck every hour; loosen a tie if they're going pale, cold, or numb.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Stretcher from Poles and Coats</h3>
+      <p class="makes"><strong>Makes:</strong> a rigid stretcher for someone who must not walk — spine watch, pelvis, thigh, or shock (Entries 5, 8, 10).</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Strong poles, longer than the patient — saplings, broom handles doubled, pipes</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="13" width="40" height="6" rx="3" fill="#3D4A5C"/><rect x="4" y="29" width="40" height="6" rx="3" fill="#3D4A5C"/></svg></span>×2</td></tr>
+        <tr><td>Coats or jackets, buttoned or zipped</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M17 7 L7 13 L11 22 L15 19 V41 H33 V19 L37 22 L41 13 L31 7 C31 11 17 11 17 7Z" fill="#3D4A5C"/><path d="M24 12v29" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>2–3</td></tr>
+        <tr><td>Or: one heavy blanket</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="13" width="36" height="22" fill="#3D4A5C"/><path d="M6 21h36M6 28h36" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>×1</td></tr>
+        <tr><td>Rope or straps, to lash and to secure the patient</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="24" r="12" fill="none" stroke="#3D4A5C" stroke-width="4"/><circle cx="20" cy="24" r="5" fill="none" stroke="#3D4A5C" stroke-width="3"/><path d="M29 33 L42 42" stroke="#3D4A5C" stroke-width="4"/></svg></span>2 lengths</td></tr>
+      </table>
+      <ol>
+        <li><strong>Coat method:</strong> button the coats, turn them inside-out-ish, and run a pole through each one's sleeves — the coats become the bed, the poles the rails. <strong>Blanket method:</strong> lay the blanket down, put both poles along its long edges, and roll the edges inward over the poles until the middle is taut.</li>
+        <li>Lash the poles at both ends so nothing can slide or splay.</li>
+        <li><strong>Test it with a healthy volunteer or a heavy load first.</strong> A stretcher that fails does so under the patient, at the worst moment. Bounce it. Trust it only after it earns it.</li>
+        <li>Load the patient as one piece: enough hands, one person calling the lift, spine patients log-rolled (Entry 10). Strap them on gently over hips and chest so a stumble doesn't unload them.</li>
+        <li>Carry low, slow, and level. On slopes, keep the head on the uphill side. Rests are planned, not collapsed into.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Wound Wash Station</h3>
+      <p class="makes"><strong>Makes:</strong> a squeeze-bottle irrigator that turns clean water into wound-cleaning pressure — Entry 4's main tool, on a card.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Plastic bottle with a cap, 1 litre soda bottle is ideal</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8v6l3 4v25a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3V15l3-4z" fill="#3D4A5C"/><path d="M17 26h14" stroke="#DAD6CC" stroke-width="3"/></svg></span>×1</td></tr>
+        <tr><td>A pin, needle, or small nail — for one pinhole</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="12" fill="#3D4A5C"/><circle cx="24" cy="24" r="4" fill="#DAD6CC"/></svg></span>×1</td></tr>
+        <tr><td>Clean water — drinking-clean, boiled and cooled if there's doubt</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c6 9 11 15 11 22a11 11 0 1 1-22 0c0-7 5-13 11-22z" fill="#3D4A5C"/></svg></span>1 litre+</td></tr>
+        <tr><td>Salt, if you want it saline — one level teaspoon per litre</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="15" y="16" width="18" height="26" rx="2" fill="#3D4A5C"/><rect x="17" y="8" width="14" height="8" fill="#3D4A5C"/><circle cx="21" cy="11.5" r="1.4" fill="#DAD6CC"/><circle cx="27" cy="11.5" r="1.4" fill="#DAD6CC"/></svg></span>1 tsp</td></tr>
+      </table>
+      <ol>
+        <li>Heat the pin and push one small hole through the centre of the bottle cap. One hole, small — you want a jet, not a shower.</li>
+        <li>Fill with clean water (salt dissolved in first, if using). Mark the bottle WOUND WASH — NOT DRINKING, because after its first job it isn't.</li>
+        <li>Squeeze firmly over the wound: the jet should be strong enough to lift grit and dirt out. Work from the cleanest part of the wound outward.</li>
+        <li>Budget a full litre for a dirty wound. Refill rather than ration — water is cheaper than infection.</li>
+        <li>Boil the bottle and cap between patients if you can; at minimum, wash, rinse with boiled water, and store it capped.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Sling and Swathe</h3>
+      <p class="makes"><strong>Makes:</strong> a proper arm sling plus the body band that makes it a real treatment — for breaks, sprains, and shoulders (Entry 5).</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>A big triangle of cloth — a sheet or shirt cut square, then folded corner to corner</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 9 L41 39 H8 Z" fill="#3D4A5C"/><circle cx="15" cy="31" r="2.5" fill="#DAD6CC"/></svg></span>×1</td></tr>
+        <tr><td>A wide strip of cloth for the swathe</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="19" width="38" height="10" fill="#3D4A5C"/><path d="M10 24h28" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>×1</td></tr>
+        <tr><td>A safety pin, or a knot that holds</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="12" fill="#3D4A5C"/><circle cx="24" cy="24" r="4" fill="#DAD6CC"/></svg></span>×1</td></tr>
+        <tr><td>Padding for the neck strap — any soft cloth</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 14c6-4 12 4 18 0s10-3 16 0v20c-6 4-12-4-18 0s-10 3-16 0z" fill="#3D4A5C"/></svg></span>×1</td></tr>
+      </table>
+      <ol>
+        <li>Bend the arm as it wants to rest — usually elbow at a right angle, hand resting toward the opposite shoulder. Never force a position; the sling serves the arm, not the other way round.</li>
+        <li>Slide the triangle under the arm: point at the elbow, top corner over the opposite shoulder, bottom corner hanging.</li>
+        <li>Bring the bottom corner up over the arm and tie both corners behind the neck — knot to the side, padded, never on the spine. The hand should sit slightly higher than the elbow, fingers visible.</li>
+        <li>Pin or tuck the point at the elbow so the arm can't slide out the back.</li>
+        <li>Swathe: the wide strip goes around the body over the slinged arm and ties at the side — the arm now rests against the chest and can't swing. Check the fingers: pink, warm, feeling. Recheck hourly, like every splint.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>17. Stop signs</h2>
+    <ul>
+      <li>Bleeding that soaks through two rounds of pressure and packing on an arm or leg. That's a tourniquet (Entry 3) — minutes, not deliberation.</li>
+      <li>The infection pattern turning body-wide: spreading redness plus fever, shivering, confusion, fast breathing. Sepsis outruns home care. Everything you have, now — fluids, warmth, the right antibiotic if you truly have it — and know it may not be enough.</li>
+      <li>A head injury that keeps darkening: harder to rouse, vomiting again and again, one pupil wide, a seizure. There is no kitchen fix for a brain swelling inside a skull. Comfort, side position, watch breathing.</li>
+      <li>Swelling lips or tongue, hives, or wheezing after a sting, a food, or a new medicine. Epinephrine if it exists anywhere in reach. Airway watch if it doesn't.</li>
+      <li>A burned face with soot in the mouth, singed nose hairs, or a hoarse voice. The airway swells shut on a delay. Do not be reassured by how well they're breathing now.</li>
+      <li>A belly rigid as a board, or pain that keeps growing and localizing. Something inside is broken or burst. Nothing by mouth, rest, and honesty (Entry 15).</li>
+      <li>Crushing chest pain in an adult, sweating and grey with it. Heart attack pattern: absolute rest — carry them, don't walk them — and an adult aspirin chewed if they're not allergic and you have one. Half of survival is refusing to let them "just push through it."</li>
+      <li>Face drooping on one side, an arm drifting down, speech gone strange. Stroke. Note the time it started; keep them still, nothing by mouth, side position if they're drowsy.</li>
+      <li>Anyone offering an unidentified found pill as medicine. Unknown pills are not a resource (Entry 12).</li>
+      <li>The moment you think "I'm not sure." That thought is the skill working. Listen to it.</li>
+    </ul>
+    <p>Knowing where your skill ends is most of having the skill.</p>
+  </section>
+
+  <section class="entry">
+    <h2>18. The whole book on one card</h2>
+    <ul>
+      <li>First minute, in order: scene safe, shout, airway, breathing, bleeding. Minutes matter in that order.</li>
+      <li>Pressure stops bleeding. Pack the deep ones. Tourniquet: high, tight, timed, never loosened.</li>
+      <li>Clean water is the medicine — irrigate a litre, close only clean wounds, never close bites.</li>
+      <li>Splint it as you found it, joints above and below, check fingers every hour.</li>
+      <li>Burns: cool running water, twenty minutes. Cover loose. Blisters stay closed.</li>
+      <li>Not breathing: push hard, push fast, in the centre of the chest — and don't stop.</li>
+      <li>Shock: treat the cause, lay them flat, keep them warm, nothing by mouth.</li>
+      <li>Sick mostly means dry: small sips, constantly. ORS = 1 litre water + 6 tsp sugar + ½ tsp salt, no saltier than tears.</li>
+      <li>Wash hands, boil instruments, burn used dressings. Clean is a treatment.</li>
+      <li>Not sure = stop. And knowing where your skill ends is part of the skill.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">All books, A–Z</a></p>
+    <p>The Millennial's Guide to the Aftermath — Basic Medical, Explained</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moving Water, Explained — The Millennial's Guide to the Aftermath</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #5B534B;
+    color: #F4F1EA;
+    font-family: Futura, "Century Gothic", "Trebuchet MS", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 32px 20px 56px; }
+  .cover {
+    margin: -32px -20px 0;
+    padding: 44px 24px 38px;
+    text-align: center;
+    background: #655C52;
+  }
+  .logo { display: block; width: 100%; max-width: 380px; height: auto; margin: 0 auto; }
+  .geo { display: block; width: 300px; max-width: 90%; height: auto; margin: 26px auto 4px; }
+  .dont-panic {
+    margin: 12px 0 6px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #F4F1EA;
+  }
+  .redrule { width: 64px; height: 6px; background: #3E9CC4; margin: 14px auto; }
+  h1 { margin: 0; font-size: 27px; font-weight: 600; color: #F4F1EA; }
+  .series {
+    margin: 10px 0 0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #CFC8BA;
+  }
+  .entry { margin-top: 44px; }
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+    border-bottom: 3px solid #3E9CC4;
+    padding-bottom: 8px;
+  }
+  p, li { font-size: 17px; }
+  ul, ol { padding-left: 24px; }
+  li { margin: 6px 0; }
+  .rule {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+  }
+  .rule strong { color: #7CC4E4; }
+  .real {
+    border-left: 5px solid #3E9CC4;
+    padding: 4px 0 4px 14px;
+    margin: 14px 0;
+  }
+  .real strong { color: #7CC4E4; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td {
+    border: 2px solid #CFC8BA;
+    padding: 8px 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  th { background: #3E3833; color: #F4F1EA; font-weight: 600; }
+  figure.diagram {
+    margin: 18px 0;
+    background: #F4F1EA;
+    border: 3px solid #3E3833;
+    border-radius: 6px;
+    padding: 14px;
+    box-shadow: 10px 10px 0 #3E9CC4;
+  }
+  figure.diagram svg { display: block; width: 100%; height: auto; }
+  figure.diagram figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #55504a;
+    text-align: center;
+  }
+  .recipe {
+    border: 3px solid #F4F1EA;
+    background: #6B6259;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .recipe h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7CC4E4;
+  }
+  .recipe .makes { margin: 0 0 6px; }
+  a { color: #7CC4E4; }
+  footer {
+    margin-top: 48px;
+    text-align: center;
+    color: #CFC8BA;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  @media print {
+    .entry { page-break-inside: avoid; }
+    figure.diagram { page-break-inside: avoid; }
+  }
+  .tile-ic { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #DAD6CC; border-radius: 3px; vertical-align: middle; margin-right: 10px; }
+  .tile-ic .ing { width: 26px; height: 26px; }
+  .recipe table { background: #DAD6CC; box-shadow: 4px 4px 8px rgba(0,0,0,0.35); }
+  .recipe td { color: #38332C; }
+  .recipe td:last-child { white-space: nowrap; }
+  .scav-ic { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: #DAD6CC; border-radius: 3px; vertical-align: middle; margin-right: 10px; }
+  .scav-ic svg { width: 26px; height: 26px; }
+</style>
+</head>
+<body>
+<main>
+  <section class="cover">
+    <svg class="logo" viewBox="0 0 640 640" role="img" aria-label="The Guide logo: a thumbs-up hand on a ringed planet, with a circle holding a small boat">
+      <defs>
+        <clipPath id="logoDiscClip"><circle cx="320" cy="310" r="215"/></clipPath>
+        <clipPath id="logoFrontClip"><rect x="-340" y="0" width="680" height="340" transform="translate(320 310) rotate(-22)"/></clipPath>
+      </defs>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#3E9CC4" stroke-width="26"/>
+      <circle cx="320" cy="310" r="215" fill="#3E3833"/>
+      <g clip-path="url(#logoDiscClip)">
+        <g transform="translate(127 107) scale(0.62)">
+          <path fill="#F4F1EA" d="M144 224c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zM334.6 80c27.3 0 49.4 22.1 49.4 49.4v4.2c0 6.8-1.3 13.6-3.8 19.9L352 224h160c26.5 0 48 21.5 48 48c0 19.7-11.9 36.6-28.9 44c17 7.4 28.9 24.3 28.9 44c0 23.4-16.8 42.9-39 47.1c4.4 7.3 7 15.8 7 24.9c0 22.2-15 40.8-35.4 46.3c2.2 5.5 3.4 11.5 3.4 17.7c0 26.5-21.5 48-48 48h-87.9c-36.3 0-71.6-12.4-99.9-35.1l-12.2-9.7c-15.2-12.1-24-30.5-24-50V262.6c0-14.9 3.5-29.6 10.1-42.9l56.2-112.4c8.4-16.7 25.5-27.3 44.3-27.3"/>
+        </g>
+      </g>
+      <ellipse cx="320" cy="310" rx="300" ry="88" transform="rotate(-22 320 310)" fill="none" stroke="#3E9CC4" stroke-width="26" clip-path="url(#logoFrontClip)"/>
+      <circle cx="490" cy="470" r="105" fill="#3E9CC4" stroke="#3E3833" stroke-width="12"/>
+      <g transform="translate(490 470)" fill="#3E3833">
+        <rect x="-3.5" y="-56" width="7" height="72"/>
+        <path d="M6 -52 L6 12 L48 12 Z"/>
+        <path d="M-58 22 L58 22 L40 50 L-40 50 Z"/>
+        <path d="M-58 64 q9.7 -9 19.4 0 q9.6 9 19.3 0 q9.7 -9 19.3 0 q9.7 9 19.4 0" fill="none" stroke="#3E3833" stroke-width="6"/>
+      </g>
+    </svg>
+    <svg class="geo" viewBox="0 0 300 40" aria-hidden="true">
+      <path d="M8 40 A30 30 0 0 1 68 40 Z" fill="#3E9CC4"/>
+      <rect x="92" y="6" width="34" height="34" fill="#F4F1EA"/>
+      <polygon points="152,40 176,6 200,40" fill="#3E3833"/>
+      <rect x="224" y="24" width="68" height="16" fill="#B4A996"/>
+    </svg>
+    <p class="dont-panic">DON'T PANIC</p>
+    <div class="redrule"></div>
+    <h1>Moving Water, Explained</h1>
+    <p class="series">The Millennial's Guide to the Aftermath</p>
+  </section>
+
+  <section class="entry">
+    <h2>Start here: the river works for you, or on you</h2>
+    <p>The other blue book, <em>Safe Water Management</em>, is about water you drink. This one is about water you meet outside a cup: the creek behind the house, the river between you and everywhere else, the stream that could be grinding your grain while you sleep.</p>
+    <p>Moving water is three things at once. It is a <strong>road</strong> — the oldest one there is, and it carries weight no cart can match. It is an <strong>engine</strong> — free power, day and night, in any weather, for anyone who puts a wheel in it. And it is a <strong>hazard</strong> — the most underestimated one in the outdoors, because it looks peaceful right up until it is standing on your chest.</p>
+    <p>This book takes them in the order that keeps you alive: read the water first, cross it and fall in it safely, meet the three things in it that actually kill people — then harness it, dam it, spread it on fields, lift it uphill, and float on it in boats you built from junk.</p>
+    <div class="rule"><strong>THE ONE RULE:</strong> Water does not care how strong a swimmer you are. Six inches of fast water can take your feet, knee-deep fast water can take <em>you</em>, and a dam that looks like a garden step can hold you under until you drown. Respect first, engineering second.</div>
+  </section>
+
+  <section class="entry">
+    <h2>1. Reading water: the surface is a map</h2>
+    <p>A river tells you what it is doing underneath, if you know the handwriting. Learn these four marks and you can read any stream in the world:</p>
+    <ul>
+      <li><strong>Smooth and glassy means deep and fast.</strong> Calm-looking water moving in a sheet is the main current, and it is stronger than it looks. Rippled, choppy water is usually shallow or bouncing over rocks.</li>
+      <li><strong>A downstream V is a door.</strong> Where water funnels between two rocks it makes a V pointing downstream. That V is the channel — the safe line for wading and for boats.</li>
+      <li><strong>An upstream V is a warning.</strong> A V pointing at you means water is piling against something hidden — a rock, a log, a drop. So is a <strong>horizon line</strong>: a flat, straight line across the river with nothing visible below it means the water falls there. Stop and scout, every time.</li>
+      <li><strong>An eddy is a rest stop.</strong> Behind every rock and bank point, the current curls back on itself and makes a pocket of still or gently upstream-flowing water. Eddies are where you rest, regroup, land, and get out.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="A river seen from above: fast arrows in the middle, a downstream V between two rocks marking the channel, calm eddies behind the rocks, and a horizon line at a drop marked do not cross.">
+        <rect x="20" y="15" width="560" height="220" rx="10" fill="#BFE0EF"/>
+        <g stroke="#3E9CC4" stroke-width="5" stroke-linecap="round">
+          <path d="M60 55 h180"/><path d="M60 125 h150"/><path d="M60 195 h180"/>
+        </g>
+        <g fill="#3E9CC4"><path d="M240 55 l-16 -8 v16z"/><path d="M210 125 l-16 -8 v16z"/><path d="M240 195 l-16 -8 v16z"/></g>
+        <circle cx="330" cy="70" r="30" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <circle cx="330" cy="180" r="30" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <path d="M368 52 a26 26 0 1 1 -14 34" fill="none" stroke="#3E3833" stroke-width="3.5"/>
+        <path d="M368 162 a26 26 0 1 0 -14 34" fill="none" stroke="#3E3833" stroke-width="3.5"/>
+        <text x="392" y="46" font-size="13" font-weight="700" fill="#3E3833">EDDY — REST HERE</text>
+        <path d="M300 125 l34 -18 M300 125 l34 18" stroke="#C62F2F" stroke-width="5" fill="none"/>
+        <text x="352" y="120" font-size="13" font-weight="700" fill="#C62F2F">V = THE DOOR</text>
+        <text x="352" y="140" font-size="12.5" fill="#3E3833">channel runs through it</text>
+        <path d="M520 30 v190" stroke="#C62F2F" stroke-width="6"/>
+        <text x="530" y="125" font-size="13" font-weight="700" fill="#C62F2F" transform="rotate(90 530 125)">HORIZON LINE = DROP — SCOUT FIRST</text>
+      </svg>
+      <figcaption>A river from above. Fast in the middle, rest behind the rocks, doors marked with a V, and never drift blind over a horizon line.</figcaption>
+    </figure>
+    <p class="real"><strong>REALITY CHECK:</strong> Current is stronger than it feels from the bank. Toss a stick in: if it outruns a walking pace, the water is faster than you are, and anything you drop — or anyone who falls — is going wherever it goes. Plan your exit eddies <em>before</em> you get in.</p>
+  </section>
+
+  <section class="entry">
+    <h2>2. The words: every term on one page</h2>
+    <ul>
+      <li><strong>Current</strong> — the flow itself. Fastest in the middle of the channel and near the surface; slowest at the banks and the bottom.</li>
+      <li><strong>Flow</strong> — how much water passes per second. A boot-deep creek and a river can have the same speed and wildly different flow. Flow is what pushes.</li>
+      <li><strong>Head</strong> — the height water falls from, measured in feet or metres. Head is stored energy: the higher the fall, the harder the push at the bottom.</li>
+      <li><strong>Eddy</strong> — the calm pocket behind an obstacle, where water curls back upstream. Your rest stop and your exit.</li>
+      <li><strong>Seam</strong> — the line where fast water slides past slow water. Crossing a seam tips boats and trips waders; cross it decisively, not halfway.</li>
+      <li><strong>Strainer</strong> — anything water flows <em>through</em> but you cannot: a fallen tree, a fence, a grate. The deadliest common object in any river (Entry 5).</li>
+      <li><strong>Hydraulic (a "hole" or "keeper")</strong> — water rolling back on itself below a drop, like a washing machine that never opens. It recirculates whatever falls in.</li>
+      <li><strong>Low-head dam</strong> — a small dam, sometimes only a foot tall, with a perfect hydraulic at its base. Looks harmless. Is a drowning machine. Portage always.</li>
+      <li><strong>Displacement</strong> — the water a boat pushes aside. The weight of that water is exactly the weight the boat can carry, boat included.</li>
+      <li><strong>Draft</strong> — how deep a loaded boat sits in the water. <strong>Freeboard</strong> — the wall of boat left above the water. Freeboard is your safety margin.</li>
+      <li><strong>Trim</strong> — how the load is balanced, front to back and side to side. A boat trimmed level and low is a boat that stays upright.</li>
+      <li><strong>Portage</strong> — carrying the boat around the part of the river that would kill it. Not defeat; the oldest boating skill there is.</li>
+      <li><strong>Flume / leat</strong> — a channel that carries water sideways, gently downhill, to deliver it where you want it — over a wheel, into a field.</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>3. Crossing on foot: the tripod rule</h2>
+    <p>Most river deaths are not swimmers. They are walkers who stepped in, got pushed, and went down in water they could have stood up in — if they could have stood up. Cross like this:</p>
+    <ul>
+      <li><strong>Choose the place, not the moment.</strong> Wide and shallow beats narrow and deep — the same water spread thin is weaker. Cross at a bend's shallow inside, above a riffle, never just above a drop, a strainer, or deep water.</li>
+      <li><strong>Unbuckle your pack's hip belt and chest strap.</strong> If you go down, you must be able to shed the pack in one second. A waterlogged pack is an anchor.</li>
+      <li><strong>Take a staff.</strong> A stout pole, planted upstream of you, makes you a tripod: two feet and a pole, and only one of the three ever moves at a time.</li>
+      <li><strong>Face upstream, shuffle sideways.</strong> Small steps, feet sliding along the bottom, leaning slightly into the current and into the pole. Never cross your feet, never lift a knee high — a raised foot is a sail.</li>
+      <li><strong>The knee rule:</strong> fast water above your knees is a no. Slow water to the waist is a careful maybe. If you cannot see the bottom, probe every step with the pole — and if you cannot feel the bottom either, turn back.</li>
+      <li><strong>In a group,</strong> cross together: line up along the current, arms linked or hands on the next person's shoulder straps, strongest person upstream breaking the flow, moving as one crab.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A wader crossing a stream: facing upstream, leaning on a staff planted upstream, shuffling sideways, with the current pushing from the left.">
+        <rect x="20" y="150" width="560" height="70" fill="#BFE0EF"/>
+        <path d="M20 150 h560" stroke="#3E9CC4" stroke-width="4"/>
+        <g stroke="#3E9CC4" stroke-width="5" stroke-linecap="round"><path d="M40 175 h90"/><path d="M40 200 h90"/></g>
+        <g fill="#3E9CC4"><path d="M130 175 l-15 -7 v14z"/><path d="M130 200 l-15 -7 v14z"/></g>
+        <circle cx="330" cy="52" r="17" fill="#E8C9A0" stroke="#3E3833" stroke-width="3"/>
+        <path d="M330 69 v52" stroke="#3E3833" stroke-width="9" stroke-linecap="round"/>
+        <path d="M330 121 l-24 46 M330 121 l30 42" stroke="#3E3833" stroke-width="9" stroke-linecap="round"/>
+        <path d="M324 84 L262 158" stroke="#3E3833" stroke-width="6" stroke-linecap="round"/>
+        <path d="M336 84 L392 108" stroke="#3E3833" stroke-width="7" stroke-linecap="round"/>
+        <path d="M262 158 v58" stroke="#8A7F70" stroke-width="7" stroke-linecap="round"/>
+        <text x="120" y="52" font-size="13" font-weight="700" fill="#3E3833">CURRENT PUSHES HERE</text>
+        <text x="398" y="96" font-size="13" fill="#3E3833">face upstream</text>
+        <text x="60" y="234" font-size="13" fill="#3E3833">staff = third leg · shuffle sideways · one point moves at a time</text>
+      </svg>
+      <figcaption>The wading tripod. Two feet and a pole, leaning into the push, and never a step you have not probed.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>4. Falling in: cold water and the one-minute rule</h2>
+    <p>You will fall in someday if you work around water long enough. What kills is not the swimming — it is the first minute, and then the instinct to stand up.</p>
+    <ul>
+      <li><strong>Cold shock is first.</strong> Sudden cold water makes you gasp — involuntarily, hugely. If your face is under when it hits, you inhale the river. The cure is the first sixty seconds: do nothing but float on your back, mouth shut, and breathe out slowly until the gasping passes. It always passes. <em>Float first.</em></li>
+      <li><strong>Then swim defensively:</strong> on your back, feet up and pointing downstream, toes breaking the surface, knees bent as shock absorbers. Your feet are your bumpers and your eyes face the danger. Steer by back-paddling toward an eddy or the bank.</li>
+      <li><strong>Never stand up in current above your ankles.</strong> A foot wedges between rocks — foot entrapment — and the current folds you face-down over your own trapped leg. Strong swimmers have drowned in knee-deep water this way. Swim until the water is shallow <em>and</em> slow, or until you reach the bank.</li>
+      <li><strong>Warm water is not safe water.</strong> It skips the cold shock and keeps everything else: current, strainers, entrapment. The rules do not change.</li>
+      <li><strong>Rescuing someone else:</strong> reach (lie down, extend a pole), throw (a rope, a bottle on a line, anything that floats), and only ever <em>go</em> if you are trained, tethered, and the water is within your own rules. A second victim helps no one.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 215" role="img" aria-label="The defensive swim position: a swimmer on their back, feet raised and pointing downstream, floating toward a calm eddy, with a strainer marked never downstream.">
+        <rect x="20" y="60" width="560" height="120" fill="#BFE0EF"/>
+        <g stroke="#3E9CC4" stroke-width="5" stroke-linecap="round"><path d="M40 95 h120"/><path d="M40 145 h120"/></g>
+        <g fill="#3E9CC4"><path d="M160 95 l-15 -7 v14z"/><path d="M160 145 l-15 -7 v14z"/></g>
+        <circle cx="268" cy="98" r="16" fill="#E8C9A0" stroke="#3E3833" stroke-width="3"/>
+        <path d="M284 106 q60 14 118 4 l34 -8" fill="none" stroke="#3E3833" stroke-width="13" stroke-linecap="round"/>
+        <path d="M436 102 l-8 -18 M436 102 l14 -14" stroke="#3E3833" stroke-width="8" stroke-linecap="round"/>
+        <text x="330" y="66" font-size="13" font-weight="700" fill="#3E3833">FEET UP, DOWNSTREAM</text>
+        <text x="330" y="152" font-size="13" fill="#3E3833">on your back · steer for the eddy</text>
+        <path d="M500 78 a30 30 0 1 1 -16 40" fill="none" stroke="#3E3833" stroke-width="3.5"/>
+        <text x="486" y="152" font-size="13" font-weight="700" fill="#3E3833">EDDY</text>
+        <text x="60" y="204" font-size="13" fill="#3E3833">Never stand up mid-current: a trapped foot folds you under.</text>
+      </svg>
+      <figcaption>The defensive swim. Feet up as bumpers, back as the boat, and the eddy as the destination.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>5. The killers: strainers, holes, and low-head dams</h2>
+    <p>Three things in moving water account for most of the dying. All three look innocent. Learn their faces:</p>
+    <ul>
+      <li><strong>The strainer.</strong> A fallen tree, a fence line, a culvert grate — water pours through it at full force and pins whatever arrives against it, under it, in it. The water does not stop pushing, ever, and no one can pull you out against it. <em>Avoidance is the only rescue:</em> see one downstream, get to the bank or an eddy early. If you are being swept into one and cannot avoid it, swim <em>at</em> it hard and climb up onto it as you hit — going under is the fatal path.</li>
+      <li><strong>The hydraulic.</strong> Below a drop, water dives down and rolls back upstream, endlessly recirculating. Boats, logs, and people can roll in one for days. Escape, if you are caught: ball up, or swim down to the bottom where the water flows out downstream — counterintuitive, and the only door. Better: never be there.</li>
+      <li><strong>The low-head dam.</strong> A weir or small dam — sometimes a single foot of drop — builds a perfect, river-wide hydraulic with no gaps. From upstream it looks like a smooth slide into foam. Rescuers die in these every year, in ordinary times, with boats and ropes and training. <strong>There is no safe way through. Portage around it, every time, without debate.</strong></li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Cross-section of a low-head dam: water pours over a small wall and rolls back on itself in an endless circle at the base, trapping anything that falls in. The safe route is a portage around it.">
+        <path d="M20 70 h300 v60 h260" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <path d="M20 84 h290 q40 4 62 34 q26 36 74 30" fill="none" stroke="#3E9CC4" stroke-width="7"/>
+        <rect x="308" y="70" width="16" height="62" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <path d="M446 148 h134" stroke="#3E9CC4" stroke-width="6"/>
+        <circle cx="392" cy="128" r="27" fill="none" stroke="#C62F2F" stroke-width="5"/>
+        <path d="M392 101 a27 27 0 0 1 24 14 M392 155 a27 27 0 0 1 -24 -14" fill="none" stroke="#C62F2F" stroke-width="5"/>
+        <g fill="#C62F2F"><path d="M416 115 l4 12 -13 -3z"/><path d="M368 141 l-4 -12 13 3z"/></g>
+        <text x="392" y="196" font-size="13.5" font-weight="700" fill="#C62F2F" text-anchor="middle">THE KEEPER</text>
+        <text x="392" y="216" font-size="12.5" fill="#3E3833" text-anchor="middle">rolls forever — nothing climbs out</text>
+        <text x="120" y="46" font-size="13" font-weight="700" fill="#3E3833">A DROP THIS SMALL STILL KILLS</text>
+        <path d="M60 226 q120 -26 240 -6 q140 22 240 -8" fill="none" stroke="#3E3833" stroke-width="3" stroke-dasharray="7 6"/>
+        <text x="60" y="246" font-size="12.5" fill="#3E3833">dashed line = the portage: carry around, every time</text>
+      </svg>
+      <figcaption>The drowning machine. One smooth slide in, an endless roll at the bottom, and exactly one safe route: around.</figcaption>
+    </figure>
+    <p class="real"><strong>REALITY CHECK:</strong> These three are why "I know this river" buries people. Flood changes everything overnight — new strainers, new drops, old dams with new teeth. Scout like a stranger every single time the water rises.</p>
+  </section>
+
+  <section class="entry">
+    <h2>6. Water as an engine: flow times head</h2>
+    <p>Every waterwheel ever built runs on one recipe: <strong>power = flow × head</strong>. Flow is how much water you have. Head is how far it falls. A big lazy river gives you flow with no fall; a mountain trickle gives you fall with no flow. Either ingredient alone is a weak engine — the art is finding or making both.</p>
+    <ul>
+      <li><strong>The undershot wheel</strong> sits in the stream and the current pushes its paddles. It works anywhere water flows, needs no dam and no channel — and it is the weakest of the three, because it only borrows the water's speed.</li>
+      <li><strong>The overshot wheel</strong> is fed from above: a channel (a flume) brings water to the top, and the water's <em>weight</em> filling buckets on one side hauls the wheel around. This is the strongest simple wheel — it uses the fall, not just the push — and it is why people dam streams: the dam manufactures head.</li>
+      <li><strong>The breastshot wheel</strong> is the compromise: water delivered at axle height. Half the weight trick, half the push.</li>
+      <li><strong>What can it run?</strong> A good small overshot wheel delivers roughly the work of several strong people, all day and all night, in the rain, without eating. Millstones, saw blades (slowly), pumps, a line shaft for a workshop, and — through a belt and an old car alternator — battery charging. That is not a metaphor for power. That is civilization's first engine, and it is still sitting in your creek.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Two waterwheels: an undershot wheel pushed by the stream at its base, and an overshot wheel turned by water poured into buckets at its top from a flume.">
+        <path d="M20 196 h250" stroke="#3E9CC4" stroke-width="7"/>
+        <g stroke="#3E9CC4" stroke-width="5" stroke-linecap="round"><path d="M36 218 h110"/></g>
+        <g fill="#3E9CC4"><path d="M146 218 l-14 -7 v14z"/></g>
+        <g stroke="#3E3833" stroke-width="5" fill="none">
+          <circle cx="150" cy="128" r="62"/>
+          <path d="M150 66 v124 M88 128 h124 M106 84 l88 88 M194 84 l-88 88"/>
+        </g>
+        <circle cx="150" cy="128" r="10" fill="#3E3833"/>
+        <g fill="#3E9CC4"><path d="M96 178 l18 14 -20 4z"/><path d="M150 190 l6 18 -14 -12z"/><path d="M204 178 l-4 20 -14 -14z"/></g>
+        <text x="150" y="240" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">UNDERSHOT — the stream pushes</text>
+        <path d="M330 40 h150 v26" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <path d="M330 52 h138" stroke="#3E9CC4" stroke-width="6"/>
+        <g stroke="#3E3833" stroke-width="5" fill="none">
+          <circle cx="468" cy="140" r="62"/>
+          <path d="M468 78 v124 M406 140 h124 M424 96 l88 88 M512 96 l-88 88"/>
+        </g>
+        <circle cx="468" cy="140" r="10" fill="#3E3833"/>
+        <g fill="#3E9CC4"><path d="M480 66 v22 M468 78 l12 14 4 -24z"/></g>
+        <path d="M480 88 q14 20 6 44" fill="none" stroke="#3E9CC4" stroke-width="5"/>
+        <path d="M330 218 h250" stroke="#3E9CC4" stroke-width="6"/>
+        <text x="455" y="240" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">OVERSHOT — the water's weight pulls</text>
+        <text x="330" y="30" font-size="12.5" fill="#3E3833">flume brings water to the top</text>
+      </svg>
+      <figcaption>Push versus weight. The undershot wheel borrows speed; the overshot wheel spends the fall — and the fall is worth more.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>7. Building the wheel: slow, strong, and geared up</h2>
+    <p>A waterwheel turns <em>slowly and enormously strongly</em> — a few revolutions a minute, with the torque to shrug off a jammed log. Almost nothing you want to run wants that. Grindstones want moderate speed; alternators want high speed. The bridge between them is gearing, and the rule is a trade: <strong>gears and belts swap force for speed, never create either.</strong></p>
+    <ul>
+      <li><strong>Site first.</strong> The best wheel spot is a natural narrow: water speeds up where the stream squeezes. Second best is a low dam you built (Entry 8) with a short flume. Keep the wheel out of the flood's main path, or build it to be lifted clear — the same creek that powers you in July will try to take the wheel in March.</li>
+      <li><strong>The wheel itself</strong> can be built (two ring rims, spokes, paddles or buckets between) or borrowed: a bicycle wheel with paddles bolted to the rim is a honest small undershot wheel, and its hub is a ready-made bearing.</li>
+      <li><strong>Bearings are the build.</strong> Bike hubs, pillow-block bearings off dead machinery, or — oldest of all — a greased hardwood journal. A wheel that grinds its bearings is a wheel that stops.</li>
+      <li><strong>Gearing up:</strong> a big pulley on the wheel shaft driving a small pulley multiplies speed by the size ratio — a 10:1 pulley pair turns 6 rpm at the wheel into 60 at the shaft, and one more pair makes 600 for an alternator. Each step costs you force. Chain and sprockets from bicycles do the same job and slip less in the wet.</li>
+      <li><strong>Govern it simply.</strong> A sluice gate on the flume — a board you raise or lower — is your throttle. Shut the water, stop the world.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 235" role="img" aria-label="A waterwheel geared up in two belt stages: the slow wheel drives a large pulley, a belt turns a small pulley faster, and a second stage spins an alternator fast enough to charge batteries.">
+        <g stroke="#3E3833" stroke-width="5" fill="none">
+          <circle cx="105" cy="130" r="58"/>
+          <path d="M105 72 v116 M47 130 h116 M64 89 l82 82 M146 89 l-82 82"/>
+        </g>
+        <circle cx="105" cy="130" r="9" fill="#3E3833"/>
+        <path d="M20 196 h180" stroke="#3E9CC4" stroke-width="6"/>
+        <circle cx="290" cy="92" r="34" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <circle cx="290" cy="150" r="13" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <path d="M118 76 L256 84 M118 184 L256 100" stroke="#3E3833" stroke-width="4"/>
+        <circle cx="430" cy="104" r="24" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <circle cx="430" cy="146" r="10" fill="none" stroke="#3E3833" stroke-width="5"/>
+        <path d="M298 130 L406 112 M298 162 L406 140" stroke="#3E3833" stroke-width="4"/>
+        <rect x="478" y="86" width="86" height="56" rx="8" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <text x="521" y="119" font-size="12.5" font-weight="700" fill="#3E3833" text-anchor="middle">ALTERNATOR</text>
+        <path d="M441 118 h37" stroke="#3E3833" stroke-width="4"/>
+        <text x="105" y="222" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">WHEEL — 6 RPM, STRONG</text>
+        <text x="290" y="222" font-size="13" fill="#3E3833" text-anchor="middle">×10 → 60 RPM</text>
+        <text x="490" y="222" font-size="13" fill="#3E3833" text-anchor="middle">×10 → 600 RPM, WEAKER</text>
+        <text x="490" y="170" font-size="12.5" fill="#3E3833" text-anchor="middle">to the battery bank</text>
+      </svg>
+      <figcaption>Gearing up. Every stage trades the wheel's muscle for speed — spend only what the machine at the end actually needs.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>8. Dams that hold: spillway first, always</h2>
+    <p>A dam is a promise you make to everyone downstream. Keep it small, keep it honest, and design its failure before its success — because every dam ever built is temporary, and the only choice you get is whether yours fails as a leak or as a wall of water.</p>
+    <ul>
+      <li><strong>Build the spillway first.</strong> Water <em>will</em> find a way over, under, or around your dam. Give it a way you chose: a wide, shallow, rock-armored channel at one side, lower than the dam's crest. A dam overtopped anywhere else is a dam being unbuilt by the water, fast.</li>
+      <li><strong>Wide beats tall.</strong> A low, broad dam spreads its load and leaks politely. A tall, narrow one stores up an argument. Dam for a few feet of head for a wheel or a pond — not for a lake.</li>
+      <li><strong>The honest types:</strong> rock-fill (stone piled across, chinked with gravel and clay), the log crib (a timber box filled with rock — strong, uses the two things creek banks have), earth with a clay core (the clay trench in the middle is the actual dam; the dirt is its jacket), and sandbags for the small and the temporary.</li>
+      <li><strong>Read the leaks.</strong> Seepage is normal. A leak that runs <em>clear</em> is the dam weeping. A leak that runs <em>cloudy</em> is the dam dissolving from inside — piping — and that is an emergency: lower the water through the spillway and rebuild, that day.</li>
+      <li><strong>Never sleep in your own flood path.</strong> Camp, store food, and park nothing irreplaceable directly below any dam, yours or anyone's.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="Cross-section of a small dam: ponded water on the left, a broad rock and earth dam with a clay core in the middle, a spillway channel carrying overflow safely past one side, and the stream continuing below.">
+        <path d="M20 108 h180" stroke="#3E9CC4" stroke-width="7"/>
+        <path d="M20 130 q90 10 180 0" fill="none" stroke="#3E9CC4" stroke-width="4"/>
+        <text x="40" y="88" font-size="13" font-weight="700" fill="#3E3833">THE POND — your stored head</text>
+        <path d="M200 210 L262 96 h76 L400 210z" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <path d="M292 96 h14 v114 h-14z" fill="#C08552"/>
+        <text x="299" y="80" font-size="12.5" font-weight="700" fill="#3E3833" text-anchor="middle">CLAY CORE</text>
+        <text x="240" y="160" font-size="12.5" fill="#F4F1EA">rock + earth</text>
+        <path d="M338 118 q60 -6 92 14 q36 22 90 10" fill="none" stroke="#3E9CC4" stroke-width="6"/>
+        <path d="M430 132 l60 84 h90" fill="none" stroke="#3E3833" stroke-width="4"/>
+        <path d="M470 160 q40 8 60 40" fill="none" stroke="#3E9CC4" stroke-width="6"/>
+        <text x="425" y="98" font-size="13" font-weight="700" fill="#3E3833">SPILLWAY</text>
+        <text x="425" y="116" font-size="12.5" fill="#3E3833">overflow goes here</text>
+        <path d="M20 210 h560" stroke="#3E3833" stroke-width="4"/>
+        <text x="60" y="238" font-size="13" fill="#3E3833">Clear leak = weeping. Cloudy leak = dissolving: drain and rebuild.</text>
+      </svg>
+      <figcaption>Anatomy of a dam that fails politely: stored head, a clay heart, and a spillway that gives flood water somewhere legal to go.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>9. Irrigation: gravity is a free employee</h2>
+    <p>Every irrigation system in history is the same trick: get water higher than the field, then let it walk downhill through the crops at a pace you control. No pump, no fuel — a ditch dug on a gentle grade is a machine with one moving part: water.</p>
+    <ul>
+      <li><strong>The layout:</strong> a source above the field (a pond, a dam, a tank, a stream tapped by a flume), a main ditch running along the field's top edge on a barely-falling contour, side ditches or furrows running gently downhill through the crop rows, and gates — boards, sod, sandbags — where each furrow meets the main ditch.</li>
+      <li><strong>The grade is everything.</strong> Too steep and the ditch erodes itself into a gully that drains the field instead of watering it. Too flat and the water never arrives. A hand's breadth of fall across a garden plot is plenty; a spirit level, a string line, or a clear hose full of water tells you the truth.</li>
+      <li><strong>Water deep, water rarely.</strong> A long soak that wets the roots beats a daily sprinkle that wets the dust. Water at dawn or evening; midday sun steals a share of everything you pour.</li>
+      <li><strong>The siphon is your portable pipe.</strong> To move water over a bank or out of a tank without a hole in it: fill a hose completely, cap both ends with your palms, put one end under the source water and the other end lower than the source, let go. Gravity does the rest, uphill over the rim and down to the field, for free.</li>
+      <li><strong>Gardens drink differently:</strong> a raised barrel and a drip line (Field Recipe 4) waters a garden row all day on a few gallons — the right tool when water is scarce and hands are busy.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="A field from above: a pond at the top, a main ditch running along the top edge, small gates, and furrows carrying water gently downhill between crop rows.">
+        <rect x="30" y="18" width="200" height="44" rx="10" fill="#BFE0EF" stroke="#3E3833" stroke-width="3"/>
+        <text x="130" y="46" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">POND / TANK — HIGH UP</text>
+        <path d="M230 40 q120 14 340 6" fill="none" stroke="#3E9CC4" stroke-width="7"/>
+        <text x="400" y="30" font-size="13" font-weight="700" fill="#3E3833">MAIN DITCH — nearly level</text>
+        <g stroke="#3E9CC4" stroke-width="5">
+          <path d="M110 62 v150"/><path d="M230 62 v150"/><path d="M350 62 v150"/><path d="M470 62 v150"/>
+        </g>
+        <g fill="#8A7F70" stroke="#3E3833" stroke-width="2">
+          <rect x="100" y="58" width="20" height="12"/><rect x="220" y="58" width="20" height="12"/><rect x="340" y="58" width="20" height="12"/><rect x="460" y="58" width="20" height="12"/>
+        </g>
+        <g stroke="#4E7A3A" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round">
+          <path d="M170 78 v124"/><path d="M290 78 v124"/><path d="M410 78 v124"/><path d="M530 78 v124"/>
+        </g>
+        <g fill="#3E9CC4"><path d="M110 212 l-8 -15 h16z"/><path d="M230 212 l-8 -15 h16z"/><path d="M350 212 l-8 -15 h16z"/><path d="M470 212 l-8 -15 h16z"/></g>
+        <text x="36" y="238" font-size="13" fill="#3E3833">gates at every furrow · furrows fall gently · crop rows between the water lines</text>
+      </svg>
+      <figcaption>Irrigation from above: store high, run the main ditch level, and let each furrow carry its share downhill.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>10. Lifting water: the ram pump cheats honestly</h2>
+    <p>Sometimes the water is down there and the field, the tank, or the house is up here. Four machines lift water without an engine, and the best of them is a beautiful cheat:</p>
+    <ul>
+      <li><strong>The hydraulic ram.</strong> Water runs downhill through a pipe and is suddenly stopped by a valve slamming shut. The shock of that stop — water hammer, the bang in old house pipes — shoves a small portion of the water up a second pipe, far higher than the source. Then the valve resets and it happens again, a few dozen times a minute, day and night, for years, with two moving parts and no fuel. The honest price: it lifts maybe a tenth of the water and spills the rest — which is why it belongs on a stream that has water to spare and a fall of even a few feet.</li>
+      <li><strong>The Archimedes screw.</strong> A spiral inside a tilted tube: turn the top handle and water climbs the spiral in steps. It lifts a lot of water a short way — ditch to field, boat bilge to river — and a waterwheel or a patient teenager can turn it.</li>
+      <li><strong>The rope pump.</strong> A loop of rope with washers or knots runs down into the well and up through a pipe; the washers drag water up the pipe as the loop turns. Hand-cranked, village-proven, lifts from real depth.</li>
+      <li><strong>The treadle and hand pumps</strong> of the old world: your legs are a half-horsepower engine with excellent availability. Boring, effective, repairable.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="A hydraulic ram pump: water flows downhill from a stream through a drive pipe, a valve slams and the shock pushes some water up a tall delivery pipe to a tank, while the rest spills out as waste.">
+        <path d="M20 40 h120" stroke="#3E9CC4" stroke-width="7"/>
+        <text x="20" y="26" font-size="13" font-weight="700" fill="#3E3833">STREAM — A FEW FEET UP</text>
+        <path d="M140 40 L268 128" stroke="#3E3833" stroke-width="7"/>
+        <text x="150" y="98" font-size="12.5" fill="#3E3833">drive pipe — downhill</text>
+        <rect x="258" y="118" width="84" height="52" rx="8" fill="#E8DFD2" stroke="#3E3833" stroke-width="3"/>
+        <text x="300" y="142" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">RAM</text>
+        <text x="300" y="160" font-size="11.5" fill="#3E3833" text-anchor="middle">slam · push · reset</text>
+        <path d="M300 170 v34 M284 190 l16 18 16 -18" fill="none" stroke="#3E9CC4" stroke-width="5"/>
+        <text x="316" y="222" font-size="12.5" fill="#3E3833">waste water out (most of it)</text>
+        <path d="M342 128 L470 60" stroke="#3E3833" stroke-width="6"/>
+        <path d="M470 60 v-22" stroke="#3E3833" stroke-width="6"/>
+        <rect x="436" y="8" width="90" height="34" rx="6" fill="#BFE0EF" stroke="#3E3833" stroke-width="3"/>
+        <text x="481" y="30" font-size="12.5" font-weight="700" fill="#3E3833" text-anchor="middle">TANK — HIGH</text>
+        <text x="330" y="100" font-size="12.5" fill="#3E3833">delivery — a tenth, lifted high</text>
+        <text x="40" y="238" font-size="13" fill="#3E3833">No fuel, two moving parts. The stream pays nine gallons to deliver one.</text>
+      </svg>
+      <figcaption>The ram pump. Falling water's own shock wave does the lifting — the honest cheat at the heart of off-grid plumbing.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>11. Why boats float: displacement and the freeboard rule</h2>
+    <p>A boat is a hole in the water that the water is not allowed to fill. It floats because the water it pushes aside — its displacement — weighs exactly as much as the boat and everything in it. Add weight, and the boat sinks deeper until the displaced water matches. Add too much, and the water wins the argument over the side.</p>
+    <ul>
+      <li><strong>Draft</strong> is how deep you sit; <strong>freeboard</strong> is the wall left above the waterline. Freeboard is your entire safety margin against waves, wakes, and leaning. Loaded for real work, keep at least a hand's width — more in any chop, more again with a nervous passenger.</li>
+      <li><strong>Stability is width and lowness.</strong> A wide, flat bottom resists tipping; weight carried low and centered keeps it resisting. Weight carried high — a standing person, a load stacked tall — is a capsize looking for a moment. Sit down. Kneel to work. Load the middle, load it low.</li>
+      <li><strong>Shape is a bargain.</strong> Flat and wide: stable, slow, turns like a door. Long and narrow: fast, tippy, tracks straight. Round and bowl-like: spins happily, goes nowhere in particular. Every boat in this book is a bargain someone struck on purpose — know which one you are floating.</li>
+      <li><strong>Capacity is arithmetic, not courage.</strong> A sealed 55-gallon drum displaces about 450 pounds of water — count half of it as usable lift once the drum, the deck, and honesty are paid for. Do the sum for your craft before the river does it for you.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A boat cross-section at its waterline: draft measured below the line, freeboard above it, a low centered load marked stable, and a high load marked tippy.">
+        <path d="M20 128 h560" stroke="#3E9CC4" stroke-width="5"/>
+        <path d="M20 146 q70 -10 140 0 q70 10 140 0 q70 -10 140 0 q70 10 140 0" fill="none" stroke="#3E9CC4" stroke-width="4"/>
+        <path d="M170 62 L196 128 a14 14 0 0 0 14 9 h180 a14 14 0 0 0 14 -9 L430 62 L404 62 L388 116 H212 L196 62z" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <rect x="262" y="84" width="76" height="30" fill="#3E3833"/>
+        <text x="300" y="103" font-size="12" font-weight="700" fill="#F4F1EA" text-anchor="middle">LOAD LOW</text>
+        <path d="M150 62 v66" stroke="#3E3833" stroke-width="3"/>
+        <path d="M142 62 h16 M142 128 h16" stroke="#3E3833" stroke-width="3"/>
+        <text x="96" y="92" font-size="13" font-weight="700" fill="#3E3833">FREEBOARD</text>
+        <text x="96" y="110" font-size="12" fill="#3E3833">your margin</text>
+        <path d="M452 128 v52" stroke="#3E3833" stroke-width="3"/>
+        <path d="M444 128 h16 M444 180 h16" stroke="#3E3833" stroke-width="3"/>
+        <text x="470" y="158" font-size="13" font-weight="700" fill="#3E3833">DRAFT</text>
+        <text x="60" y="222" font-size="13" fill="#3E3833">Weight high = tippy. Weight low, centered, seated = forgiving.</text>
+      </svg>
+      <figcaption>Freeboard above the line, draft below it, and the load where it belongs: low, centered, and seated.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>12. Rafts: the boat you can build today</h2>
+    <p>A raft is the fastest honest answer to "we need to be on that water": floatation underneath, a deck on top, and nothing about it that can sink in the ordinary way. It will not be fast, it will not go back upstream without a fight, and it will carry a shocking amount of weight while forgiving nearly every beginner mistake.</p>
+    <ul>
+      <li><strong>Floatation:</strong> dry logs (fresh, light softwood floats best; a waterlogged log is a stone with bark) or sealed drums — the drum raft is the better machine: predictable lift, replaceable parts. Four drums under a deck is a working platform for people and cargo.</li>
+      <li><strong>Build it as a sandwich:</strong> two stout rails under the deck, drums or logs trapped between the rails and the deck boards so nothing can escape sideways, everything lashed or bolted, and the load spread across the middle.</li>
+      <li><strong>Wet rope shrinks.</strong> Lashings that sing tight on the bank go slack in the water as fibers swell and shift — no, the other lesson: natural rope <em>tightens</em> when wet and synthetics slip. Either way, stop after the first hour afloat and re-tension everything. Then trust it.</li>
+      <li><strong>Steering:</strong> a sweep — a long oar on a post at the stern — moves a raft more than pride suggests. Poles work in water shallower than the pole. Paddles work everywhere and exhaust everyone. Downstream, the current is the engine and the sweep is the rudder.</li>
+      <li><strong>Plan one-way.</strong> A raft trip downstream ends with a walk back, a portage on wheels, or a dismantling and a carry. Decide which before you launch, not at the far bank.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 245" role="img" aria-label="A barrel raft seen from above: four drums trapped under a plank deck, rails along both sides, the load centered, and a steering sweep at the stern.">
+        <rect x="120" y="35" width="360" height="150" rx="10" fill="#C9A876" stroke="#3E3833" stroke-width="3"/>
+        <g stroke="#3E3833" stroke-width="2.5"><path d="M168 35 v150 M216 35 v150 M264 35 v150 M312 35 v150 M360 35 v150 M408 35 v150"/></g>
+        <g fill="#3E9CC4" stroke="#3E3833" stroke-width="3">
+          <rect x="140" y="52" width="66" height="44" rx="8"/><rect x="394" y="52" width="66" height="44" rx="8"/>
+          <rect x="140" y="124" width="66" height="44" rx="8"/><rect x="394" y="124" width="66" height="44" rx="8"/>
+        </g>
+        <rect x="104" y="28" width="14" height="164" fill="#8A7F70" stroke="#3E3833" stroke-width="2.5"/>
+        <rect x="482" y="28" width="14" height="164" fill="#8A7F70" stroke="#3E3833" stroke-width="2.5"/>
+        <rect x="252" y="86" width="96" height="48" fill="#3E3833"/>
+        <text x="300" y="115" font-size="12.5" font-weight="700" fill="#F4F1EA" text-anchor="middle">LOAD — CENTERED</text>
+        <path d="M300 185 L258 232" stroke="#3E3833" stroke-width="7" stroke-linecap="round"/>
+        <path d="M258 232 l-14 8 M258 232 l2 16" stroke="#3E3833" stroke-width="6" stroke-linecap="round"/>
+        <text x="330" y="228" font-size="13" font-weight="700" fill="#3E3833">SWEEP AT THE STERN</text>
+        <text x="130" y="228" font-size="13" fill="#3E3833">drums trapped, not tied on</text>
+      </svg>
+      <figcaption>The barrel raft from above. The drums cannot escape, the load cannot wander, and the sweep does the steering.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>13. Dugouts and plank boats: the real fleet</h2>
+    <p>When a raft is not enough — when you need to go back upstream, carry loads weekly, fish a lake for years — you build a boat. Two of them are within reach of scavenged tools:</p>
+    <ul>
+      <li><strong>The dugout canoe.</strong> One big, straight log. Flatten a top, then hollow it the old way: a controlled burn along the centerline, scrape out the charcoal, burn again — fire does the heavy digging and an adze or axe does the shaping. Leave the walls a thumb thick, thicker at the ends. It is slow work measured in days, and the result is heavy, tough, stable, and nearly immortal. A dugout does not rot on any schedule that matters.</li>
+      <li><strong>The plank punt.</strong> The easiest true boat ever designed: a flat floor of boards, two straight sides, a square transom at each end (or one), everything screwed or nailed, and the seams sealed with tar, pitch, or cloth bedded in paint. A punt is a floating box and it is glorious: stable as a dock, carries a family and a harvest, rows and poles and even sails passably. If you build one boat in your life, build this one.</li>
+      <li><strong>Sealing is the whole craft.</strong> Boats do not leak through boards; they leak through seams. Rake the seam, pack it with fiber (oakum, cloth strips, moss in a pinch), and pay it with tar or pitch. Expect the first launch to weep until the wood swells — wood closes its own seams when it drinks, which is the one time a boat taking on water is good news.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 215" role="img" aria-label="Making a dugout in three cross-sections: a whole log, the log with a charred hollow burned into its top, and the finished dugout with even walls floating at its waterline.">
+        <g>
+          <circle cx="105" cy="100" r="58" fill="#C9A876" stroke="#3E3833" stroke-width="3"/>
+          <circle cx="105" cy="100" r="40" fill="none" stroke="#8A7F70" stroke-width="3"/>
+          <circle cx="105" cy="100" r="18" fill="none" stroke="#8A7F70" stroke-width="3"/>
+          <text x="105" y="188" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">1 · THE LOG</text>
+          <text x="105" y="208" font-size="12" fill="#3E3833" text-anchor="middle">straight, sound, big</text>
+        </g>
+        <g>
+          <path d="M247 58 a58 58 0 1 0 116 0 l-8 0 a44 40 0 0 1 -100 0z" fill="#C9A876" stroke="#3E3833" stroke-width="3"/>
+          <path d="M262 56 a43 34 0 0 0 86 0z" fill="#3E3833"/>
+          <path d="M282 44 q6 -12 0 -20 M305 44 q6 -12 0 -20 M328 44 q6 -12 0 -20" stroke="#C62F2F" stroke-width="4" fill="none"/>
+          <text x="305" y="188" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">2 · BURN + SCRAPE</text>
+          <text x="305" y="208" font-size="12" fill="#3E3833" text-anchor="middle">fire digs, the adze shapes</text>
+        </g>
+        <g>
+          <path d="M447 58 a58 58 0 1 0 116 0 l-14 0 a44 44 0 0 1 -88 0z" fill="#C9A876" stroke="#3E3833" stroke-width="3"/>
+          <path d="M420 128 h170" stroke="#3E9CC4" stroke-width="5"/>
+          <text x="505" y="188" font-size="13" font-weight="700" fill="#3E3833" text-anchor="middle">3 · THE DUGOUT</text>
+          <text x="505" y="208" font-size="12" fill="#3E3833" text-anchor="middle">walls a thumb thick</text>
+        </g>
+      </svg>
+      <figcaption>Log, fire, boat. The dugout is the slowest build in this book and the one your grandchildren inherit.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>14. Skin, tarp, and tube boats: one-person watercraft</h2>
+    <p>Sometimes the job is one person, one crossing, one fishing spot — and the boat has to be carried to the water on a back. The light fleet:</p>
+    <ul>
+      <li><strong>The coracle (bull boat).</strong> A bowl of bent sticks — willow, sapling, any springy frame — covered in a hide in the old world or a tarp in this one, seams up and tied at the rim. One person, one paddle, and a shape so round it spins if you sneeze. It also crosses any river, floats in inches of water, weighs almost nothing, and has been working for a thousand years. You do not steer it so much as negotiate with it. For a crossing, that is enough.</li>
+      <li><strong>The tarp canoe.</strong> A lashed frame of saplings in a canoe's long shape, a tarp wrapped under and up, edges folded and tied along the gunwales. Fragile against rocks, honest on calm water, and built in an afternoon from a woodpile and a hardware-store tarp.</li>
+      <li><strong>Inner tubes.</strong> One tube is a toy that pops on the first sharp rock. Four tubes lashed under a light deck is a small raft that shrugs off bumps — rubber bounces where boards crack. Keep tubes for slow water and short hops, carry a patch kit, and never trust a tube you would not trust as your only way home — because it is.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 225" role="img" aria-label="A coracle in cross-section: a bowl of bent frame sticks covered by a tarp skin, floating high, with one paddler seated in the middle.">
+        <path d="M120 78 q180 150 360 0" fill="none" stroke="#3E3833" stroke-width="6"/>
+        <path d="M132 84 q168 128 336 0" fill="none" stroke="#3E9CC4" stroke-width="5"/>
+        <path d="M170 92 q40 44 86 66 M430 92 q-40 44 -86 66 M230 118 q28 26 70 34 M370 118 q-28 26 -70 34" fill="none" stroke="#8A7F70" stroke-width="4"/>
+        <path d="M100 108 h400" stroke="#3E9CC4" stroke-width="5"/>
+        <circle cx="300" cy="66" r="15" fill="#E8C9A0" stroke="#3E3833" stroke-width="3"/>
+        <path d="M300 81 v30 M300 92 l34 20" stroke="#3E3833" stroke-width="7" stroke-linecap="round"/>
+        <path d="M334 112 l26 30" stroke="#3E3833" stroke-width="5" stroke-linecap="round"/>
+        <text x="120" y="196" font-size="13" fill="#3E3833">frame of bent sticks · skin over it, seams up · floats in inches</text>
+        <text x="392" y="52" font-size="13" font-weight="700" fill="#3E3833">ONE PADDLE, ONE PERSON</text>
+      </svg>
+      <figcaption>The coracle. A bowl, a skin, and a negotiation — the oldest personal watercraft still on the water.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>15. Paddles, poles, and sails: moving without an engine</h2>
+    <ul>
+      <li><strong>The paddle.</strong> Power comes from the torso, not the arms: plant the blade by your hip, pull the boat past it with your whole back, lift it out at your seat. Stroke close alongside the hull — a wide sweeping stroke is a steering stroke whether you meant it or not. To turn left, paddle on the right; the stern paddler steers with a small outward flick at the end of the stroke.</li>
+      <li><strong>The pole.</strong> In water shallower than a long pole, poling beats everything: plant the pole on the bottom behind you, lean your weight onto it, walk your hands down it, and the boat walks up rapids that no paddle could climb. It is how you go <em>up</em> a river.</li>
+      <li><strong>The sail.</strong> Downwind, a tarp on a mast is free speed with no effort at all — a square of tarp on two spars, hoisted on any boat in this book, will push you home faster than paddling. The honest limits: without a keel you mostly go <em>with</em> the wind, not across it. A leeboard — a flat board clamped over the lee side, hanging in the water — buys you some across-wind ability by giving the water something to push against. A sail also raises your center of effort: in gusts, a small sail on a small boat is a capsize with good PR. Reef early: smaller sail, sooner.</li>
+      <li><strong>Rowing</strong> — two oars on pins, facing backward — is the strongest steady propulsion a person makes, and the punt (Entry 13) rows beautifully. Facing backward takes one afternoon to learn and is worth it for any regular crossing.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 240" role="img" aria-label="A punt under a simple tarp sail: mast and square sail catching a following wind, a leeboard down on the far side, and a steering paddle at the stern.">
+        <path d="M110 168 L150 196 h300 L490 168 L462 168 L440 188 H160 L138 168z" fill="#8A7F70" stroke="#3E3833" stroke-width="3"/>
+        <path d="M80 196 h440" stroke="#3E9CC4" stroke-width="5"/>
+        <rect x="296" y="52" width="7" height="118" fill="#3E3833"/>
+        <path d="M310 58 h96 v64 h-96z" fill="#F4F1EA" stroke="#3E3833" stroke-width="3"/>
+        <path d="M303 58 L282 122" stroke="#3E3833" stroke-width="4"/>
+        <rect x="352" y="150" width="12" height="52" fill="#3E3833" transform="rotate(8 358 176)"/>
+        <text x="420" y="96" font-size="13" font-weight="700" fill="#3E3833">TARP SAIL</text>
+        <text x="420" y="116" font-size="12.5" fill="#3E3833">downwind is free</text>
+        <text x="376" y="222" font-size="12.5" fill="#3E3833">leeboard down</text>
+        <path d="M150 168 L118 138" stroke="#3E3833" stroke-width="6" stroke-linecap="round"/>
+        <path d="M118 138 l-16 -6 M118 138 l-4 -16" stroke="#3E3833" stroke-width="5" stroke-linecap="round"/>
+        <text x="60" y="118" font-size="13" fill="#3E3833">steering paddle</text>
+        <g stroke="#3E9CC4" stroke-width="4" stroke-linecap="round"><path d="M436 62 h52 M436 84 h52"/></g>
+        <g fill="#3E9CC4"><path d="M488 62 l-13 -6 v12z"/><path d="M488 84 l-13 -6 v12z"/></g>
+        <text x="436" y="48" font-size="12.5" fill="#3E3833">wind behind you</text>
+      </svg>
+      <figcaption>The free engine. A tarp, a mast, a board over the side — and a following wind does the rowing.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>16. Traveling the river: bends, banks, and the long way down</h2>
+    <ul>
+      <li><strong>Downstream is a conveyor belt.</strong> The current does the work; your job is steering, spacing, and exits. Travel the middle of the channel, keep an eddy in reach, and stop early and often — a river trip is a chain of short, safe hops between eddies, not one long drift.</li>
+      <li><strong>Upstream is bank work.</strong> The slowest water in any river is along the banks and behind the rocks — the same eddies, used as stairs. Pole the shallows, paddle the eddies, portage the rest. Anyone who promises you an easy upstream mile is selling something.</li>
+      <li><strong>Bends have a deep side and a beach side.</strong> The current swings to the <em>outside</em> of every bend and digs it deep and fast — and that is also where fallen trees collect, undercut banks collapse, and strainers are born. The <em>inside</em> of the bend is shallow, slow, and gravelly: that is your landing, your wading crossing, and your campsite beach. Approach bends on the inside line and let the deep side mind itself.</li>
+      <li><strong>Scout every horizon line</strong> (Entry 1): land above it, walk down, look, decide. The thirty seconds this costs is the cheapest insurance in the book.</li>
+      <li><strong>Camp above the flood's autograph.</strong> Rivers sign their high-water mark: debris lines in the banks and branches, scour marks, silt in the grass. Camp above the highest signature you can find — a river can revisit its record overnight, in the rain, while you sleep.</li>
+      <li><strong>Never tie yourself to a boat,</strong> never tie a boat to yourself, and never wrap a rope around any part of anyone. Lines are held in hands or they are not held at all.</li>
+    </ul>
+    <figure class="diagram">
+      <svg viewBox="0 0 600 250" role="img" aria-label="A river bend from above: the deep, fast channel hugs the outside of the bend where a fallen tree waits, while the inside is a shallow, slow gravel beach marked for landing and wading.">
+        <path d="M60 62 q240 0 330 80 q70 70 190 84" fill="none" stroke="#BFE0EF" stroke-width="92"/>
+        <path d="M60 46 q250 -4 344 74" fill="none" stroke="#3E9CC4" stroke-width="6"/>
+        <path d="M84 76 q196 6 282 66" fill="none" stroke="#3E9CC4" stroke-width="4"/>
+        <g fill="#3E9CC4"><path d="M366 134 l-16 -2 8 14z"/><path d="M352 154 l-15 -5 5 15z"/></g>
+        <path d="M470 96 l44 30 M486 84 l30 44 M500 108 l26 18" stroke="#3E3833" stroke-width="5" stroke-linecap="round"/>
+        <text x="438" y="66" font-size="13" font-weight="700" fill="#C62F2F">OUTSIDE: DEEP, FAST,</text>
+        <text x="438" y="86" font-size="13" font-weight="700" fill="#C62F2F">STRAINERS</text>
+        <path d="M96 100 q200 4 292 72 q-120 30 -292 -72z" fill="#E8DFD2" stroke="#3E3833" stroke-width="2.5"/>
+        <text x="110" y="200" font-size="13" font-weight="700" fill="#3E3833">INSIDE: SHALLOW BEACH</text>
+        <text x="110" y="220" font-size="12.5" fill="#3E3833">land here · wade here · camp above the debris line</text>
+        <text x="52" y="244" font-size="13" fill="#3E3833">Every bend: the outside digs, the inside deposits. Take the inside line.</text>
+      </svg>
+      <figcaption>Anatomy of a bend. Deep water and trouble on the outside; a beach, a crossing, and a landing on the inside.</figcaption>
+    </figure>
+  </section>
+
+  <section class="entry">
+    <h2>17. What to scavenge for water work</h2>
+    <ul>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="4" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M14 16h20M14 32h20" stroke="#3E3833" stroke-width="3.5"/></svg></span><strong>Plastic drums and barrels</strong> — the blue 55-gallon kind above all. Sealed, they are flotation, water storage, and ram-pump air chambers in one. Check the bung seals; take every intact one you find.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="none" stroke="#3E3833" stroke-width="6"/><circle cx="24" cy="24" r="4" fill="#3E3833"/></svg></span><strong>Inner tubes</strong> — truck tubes especially. Rafts, floats, and gaskets. Take the patch kits and pumps from the same shelf.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 14h18a8 8 0 0 1 8 8v18" fill="none" stroke="#3E3833" stroke-width="5"/><path d="M4 10h10M30 36h10" stroke="#3E3833" stroke-width="5"/></svg></span><strong>PVC pipe and fittings</strong> — plumbing aisles are ram pumps and irrigation systems waiting to be assembled. Elbows, tees, valves, and every check valve in the building.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M24 7v34M7 24h34M12 12l24 24M36 12L12 36" stroke="#3E3833" stroke-width="2.5"/><circle cx="24" cy="24" r="3.5" fill="#3E3833"/></svg></span><strong>Bicycle wheels, chains, and sprockets</strong> — ready-made waterwheels, bearings, and gearing. A dead bike is a machine shop that fits in a wheelbarrow.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="#3E3833" stroke-width="4"/><circle cx="24" cy="24" r="7" fill="none" stroke="#3E3833" stroke-width="4"/><path d="M36 12l6-4" stroke="#3E3833" stroke-width="4"/></svg></span><strong>Garden hose</strong> — siphons, drip lines, and flumes for small water. Every coil is plumbing that needs no fittings to start working.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 16l16-7 16 7-16 7z" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M8 25l16 7 16-7M8 34l16 7 16-7" fill="none" stroke="#3E3833" stroke-width="3.5"/></svg></span><strong>Tarps</strong> — boat skins, sails, dam liners, flume liners, and pond liners. The single most convertible object in this book. Take the big ones and the grommets with them.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="6" fill="#3E3833"/><rect x="6" y="22" width="36" height="6" fill="#3E3833"/><rect x="6" y="32" width="36" height="6" fill="#3E3833"/></svg></span><strong>Lumber and pallets</strong> — decks, punts, flumes, dam cribs, wheel paddles. Straight boards are currency; a pallet is a raft deck that has not been told yet.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="none" stroke="#3E3833" stroke-width="4"/><path d="M24 11v26M13 18q11 8 22 0M13 30q11-8 22 0" fill="none" stroke="#3E3833" stroke-width="3"/></svg></span><strong>Rope and cord</strong> — lashings, anchor lines, safety lines. Natural fiber for lashings that must bite; synthetic for lines that live in the water.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 10h24l-4 28a4 4 0 0 1-4 3h-8a4 4 0 0 1-4-3z" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M12 20h24" stroke="#3E3833" stroke-width="3.5"/></svg></span><strong>Buckets</strong> — bailing, measuring flow, carrying the river one armload at a time while the real systems get built. A settlement runs on buckets longer than it admits.</li>
+      <li><span class="scav-ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8h16v10l4 6v14a3 3 0 0 1-3 3h-18a3 3 0 0 1-3-3V24l4-6z" fill="none" stroke="#3E3833" stroke-width="3.5"/><path d="M12 30h24" stroke="#C62F2F" stroke-width="4"/></svg></span><strong>Life jackets</strong> — marinas, boat sheds, pool stores. Take them all, in every size, and wear them: the best swimmer in the county drowns the same as anyone when the water is cold and the current is rude.</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>18. Field recipes: water builds</h2>
+
+    <div class="recipe">
+      <h3>Field Recipe · The Barrel Raft</h3>
+      <p class="makes"><strong>Makes:</strong> a working cargo platform for four drums' worth of lift — about 800 honest pounds of people and freight, in one afternoon.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Sealed plastic drums, bungs tight, no cracks — your flotation and your life</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="4" fill="#3D4A5C"/><path d="M14 16h20M14 32h20" stroke="#DAD6CC" stroke-width="3"/></svg></span>4</td></tr>
+        <tr><td>Deck boards or two pallets — the floor everything stands on</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="6" fill="#3D4A5C"/><rect x="6" y="22" width="36" height="6" fill="#3D4A5C"/><rect x="6" y="32" width="36" height="6" fill="#3D4A5C"/></svg></span>6–8</td></tr>
+        <tr><td>Long rails, stout — the sandwich that traps the drums</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="16" width="40" height="6" fill="#3D4A5C"/><rect x="4" y="27" width="40" height="6" fill="#3D4A5C"/></svg></span>2</td></tr>
+        <tr><td>Rope for lashings — long enough to go around everything, twice</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="none" stroke="#3D4A5C" stroke-width="4"/><path d="M24 11v26M13 18q11 8 22 0M13 30q11-8 22 0" fill="none" stroke="#3D4A5C" stroke-width="3"/></svg></span>30 m</td></tr>
+        <tr><td>A long pole or a board on a handle — the sweep that steers it</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38 L30 18" stroke="#3D4A5C" stroke-width="4"/><path d="M30 18 l10-8 2 10-8 8z" fill="#3D4A5C"/></svg></span>1</td></tr>
+      </table>
+      <ol>
+        <li>Lay the two rails parallel on the ground, a deck's width apart. Stand the four drums between them, two by two.</li>
+        <li>Lay the deck boards across the top, overhanging the rails slightly. The drums are now trapped in a sandwich: rails below the deck, drums between, nothing able to escape sideways.</li>
+        <li>Lash every crossing — rail to deck, deck to rail — in tight figure patterns, working around all four drums. Screws or bolts where you have them; lashings where you do not.</li>
+        <li>Float it empty. Stand on it. Bounce. It should feel like a dock, not a trampoline. Re-tension every lashing.</li>
+        <li>Mount the sweep on a post at the stern, load the middle low and centered, and re-check the lashings after the first hour in the water.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Overshot Wheel from a Bicycle Wheel</h3>
+      <p class="makes"><strong>Makes:</strong> a small working waterwheel from the commonest machine on Earth — turns a grindstone, a pump, or an alternator, wherever a stream falls a few feet.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>A bicycle wheel, true and sound — its hub is a ready-made bearing</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="#3D4A5C" stroke-width="3.5"/><path d="M24 7v34M7 24h34M12 12l24 24M36 12L12 36" stroke="#3D4A5C" stroke-width="2.5"/><circle cx="24" cy="24" r="3.5" fill="#3D4A5C"/></svg></span>1</td></tr>
+        <tr><td>Small boards or cut-down buckets — the paddles that catch the water</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="10" width="14" height="10" fill="#3D4A5C"/><rect x="26" y="10" width="14" height="10" fill="#3D4A5C"/><rect x="8" y="26" width="14" height="10" fill="#3D4A5C"/><rect x="26" y="26" width="14" height="10" fill="#3D4A5C"/></svg></span>12–16</td></tr>
+        <tr><td>Frame timbers — the stand that holds the axle over the stream</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="16" width="40" height="6" fill="#3D4A5C"/><rect x="4" y="27" width="40" height="6" fill="#3D4A5C"/></svg></span>4</td></tr>
+        <tr><td>Flume boards or a length of gutter — delivers the water to the top of the wheel</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 14h36v8H6z" fill="#3D4A5C"/><path d="M6 30h24v6H6z" fill="#3D4A5C"/></svg></span>3–4</td></tr>
+        <tr><td>A belt or bike chain — carries the turning to whatever it will drive</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="14" cy="24" r="7" fill="none" stroke="#3D4A5C" stroke-width="3.5"/><circle cx="35" cy="24" r="5" fill="none" stroke="#3D4A5C" stroke-width="3.5"/><path d="M14 17h21M14 31h21" stroke="#3D4A5C" stroke-width="3.5"/></svg></span>1</td></tr>
+      </table>
+      <ol>
+        <li>Bolt the paddles around the rim, angled like cups — each fills at the top and empties at the bottom.</li>
+        <li>Build the stand astride the stream at a narrow point, axle level, the wheel hanging free and true.</li>
+        <li>Run the flume from a small dam or side channel to just past the wheel's top, so water lands in the cups on one side only.</li>
+        <li>Fit a sluice board at the flume's mouth — your throttle. Closed, the wheel rests. Open a crack, it turns.</li>
+        <li>Belt the hub pulley to your machine, gearing up in stages (Entry 7) as far as needed. Grease the hub. Let the creek work.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Ram Pump from Pipe Fittings</h3>
+      <p class="makes"><strong>Makes:</strong> the pump that lifts water uphill day and night with no fuel — a stream's fall delivers a tenth of its water to a tank far above.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Stout rigid pipe for the drive line, running downhill to the pump</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 10h24a8 8 0 0 1 8 8v20" fill="none" stroke="#3D4A5C" stroke-width="5"/><path d="M2 6h10M34 34h10" stroke="#3D4A5C" stroke-width="5"/></svg></span>10 m+</td></tr>
+        <tr><td>Check valves — the two moving parts; one slams, one delivers. Spares are wisdom</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="14" fill="none" stroke="#3D4A5C" stroke-width="4"/><path d="M14 24h20M24 14v20" stroke="#3D4A5C" stroke-width="3"/><path d="M24 24l8-8" stroke="#3D4A5C" stroke-width="4"/></svg></span>2</td></tr>
+        <tr><td>A sealed bottle or small tank — the air chamber that smooths the pulses into a flow</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M20 5h8v6l3 4v25a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3V15l3-4z" fill="#3D4A5C"/><path d="M17 26h14" stroke="#DAD6CC" stroke-width="3"/></svg></span>1</td></tr>
+        <tr><td>Delivery hose or pipe — the long climb to the tank, narrower than the drive pipe</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="#3D4A5C" stroke-width="4"/><circle cx="24" cy="24" r="7" fill="none" stroke="#3D4A5C" stroke-width="4"/></svg></span>as needed</td></tr>
+        <tr><td>A screen for the intake — keeps the stream's debris out of your valves</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="10" width="28" height="28" fill="none" stroke="#3D4A5C" stroke-width="3.5"/><path d="M10 19h28M10 28h28M19 10v28M28 10v28" stroke="#3D4A5C" stroke-width="2.5"/></svg></span>1</td></tr>
+      </table>
+      <ol>
+        <li>Site it: you need flow and a few feet of fall. The pump sits below the intake, at the bottom of the drive pipe's run.</li>
+        <li>Assemble the classic cross: drive pipe in, waste valve (the slammer) on one branch, delivery valve and air chamber on the other, line climbing away.</li>
+        <li>Open the water. Flow accelerates, the waste valve slams, and the hammer-shock shoves a pulse into the air chamber — a few dozen times a minute. Tune the waste valve until it ticks steadily like a clock.</li>
+        <li>Run the delivery line up to the tank. Expect a tenth of the drive water to arrive, lifted far higher than the fall powering it.</li>
+        <li>Check it weekly: clear the intake screen, feel for the steady tick. A silent ram is a clogged screen or a tired valve, and both are ten-minute fixes.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Gravity Drip Line for a Garden Row</h3>
+      <p class="makes"><strong>Makes:</strong> all-day watering for a garden row from one raised barrel — the irrigation of Entry 9, shrunk to fit a backyard and a bucket brigade.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>A barrel or drum — the reservoir; bigger is lazier</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="6" width="20" height="36" rx="4" fill="#3D4A5C"/><path d="M14 16h20M14 32h20" stroke="#DAD6CC" stroke-width="3"/></svg></span>1</td></tr>
+        <tr><td>Blocks, a stand, or a bank — height is pressure; a metre up is enough</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="30" width="14" height="10" fill="#3D4A5C"/><rect x="26" y="30" width="14" height="10" fill="#3D4A5C"/><rect x="17" y="18" width="14" height="10" fill="#3D4A5C"/></svg></span>3–4</td></tr>
+        <tr><td>Garden hose — the drip line itself, one per row</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="#3D4A5C" stroke-width="4"/><circle cx="24" cy="24" r="7" fill="none" stroke="#3D4A5C" stroke-width="4"/><path d="M36 12l6-4" stroke="#3D4A5C" stroke-width="4"/></svg></span>1 per row</td></tr>
+        <tr><td>Cloth for a filter at the outlet — keeps the drip holes dripping instead of clogging</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 12h28v24H10z" fill="#3D4A5C"/><path d="M10 20h28M10 28h28" stroke="#DAD6CC" stroke-width="2.5"/></svg></span>1 piece</td></tr>
+        <tr><td>An awl, nail, or small drill — makes the drip holes; smaller than you think</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M30 6l12 12-8 4-8-8z" fill="#3D4A5C"/><path d="M26 14L8 32l-3 9 9-3L32 20z" fill="#3D4A5C"/></svg></span>1</td></tr>
+      </table>
+      <ol>
+        <li>Set the barrel high at the row's end — on blocks, a stand, or the bank above the garden. Height is the whole pump.</li>
+        <li>Fit the outlet low on the barrel with the cloth filter inside it. Fill the barrel and let the sediment settle away from the outlet.</li>
+        <li>Lay the hose down the row, end capped. Pierce a small hole at each plant — pin-sized. Water under low pressure finds a pin hole entirely sufficient.</li>
+        <li>Open the outlet and walk the row: every plant should weep steadily, none should jet. Enlarge a hole only where a plant runs dry.</li>
+        <li>Refill the barrel on your rounds. A barrel a day keeps a row alive through a drought, sipping where a sprinkler would gulp.</li>
+      </ol>
+    </div>
+
+    <div class="recipe">
+      <h3>Field Recipe · Tarp Coracle</h3>
+      <p class="makes"><strong>Makes:</strong> a one-person bowl boat you can carry under one arm — a river crossing, a fishing perch, and a thousand years of precedent.</p>
+      <table>
+        <tr><th>Component</th><th>Count</th></tr>
+        <tr><td>Springy saplings or willow wands — the ribs of the bowl; green wood bends, dry wood snaps</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 40 Q24 8 38 40" fill="none" stroke="#3D4A5C" stroke-width="4"/><path d="M17 40 Q24 20 31 40" fill="none" stroke="#3D4A5C" stroke-width="4"/></svg></span>8–10</td></tr>
+        <tr><td>A tarp, roughly two metres square — the skin; no holes, grommets a bonus</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 14l16-6 16 6-16 6z" fill="#3D4A5C"/><path d="M8 24l16 6 16-6M8 33l16 6 16-6" fill="none" stroke="#3D4A5C" stroke-width="3.5"/></svg></span>1</td></tr>
+        <tr><td>Cord for lashing — the rim is lashed, not nailed; it must flex</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="13" fill="none" stroke="#3D4A5C" stroke-width="4"/><path d="M24 11v26M13 18q11 8 22 0M13 30q11-8 22 0" fill="none" stroke="#3D4A5C" stroke-width="3"/></svg></span>10 m</td></tr>
+        <tr><td>A hoop or stout rim wand — the gunwale that gives the bowl its shape and its carry handle</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16" fill="none" stroke="#3D4A5C" stroke-width="4.5"/></svg></span>1</td></tr>
+        <tr><td>A paddle — one blade, used over the bow in a figure-eight, coracle fashion</td><td><span class="tile-ic"><svg class="ing" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 38 L30 18" stroke="#3D4A5C" stroke-width="4"/><path d="M30 18 l10-8 2 10-8 8z" fill="#3D4A5C"/></svg></span>1</td></tr>
+      </table>
+      <ol>
+        <li>Bend the rim hoop into a circle on the ground and lash the join. This circle is the boat's mouth and its destiny — a metre to a metre and a half across.</li>
+        <li>Bend the saplings into U shapes, ends lashed around the hoop, bellies crossing under the center — a basket's skeleton, ribs in both directions.</li>
+        <li>Weave or lash two lighter wands around the belly to hold the bowl's shape. Sit in it on land. It should feel like a bowl, because it is one.</li>
+        <li>Drape the tarp inside the frame, smooth it into the bowl, and fold the edges over the hoop, lashing them down all the way around. Seams and folds point up, never down into the water.</li>
+        <li>Launch in the shallows, kneel in the center, and learn the spin in water you can stand up in — before the river teaches you at tuition rates.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="entry">
+    <h2>19. Stop signs</h2>
+    <ul>
+      <li><strong>Never swim, wade, or boat above a low-head dam.</strong> Portage around it. Every time. There is no exception and no discussion (Entry 5).</li>
+      <li><strong>Never stand up in fast water above your ankles.</strong> Foot entrapment drowns the strong in knee-deep water (Entry 4).</li>
+      <li><strong>Never approach a strainer from upstream in the water.</strong> Get out early, walk around, re-enter below it.</li>
+      <li><strong>Never tie a rope to a person in moving water</strong> — not to yourself, not to a rescuer without a quick release, not ever.</li>
+      <li><strong>Never cross fast water above your knees,</strong> and never cross what you cannot see or probe the bottom of.</li>
+      <li><strong>Never let a passenger stand in a small boat.</strong> Seated and low, or ashore. Most capsizes are standing ovations.</li>
+      <li><strong>Never overload past your freeboard.</strong> A hand's width minimum, loaded, in calm water — more in any weather.</li>
+      <li><strong>Never dam what you cannot afford to flood,</strong> and never build a dam whose failure you have not planned for (Entry 8).</li>
+      <li><strong>Never camp below the debris line.</strong> The river has been higher than you think, and it keeps its appointments at night.</li>
+      <li><strong>Never trust floodwater at all.</strong> It hides holes, carries strainers, and moves faster than any of this book's rules assume. Wait it out.</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <h2>20. The whole book on one card</h2>
+    <ul>
+      <li><strong>Read it:</strong> smooth = deep and fast; downstream V = the door; horizon line = a drop, scout it; eddies are rest stops.</li>
+      <li><strong>Cross it:</strong> wide and shallow, pack unbuckled, staff upstream, face the current, shuffle — fast water above the knees is a no.</li>
+      <li><strong>Fall in:</strong> float the first minute, then back-down, feet up, never stand mid-current.</li>
+      <li><strong>The killers:</strong> strainers pin, hydraulics roll, low-head dams do both river-wide. Avoid, climb, portage.</li>
+      <li><strong>Harness it:</strong> power = flow × head. Overshot beats undershot. Gear up in stages, trading force for speed.</li>
+      <li><strong>Dam it:</strong> spillway first, wide not tall, clear leaks weep and cloudy leaks kill. Never sleep in the flood path.</li>
+      <li><strong>Spread it:</strong> store high, ditch level, furrows gentle, soak deep and rarely. The siphon is a free pipe.</li>
+      <li><strong>Lift it:</strong> the ram pump spends nine gallons of fall to deliver one uphill, forever, on two moving parts.</li>
+      <li><strong>Float on it:</strong> displacement carries you; freeboard protects you; load low, centered, seated.</li>
+      <li><strong>Build:</strong> barrel raft today, punt for keeps, dugout for the grandchildren, coracle for the crossing.</li>
+      <li><strong>Travel:</strong> downstream is a conveyor, upstream is bank work, bends are deep outside and beached inside — take the inside line.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><a href="../index.html">All books, A–Z</a></p>
+    <p>The Millennial's Guide to the Aftermath — Moving Water, Explained</p>
+  </footer>
+</main>
+</body>
+</html>
